@@ -3,6 +3,7 @@
 Web Application 345 Thrive
 
 Developer: Masaaki Furuki/HUGE HOOD LLC
+
 Copyrights Eudaimonia Inc. All rights reserved.
 
 This README would normally document whatever steps are necessary to get the
