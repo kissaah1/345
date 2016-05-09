@@ -7,16 +7,16 @@
 	<meta name="description" content="Preparing organizations and individuals to thrive and sucseed.">
 	<meta name="keywords" content="Employee success, Career Design, Human Resouce, key word, key word, key word, key word, key word, key word, key word, key word">
 	<meta name="robots" content="all">
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title><%= full_title(yield(:title)) %></title>
 	<%= favicon_link_tag 'favicon.ico' %>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
+	<%= render 'layouts/shim' %>
 </head>
 <body>
-
+<%= render 'layouts/header' %>
 <%= yield %>
-
+<%= render 'layouts/footer' %>
 </body>
 </html>

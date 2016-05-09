@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/* SCSS Document
+ * Masaaki Furuki
+ * 2016
+ */
+
+.spacer {
+	height: 30px;
+}
+// 1. Reset
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	border: 0;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: block;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+// IE
+	*zoom: 1;
+}
+h1, h2 {
+	font-weight: 600;
+}
+h3, h4, h5, h6 {
+	font-weight: 500;
+}
+h1 { font-size: 2.625em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+p {
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+p.small { font-size: 0.8750em; }
+.f100 { font-weight: 100; }
+.f200 { font-weight: 200; }
+.f300 { font-weight: 300; }
+.f400 { font-weight: 400; }
+.f500 { font-weight: 500; }
+.f600 { font-weight: 600; }
+.f700 { font-weight: 700; }
+.f800 { font-weight: 800; }
+.f900 { font-weight: 900; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-shadow { text-shadow: 2px -1px 2px rgba(0,0,0,0.5); }
+.box-shadow { box-shadow: 1px 1px 1px rgba(0,0,0,0.1); }
+.italic {
+	font-style: italic;
+}
+
+$small-footer: 120px;
+$medium-footer: 360px;
+$large-footer: 480px;
+
+// 2. Color Scheme
+
+// 2-1. Defualt Color
+$primary-color: #4f4a46;
+$secondary-color: #c9ccce;
+$success-color: #afda51;
+$alert-color: #fd594e;
+$warning-color: #ffbe3c;
+$info-color: #35afd8;
+
+$primary-dark: #423d3a;
+$secondary-dark: #bec1c2;
+$success-dark: #a3cc4b;
+$alert-dark: #f0554a;
+$warning-dark: #f2b53a;
+$info-dark: #31a5cc;
+
+// 2-2. Defamedit Color
+$light-red: #ffb2be;
+// Panton+ Solid Uncoated PANTONE 0331 U
+// rgb(255, 178, 190)
+$red: #fc5158;
+// Panton+ Solid Uncoated PANTONE Red 032 U
+// rgb(252, 81, 88)
+$dark-red: #d04f54;
+// Panton+ Solid Uncoated PANTONE 1797 U
+// rgb(208, 79, 84)
+$light-blue: #7ccbef;
+// Panton+ Solid Uncoated PANTONE 297 U
+// rgb(124, 203, 239)
+$blue: #006db7;
+// Panton+ Solid Uncoated PANTONE 300 U
+// rgb(0, 109, 183)
+$dark-blue: #24588d;
+// Panton+ Solid Uncoated PANTONE 2945 U
+// rgb(36, 88, 141)
+$light-green: #a9dad7;
+// Panton+ Solid Uncoated PANTONE 7464 U
+// rgb(169, 218, 215)
+$green: #00a9a2;
+// Panton+ Solid Uncoated PANTONE 326 U
+// rgb(0, 169, 162)
+$dark-green: #097c79;
+// Panton+ Solid Uncoated PANTONE 328 U
+// rgb(9, 124, 121)
+$light-purple: #f3c2de;
+// Panton+ Solid Uncoated PANTONE 671 U
+// rgb(243, 194, 222)
+$purple: #e85dbd;
+// Panton+ Solid Uncoated PANTONE 238 U
+// rgb(232, 93, 189)
+$dark-purple: #af548f;
+// Panton+ Solid Uncoated PANTONE 2415 U
+// rgb(175, 84, 143)
+$light-yellow: #f0f179;
+// Panton+ Solid Uncoated PANTONE 386 U
+// rgb(240, 241, 121)
+$yellow: #faeb37;
+// Panton+ Solid Uncoated PANTONE 3955 U
+// rgb(250, 235, 55)
+$dark-yellow: #b6a72b;
+// Panton+ Solid Uncoated PANTONE 3975 U
+// rgb(182, 167, 72)
+$ivoly: #efebe8;
+// DIC 583s
+// rgb(239, 235, 232)
+$light-gray: #f7f7f7;
+// just hex color
+// rgb(247, 247, 247)
+$gray: #bebebe;
+// Panton+ Solid Uncoated PANTONE 420 U
+// rgb(190, 190, 190)
+$dark-gray: #7d7d7f;
+// Panton+ Solid Uncoated PANTONE 425 U
+// rgb(125, 125, 127)
+$black: #4c4846;
+// Panton+ Solid Uncoated PANTONE Neutral Black U
+// rgb(76, 72, 70)
+$white: #fcfcfa;
+// just hex color
+// rgb(249, 249, 239)
+
+$highlight: rgba(240, 241, 121, 0.9);
+$shadow: rgba(0, 0, 0, 0.1);
+$transparent: rgba(255, 255, 255, 0);
+
+// 2-3. Brand Color
+$facebook: #3b5998;
+$twitter: #4099ff;
+$linkedin: #007bb6;
+
+// 3. Typography
+$sans: 'Helvetica Neue', 'Open Sans', 'Roboto', Helvetica, Arial, Verdana, sans-serif;
+$serif: Georgia, 'Roboto Slab', 'Times New Roman', Serif;
+
+$icon: 'FoundationIconsGeneral';
+$icon-enclosed: 'FoundationIconsGeneralEnclosed';
+$icon-social: 'FoundationIconsSocial';
+
+$japanese-sans:
+	'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif,
+	'小塚ゴシック Pr6N', 'Kozuka Gothic Pr6N', '小塚ゴシック Pro', 'Kozuka Gothic Pro',
+	'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro',
+	'游ゴシック体', 'YuGothic', '游ゴシック', 'Yu Gothic',
+	'MS Pゴシック', 'MS PGothic';
+$japanese-serif:
+	'Roboto Slab', 'Times New Roman', Georgia, Serif,
+	'小塚明朝 Pr6N', 'Kozuka Mincho Pr6N', '小塚明朝 Pro', 'Kozuka Mincho Pro',
+	'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro',
+	'游明朝体','YuMincho', '游明朝','Yu Mincho',
+	'ＭＳ Ｐ明朝', 'MS PMincho';
+
+
+
+.row-90 { width: 90%; *width: 89.9%; }
+.row-80 { width: 80%; *width: 79.9%; }
+.row-70 { width: 70%; *width: 69.9%; }
+.row-60 { width: 60%; *width: 59.9%; }
+.row-50 { width: 50%; *width: 49.9%; }
+.row-40 { width: 40%; *width: 39.9%; }
+.row-30 { width: 30%; *width: 29.9%; }
+.row-20 { width: 20%; *width: 19.9%; }
+.row-10 { width: 10%; *width: 9.9%; }
+
+// Columns and Grid
+.grid-100 { width: 100%; *width: 99.9%; }
+.grid-90 { width: 90%; *width: 89.9%; }
+.grid-80 { width: 80%; *width: 79.9%; }
+.grid-70 { width: 70%; *width: 69.9%; }
+.grid-60 { width: 60%; *width: 59.9%; }
+.grid-50 { width: 50%; *width: 49.9%; }
+.grid-40 { width: 40%; *width: 39.9%; }
+.grid-30 { width: 30%; *width: 29.9%; }
+.grid-20 { width: 20%; *width: 19.9%; }
+.grid-10 { width: 10%; *width: 9.9%; }
+
+.columns {
+	.grid-10,
+	.grid-20,
+	.grid-30,
+	.grid-40,
+	.grid-50,
+	.grid-60,
+	.grid-70,
+	.grid-80,
+	.grid-90,
+	.grid-100 {
+	float: left;
+	.row {
+		padding: 20px;
+	}
+	}
+}
+.column {
+	display: inline-block !important;
+	vertical-align: top;
+}
+

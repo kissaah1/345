@@ -1,0 +1,41 @@
+<header>
+<%# if logged_in? %>
+<%# else %>
+<%# end %>
+	<div class="row topbar">
+
+		<div class="grid-80 centered clearfix">
+			<div class="grid-40 lefted logo">
+			<h1>
+			345 Thrive
+			</h1>
+			<a class="lefted" href="#">
+			</a>
+
+			</div><!-- grid-50 lefted -->
+
+			<div class="grid-60 righted text-right">
+			<nav>
+				<div class="dropdown">
+					<button onclick="expandDropdown()" class="trigger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+					<div id="dropdownList" class="dropdown-content">
+					<%= link_to "HOME",    root_path %>
+					<%= link_to "ABOUT",    about_path %>
+	<a class="last login" href="#">
+	SIGN UP | LOG IN
+	</a>
+					</div><!-- dropdown-content -->
+
+				</div><!-- dropdown -->
+
+			</nav>
+			</div><!-- grid-60 righted text-right -->
+		</div><!-- grid-80 centered clearfix -->
+
+	</div><!-- row topbar -->
+
+</header>
