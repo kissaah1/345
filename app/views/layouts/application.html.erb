@@ -14,9 +14,43 @@
 	<%= csrf_meta_tags %>
 	<%= render 'layouts/shim' %>
 </head>
-<body>
+
+<% if user_signed_in? %>
+<body id="logged-in-view">
+<% else %>
+<body id="public-view">
+<% end %>
+<div id="container">
 <%= render 'layouts/header' %>
-<%= yield %>
+
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+
+		<%= yield %>
+
+
 <%= render 'layouts/footer' %>
+</div><!-- container -->
+<script type="text/javascript">
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function expandDropdown() {
+    document.getElementById("dropdownList").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.trigger')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>

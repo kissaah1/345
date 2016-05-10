@@ -1,7 +1,4 @@
 <header>
-<%# if logged_in? %>
-<%# else %>
-<%# end %>
 	<div class="row topbar">
 
 		<div class="grid-80 centered clearfix">
@@ -25,9 +22,11 @@
 					<div id="dropdownList" class="dropdown-content">
 					<%= link_to "HOME",    root_path %>
 					<%= link_to "ABOUT",    about_path %>
-	<a class="last login" href="#">
-	SIGN UP | LOG IN
-	</a>
+	<% if user_signed_in? %>
+	<%= link_to "LOG OUT",	destroy_user_session_path,	method: :delete,	class: 'last login' %>
+	<% else %>
+	<%= link_to "SIGN UP | LOG IN",	new_user_session_path,	class: 'last login' %>
+	<% end %>
 					</div><!-- dropdown-content -->
 
 				</div><!-- dropdown -->

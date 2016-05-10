@@ -1,0 +1,2812 @@
+/* SCSS Document
+ * Masaaki Furuki
+ * 2016
+ */
+/* line 8, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.spacer {
+  height: 30px;
+}
+
+/* line 12, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 19, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 23, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+li {
+  list-style: none;
+}
+
+/* line 26, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 29, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+img {
+  border: 0;
+}
+
+/* line 32, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: block;
+}
+
+/* line 37, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 40, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 44, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h1, h2 {
+  font-weight: 600;
+}
+
+/* line 47, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+/* line 50, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h1 {
+  font-size: 2.625em;
+}
+
+/* line 51, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 52, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h3 {
+  font-size: 1.75em;
+}
+
+/* line 53, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 54, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h5 {
+  font-size: 1.25em;
+}
+
+/* line 55, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+p {
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+/* line 60, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+p.small {
+  font-size: 0.8750em;
+}
+
+/* line 61, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f100 {
+  font-weight: 100;
+}
+
+/* line 62, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f200 {
+  font-weight: 200;
+}
+
+/* line 63, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f300 {
+  font-weight: 300;
+}
+
+/* line 64, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f400 {
+  font-weight: 400;
+}
+
+/* line 65, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f500 {
+  font-weight: 500;
+}
+
+/* line 66, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f600 {
+  font-weight: 600;
+}
+
+/* line 67, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f700 {
+  font-weight: 700;
+}
+
+/* line 68, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f800 {
+  font-weight: 800;
+}
+
+/* line 69, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f900 {
+  font-weight: 900;
+}
+
+/* line 70, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 71, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 72, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 73, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.text-shadow {
+  text-shadow: 2px -1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* line 74, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.box-shadow {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 75, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 197, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-90 {
+  width: 90%;
+  *width: 89.9%;
+}
+
+/* line 198, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-80 {
+  width: 80%;
+  *width: 79.9%;
+}
+
+/* line 199, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-70 {
+  width: 70%;
+  *width: 69.9%;
+}
+
+/* line 200, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-60 {
+  width: 60%;
+  *width: 59.9%;
+}
+
+/* line 201, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-50 {
+  width: 50%;
+  *width: 49.9%;
+}
+
+/* line 202, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-40 {
+  width: 40%;
+  *width: 39.9%;
+}
+
+/* line 203, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-30 {
+  width: 30%;
+  *width: 29.9%;
+}
+
+/* line 204, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-20 {
+  width: 20%;
+  *width: 19.9%;
+}
+
+/* line 205, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-10 {
+  width: 10%;
+  *width: 9.9%;
+}
+
+/* line 208, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-100 {
+  width: 100%;
+  *width: 99.9%;
+}
+
+/* line 209, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-90 {
+  width: 90%;
+  *width: 89.9%;
+}
+
+/* line 210, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-80 {
+  width: 80%;
+  *width: 79.9%;
+}
+
+/* line 211, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-70 {
+  width: 70%;
+  *width: 69.9%;
+}
+
+/* line 212, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-60 {
+  width: 60%;
+  *width: 59.9%;
+}
+
+/* line 213, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-50 {
+  width: 50%;
+  *width: 49.9%;
+}
+
+/* line 214, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-40 {
+  width: 40%;
+  *width: 39.9%;
+}
+
+/* line 215, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-30 {
+  width: 30%;
+  *width: 29.9%;
+}
+
+/* line 216, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-20 {
+  width: 20%;
+  *width: 19.9%;
+}
+
+/* line 217, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-10 {
+  width: 10%;
+  *width: 9.9%;
+}
+
+/* line 220, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.columns .grid-10,
+.columns .grid-20,
+.columns .grid-30,
+.columns .grid-40,
+.columns .grid-50,
+.columns .grid-60,
+.columns .grid-70,
+.columns .grid-80,
+.columns .grid-90,
+.columns .grid-100 {
+  float: left;
+}
+/* line 231, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.columns .grid-10 .row,
+.columns .grid-20 .row,
+.columns .grid-30 .row,
+.columns .grid-40 .row,
+.columns .grid-50 .row,
+.columns .grid-60 .row,
+.columns .grid-70 .row,
+.columns .grid-80 .row,
+.columns .grid-90 .row,
+.columns .grid-100 .row {
+  padding: 20px;
+}
+
+/* line 236, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.column {
+  display: inline-block !important;
+  vertical-align: top;
+}
+@charset "UTF-8";
+/* 1. References
+	Link files, default settings for current project
+*/
+/* SCSS Document
+ * Masaaki Furuki
+ * 2016
+ */
+/* line 7, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.spacer {
+  height: 30px;
+}
+
+/* line 11, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 18, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 22, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+li {
+  list-style: none;
+}
+
+/* line 25, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 28, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+img {
+  border: 0;
+}
+
+/* line 31, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: block;
+}
+
+/* line 36, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 39, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 43, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h1, h2 {
+  font-weight: 600;
+}
+
+/* line 46, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+/* line 49, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h1 {
+  font-size: 2.625em;
+}
+
+/* line 50, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 51, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h3 {
+  font-size: 1.75em;
+}
+
+/* line 52, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 53, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+h5 {
+  font-size: 1.25em;
+}
+
+/* line 54, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+p {
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+/* line 59, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+p.small {
+  font-size: 0.8750em;
+}
+
+/* line 60, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f100 {
+  font-weight: 100;
+}
+
+/* line 61, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f200 {
+  font-weight: 200;
+}
+
+/* line 62, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f300 {
+  font-weight: 300;
+}
+
+/* line 63, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f400 {
+  font-weight: 400;
+}
+
+/* line 64, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f500 {
+  font-weight: 500;
+}
+
+/* line 65, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f600 {
+  font-weight: 600;
+}
+
+/* line 66, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f700 {
+  font-weight: 700;
+}
+
+/* line 67, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f800 {
+  font-weight: 800;
+}
+
+/* line 68, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.f900 {
+  font-weight: 900;
+}
+
+/* line 69, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 70, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 71, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 72, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.text-shadow {
+  text-shadow: 2px -1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* line 73, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.box-shadow {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 74, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 196, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-90 {
+  width: 90%;
+  *width: 89.9%;
+}
+
+/* line 197, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-80 {
+  width: 80%;
+  *width: 79.9%;
+}
+
+/* line 198, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-70 {
+  width: 70%;
+  *width: 69.9%;
+}
+
+/* line 199, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-60 {
+  width: 60%;
+  *width: 59.9%;
+}
+
+/* line 200, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-50 {
+  width: 50%;
+  *width: 49.9%;
+}
+
+/* line 201, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-40 {
+  width: 40%;
+  *width: 39.9%;
+}
+
+/* line 202, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-30 {
+  width: 30%;
+  *width: 29.9%;
+}
+
+/* line 203, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-20 {
+  width: 20%;
+  *width: 19.9%;
+}
+
+/* line 204, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.row-10 {
+  width: 10%;
+  *width: 9.9%;
+}
+
+/* line 207, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-100 {
+  width: 100%;
+  *width: 99.9%;
+}
+
+/* line 208, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-90 {
+  width: 90%;
+  *width: 89.9%;
+}
+
+/* line 209, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-80 {
+  width: 80%;
+  *width: 79.9%;
+}
+
+/* line 210, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-70 {
+  width: 70%;
+  *width: 69.9%;
+}
+
+/* line 211, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-60 {
+  width: 60%;
+  *width: 59.9%;
+}
+
+/* line 212, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-50 {
+  width: 50%;
+  *width: 49.9%;
+}
+
+/* line 213, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-40 {
+  width: 40%;
+  *width: 39.9%;
+}
+
+/* line 214, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-30 {
+  width: 30%;
+  *width: 29.9%;
+}
+
+/* line 215, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-20 {
+  width: 20%;
+  *width: 19.9%;
+}
+
+/* line 216, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.grid-10 {
+  width: 10%;
+  *width: 9.9%;
+}
+
+/* line 219, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.columns .grid-10,
+.columns .grid-20,
+.columns .grid-30,
+.columns .grid-40,
+.columns .grid-50,
+.columns .grid-60,
+.columns .grid-70,
+.columns .grid-80,
+.columns .grid-90,
+.columns .grid-100 {
+  float: left;
+}
+/* line 230, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.columns .grid-10 .row,
+.columns .grid-20 .row,
+.columns .grid-30 .row,
+.columns .grid-40 .row,
+.columns .grid-50 .row,
+.columns .grid-60 .row,
+.columns .grid-70 .row,
+.columns .grid-80 .row,
+.columns .grid-90 .row,
+.columns .grid-100 .row {
+  padding: 20px;
+}
+
+/* line 235, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/_settings.scss */
+.column {
+  display: inline-block !important;
+  vertical-align: top;
+}
+
+/* line 11, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+body {
+  background-color: #fcfcfa;
+  color: #4c4846;
+  font-family: "Helvetica Neue", "Open Sans", "Roboto", Helvetica, Arial, Verdana, sans-serif;
+}
+
+/* line 18, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.highlight {
+  background-image: url(../images/highlight.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  font-style: italic;
+}
+
+/* line 24, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+::-moz-selection {
+  background: rgba(240, 241, 121, 0.9);
+}
+
+/* line 27, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+::selection {
+  background: rgba(240, 241, 121, 0.9);
+}
+
+/* line 30, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.highlight::-moz-selection {
+  background: #7ccbef;
+}
+
+/* line 33, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.highlight::selection {
+  background: #7ccbef;
+}
+
+/* line 36, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a {
+  color: #bebebe;
+}
+/* line 38, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a:hover {
+  color: #4c4846;
+}
+/* line 40, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a:hover .material-icons {
+  color: #4c4846;
+}
+
+/* line 45, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.primary {
+  color: #4f4a46;
+}
+/* line 47, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.primary:hover {
+  color: #423d3a;
+}
+
+/* line 49, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.secondary {
+  color: #c9ccce;
+}
+/* line 51, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.secondary:hover {
+  color: #bec1c2;
+}
+
+/* line 53, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.alert {
+  color: #fd594e;
+}
+/* line 55, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.alert:hover {
+  color: #f0554a;
+}
+
+/* line 57, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.success {
+  color: #afda51;
+}
+/* line 59, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.success:hover {
+  color: #a3cc4b;
+}
+
+/* line 61, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.warning {
+  color: #ffbe3c;
+}
+/* line 63, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.warning:hover {
+  color: #f2b53a;
+}
+
+/* line 65, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.info, a.url {
+  color: #35afd8;
+}
+/* line 67, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.info:hover, a.url:hover {
+  color: #31a5cc;
+}
+
+/* 2. Basic Layouts */
+/* line 72, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view #container {
+  background-color: #e6e6e6;
+}
+
+/* line 76, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#container {
+  width: 100%;
+  position: relative;
+  height: auto !important;
+  /* IE6 */
+  height: 100%;
+  /* IE6 */
+  min-height: 100%;
+}
+
+/* line 83, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.row {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* line 87, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.lefted {
+  float: left;
+}
+
+/* line 90, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.righted {
+  float: right;
+}
+
+/* line 93, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.centered {
+  margin: 0 auto;
+}
+
+/* line 100, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view header .topbar {
+  min-height: 98px;
+}
+/* line 103, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view header .topbar .logo h1 {
+  display: none;
+  visibility: hidden;
+}
+/* line 107, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view header .topbar .logo a {
+  display: table-cell;
+  vertical-align: middle;
+  height: 98px;
+  width: 216px;
+  background: url("/logo.png", image) no-repeat center center;
+  background-size: 100%;
+}
+
+/* line 120, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header {
+  margin-bottom: 60px;
+}
+/* line 122, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .topbar {
+  min-height: 40px;
+}
+/* line 125, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .topbar .logo h1 {
+  display: none;
+  visibility: hidden;
+}
+/* line 129, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .topbar .logo a {
+  display: table-cell;
+  vertical-align: middle;
+  height: 48px;
+  width: 149px;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+/* line 142, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* line 146, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .trigger {
+  margin-top: 5px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 20px;
+  height: 43px;
+  background-color: #006db7;
+}
+/* line 155, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .trigger .bar {
+  display: block;
+  height: 2px;
+  width: 20px;
+  background-color: #fcfcfa;
+  margin-bottom: 4px;
+}
+/* line 164, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .trigger:hover .bar, #logged-in-view header .trigger:focus .bar {
+  background-color: #7ccbef;
+}
+/* line 168, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  min-width: 320px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  line-height: 48px;
+  text-align: left;
+  margin: 5px;
+  vertical-align: top;
+}
+/* line 181, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content a {
+  font-size: 0.925em;
+  margin-left: 0;
+  font-weight: 400;
+  color: #7d7d7f;
+  display: block;
+  width: 320px;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 192, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content a:hover {
+  color: #fcfcfa;
+  background-color: #7ccbef;
+}
+/* line 195, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content a:hover .material-icons {
+  color: #fcfcfa;
+}
+/* line 199, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content a .nav-item {
+  display: inline-block;
+  line-height: 47px;
+  vertical-align: top;
+  margin-left: 5px;
+}
+/* line 205, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content a .material-icons {
+  line-height: 48px;
+  font-size: 14px;
+  display: inline-block;
+  color: #bebebe;
+}
+/* line 212, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content a.last {
+  border: none;
+}
+/* line 214, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content a.last.login {
+  padding: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 48px;
+  text-indent: 0;
+  color: #fcfcfa;
+  background-color: rgba(64, 183, 242, 0.9);
+}
+/* line 222, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .dropdown-content a.last.login:hover {
+  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2);
+}
+/* line 228, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view header .show {
+  display: block;
+}
+
+/* line 234, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+header {
+  display: block;
+  width: 100%;
+  background-color: #006db7;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 240, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+header .sticky {
+  position: fixed;
+}
+/* line 244, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+header .horizontal-divider {
+  background-color: #006db7;
+  width: 100%;
+  min-height: 2px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 252, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+header p {
+  font-weight: 300;
+  font-size: 21px;
+}
+/* line 255, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+header p small {
+  font-size: 12px;
+}
+/* line 259, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+header nav {
+  width: 100%;
+  font-size: 14px;
+}
+/* line 262, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+header nav a {
+  color: #fcfcfa;
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+/* line 271, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+ul.holizontal li {
+  display: inline-block;
+  margin-right: 10px;
+}
+/* line 274, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+ul.holizontal li.li-first {
+  margin-left: 0 !important;
+}
+/* line 277, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+ul.holizontal li.li-last {
+  margin-right: 0 !important;
+}
+
+/* line 289, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.bottomfix {
+  padding-bottom: 420px;
+}
+/* line 293, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section h3, #logged-in-view section.company-section h3 {
+  font-size: 22px;
+  color: #afb2b5;
+  font-weight: 300;
+  margin-bottom: 5px;
+  line-height: 40px;
+}
+/* line 299, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section h3 .sub-menu, #logged-in-view section.company-section h3 .sub-menu {
+  font-size: 0.625em;
+  font-weight: 400;
+  margin-right: 5px;
+}
+/* line 304, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section h3 .material-icons, #logged-in-view section.company-section h3 .material-icons {
+  line-height: 40px;
+  color: #bebebe;
+  font-size: 28px;
+}
+/* line 310, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section p, #logged-in-view section.company-section p {
+  font-size: 0.925em;
+}
+/* line 313, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section form, #logged-in-view section.company-section form {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+/* line 318, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section form .field textarea, #logged-in-view section.company-section form .field textarea {
+  border: solid 1px #bebebe;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  font-family: "Helvetica Neue", "Open Sans", "Roboto", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 0.925em;
+  font-weight: 400;
+}
+/* line 332, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns, #logged-in-view section.company-section .row .columns {
+  margin: 20px auto;
+}
+/* line 337, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .material-icons {
+  color: #7d7d7f;
+  line-height: 36px;
+}
+/* line 344, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .material-icons.sub-menu, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .material-icons.sub-menu, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .material-icons.sub-menu {
+  vertical-align: middle;
+  line-height: 36px;
+  font-size: 16px;
+  color: #bebebe;
+  text-align: right;
+}
+/* line 353, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card a small, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience a small, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing a small, #logged-in-view section.company-section .row .columns .sticky-note .profile-card a small, #logged-in-view section.company-section .row .columns .sticky-note .work-experience a small, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing a small {
+  font-size: 11px;
+}
+/* line 356, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card a:hover, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience a:hover, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing a:hover, #logged-in-view section.company-section .row .columns .sticky-note .profile-card a:hover, #logged-in-view section.company-section .row .columns .sticky-note .work-experience a:hover, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing a:hover {
+  color: inherit;
+}
+/* line 358, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card a:hover .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience a:hover .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .profile-card a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .work-experience a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing a:hover .material-icons {
+  color: inherit;
+}
+/* line 363, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card img.profile-pic, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience img.profile-pic, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing img.profile-pic, #logged-in-view section.company-section .row .columns .sticky-note .profile-card img.profile-pic, #logged-in-view section.company-section .row .columns .sticky-note .work-experience img.profile-pic, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing img.profile-pic {
+  display: relative;
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 371, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card img.company-logo, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience img.company-logo, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing img.company-logo, #logged-in-view section.company-section .row .columns .sticky-note .profile-card img.company-logo, #logged-in-view section.company-section .row .columns .sticky-note .work-experience img.company-logo, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing img.company-logo {
+  display: relative;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 379, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .taglines, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .taglines, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .taglines, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .taglines, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .taglines, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .taglines {
+  margin-top: 10px;
+}
+/* line 381, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .taglines p, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .taglines p, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .taglines p, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .taglines p, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .taglines p, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .taglines p {
+  line-height: 175%;
+}
+/* line 385, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card h2.user-name, #logged-in-view section.profile-section .row .columns .sticky-note .profile-card h2.company-name, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience h2.user-name, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience h2.company-name, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing h2.user-name, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing h2.company-name, #logged-in-view section.company-section .row .columns .sticky-note .profile-card h2.user-name, #logged-in-view section.company-section .row .columns .sticky-note .profile-card h2.company-name, #logged-in-view section.company-section .row .columns .sticky-note .work-experience h2.user-name, #logged-in-view section.company-section .row .columns .sticky-note .work-experience h2.company-name, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing h2.user-name, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing h2.company-name {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+/* line 389, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card p, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience p, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing p, #logged-in-view section.company-section .row .columns .sticky-note .profile-card p, #logged-in-view section.company-section .row .columns .sticky-note .work-experience p, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing p {
+  line-height: 150%;
+}
+/* line 391, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card p.location, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience p.location, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing p.location, #logged-in-view section.company-section .row .columns .sticky-note .profile-card p.location, #logged-in-view section.company-section .row .columns .sticky-note .work-experience p.location, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing p.location {
+  font-size: 14px;
+  color: #7d7d7f;
+}
+/* line 395, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card p.industry, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience p.industry, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing p.industry, #logged-in-view section.company-section .row .columns .sticky-note .profile-card p.industry, #logged-in-view section.company-section .row .columns .sticky-note .work-experience p.industry, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing p.industry {
+  font-size: 14px;
+  color: #7d7d7f;
+}
+/* line 399, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card p.company-size, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience p.company-size, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing p.company-size, #logged-in-view section.company-section .row .columns .sticky-note .profile-card p.company-size, #logged-in-view section.company-section .row .columns .sticky-note .work-experience p.company-size, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing p.company-size {
+  font-size: 14px;
+  font-weight: 500;
+  color: #bebebe;
+}
+/* line 404, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card p.headline, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience p.headline, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing p.headline, #logged-in-view section.company-section .row .columns .sticky-note .profile-card p.headline, #logged-in-view section.company-section .row .columns .sticky-note .work-experience p.headline, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing p.headline {
+  font-size: 16px;
+  font-weight: 500;
+}
+/* line 408, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card p.current-position, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience p.current-position, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing p.current-position, #logged-in-view section.company-section .row .columns .sticky-note .profile-card p.current-position, #logged-in-view section.company-section .row .columns .sticky-note .work-experience p.current-position, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing p.current-position {
+  font-size: 14px;
+  color: #7d7d7f;
+}
+/* line 412, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card p.company-summary, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience p.company-summary, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing p.company-summary, #logged-in-view section.company-section .row .columns .sticky-note .profile-card p.company-summary, #logged-in-view section.company-section .row .columns .sticky-note .work-experience p.company-summary, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing p.company-summary {
+  font-size: 0.825em;
+  margin-left: 10px;
+  color: #7d7d7f;
+}
+/* line 418, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .experience-card, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .experience-card, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .experience-card, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .experience-card, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .experience-card, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .experience-card {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 422, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .experience-card.last, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .experience-card.last, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .experience-card.last, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .experience-card.last, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .experience-card.last, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .experience-card.last {
+  border: none;
+  margin-bottom: 5px;
+}
+/* line 428, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question {
+  margin: 20px;
+}
+/* line 430, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question.last, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question.last, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question.last, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question.last, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question.last, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question.last {
+  border: none;
+}
+/* line 433, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question h4, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question h4, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question h4, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question h4, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question h4, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question h4 {
+  font-size: 1.125em;
+  color: #006db7;
+  font-weight: 400;
+  line-height: 175%;
+  font-style: italic;
+}
+/* line 439, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question h4 .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question h4 .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question h4 .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question h4 .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question h4 .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question h4 .material-icons {
+  font-style: italic;
+}
+/* line 443, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 85%;
+  background-color: #f7f7f7;
+  vertical-align: top;
+  margin: 12px 20px 20px 40px;
+  padding: 20px;
+  box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.1);
+}
+/* line 453, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer h5, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer h5, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer h5, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer h5, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer h5, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer h5 {
+  font-size: 0.875em;
+  color: #24588d;
+  font-weight: 400;
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 460, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer small, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer small, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer small, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer small, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer small, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer small {
+  font-size: 0.725em;
+  color: #7d7d7f;
+  display: inline-block;
+  font-weight: 300;
+}
+/* line 466, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer p, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer p, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer p, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer p, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer p, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer p {
+  font-size: 0.825em;
+  margin-top: 3px;
+}
+/* line 470, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer {
+  color: #bebebe;
+  margin-top: 5px;
+}
+/* line 473, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a {
+  color: #7d7d7f;
+}
+/* line 475, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a small, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a small, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a small, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a small, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a small, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a small {
+  line-height: 22px;
+}
+/* line 478, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a .material-icons {
+  color: #7d7d7f;
+  font-size: 16px;
+  line-height: 22px;
+}
+/* line 483, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a:hover, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a:hover, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a:hover, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a:hover, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a:hover, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a:hover {
+  color: #4c4846;
+}
+/* line 485, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a:hover .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a:hover .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .profile-card .questions .question .answer .edit-answer a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .work-experience .questions .question .answer .edit-answer a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .howrudoing .questions .question .answer .edit-answer a:hover .material-icons {
+  color: #4c4846;
+}
+/* line 498, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .allies a small, #logged-in-view section.company-section .row .columns .sticky-note .allies a small {
+  font-size: 11px;
+}
+/* line 501, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .allies a:hover, #logged-in-view section.company-section .row .columns .sticky-note .allies a:hover {
+  color: inherit;
+}
+/* line 503, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .allies a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .allies a:hover .material-icons {
+  color: #4c4846;
+}
+/* line 508, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .allies .sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .allies .sub-menu {
+  line-height: 36px;
+}
+/* line 510, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .allies .sub-menu small, #logged-in-view section.company-section .row .columns .sticky-note .allies .sub-menu small {
+  line-height: 36px;
+  vertical-align: middle;
+}
+/* line 514, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .allies .sub-menu .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .allies .sub-menu .material-icons {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 36px;
+}
+/* line 523, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .summary p, #logged-in-view section.company-section .row .columns .sticky-note .summary p {
+  color: #7d7d7f;
+}
+/* line 528, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally {
+  width: 90%;
+  display: block !important;
+  margin: 0 auto 20px auto;
+  padding: 5px 20px 20px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 534, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally.last, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally.last {
+  border: none;
+}
+/* line 538, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally h4.ally-class, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally h4.ally-class {
+  font-size: 0.9725em;
+  color: #7d7d7f;
+  line-height: 40px;
+}
+/* line 542, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally h4.ally-class .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally h4.ally-class .material-icons {
+  font-size: 24px;
+  line-height: 40px;
+}
+/* line 548, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-comment, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-comment {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 65%;
+  background-color: #f7f7f7;
+  vertical-align: top;
+  margin: 12px 20px 20px 20px;
+  padding: 20px;
+  box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.1);
+}
+/* line 558, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-comment h5, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-comment h5 {
+  font-size: 0.875em;
+  color: #24588d;
+  font-weight: 400;
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 565, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-comment small, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-comment small {
+  font-size: 0.725em;
+  color: #7d7d7f;
+  display: inline-block;
+  font-weight: 300;
+}
+/* line 571, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-comment p, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-comment p {
+  font-size: 0.825em;
+  margin-top: 3px;
+}
+/* line 574, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-comment p.reply, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-comment p.reply {
+  color: #bebebe;
+  margin-top: 5px;
+  line-height: 36px;
+}
+/* line 578, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-comment p.reply .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-comment p.reply .material-icons {
+  font-size: 16px;
+  line-height: 36px;
+}
+/* line 582, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-comment p.reply a, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-comment p.reply a {
+  color: #7d7d7f;
+}
+/* line 584, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-comment p.reply a:hover, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-comment p.reply a:hover {
+  color: #4c4846;
+}
+/* line 591, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-profile, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-profile {
+  display: inline-block;
+  width: 128px;
+}
+/* line 594, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-profile p, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-profile p {
+  width: 100%;
+  padding-left: 0;
+  font-size: 0.875em;
+}
+/* line 598, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name {
+  font-weight: 500;
+  display: inline-block;
+  line-height: 36px;
+}
+/* line 602, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name a, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name a {
+  color: #7d7d7f;
+}
+/* line 604, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name a .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name a .material-icons {
+  color: #bebebe;
+}
+/* line 607, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name a:hover, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name a:hover {
+  color: #4c4846;
+}
+/* line 609, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-name a:hover .material-icons {
+  color: #4c4846;
+}
+/* line 615, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-title, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally .ally-profile p.ally-title {
+  color: #bebebe;
+  font-size: 0.775em;
+}
+/* line 621, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally ul, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally ul {
+  display: inline-block;
+  padding: 0;
+}
+/* line 624, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally ul li, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally ul li {
+  vertical-align: top;
+  line-height: normal;
+}
+/* line 629, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally a, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally a {
+  color: #fc5158;
+}
+/* line 632, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.my-ally img.profile-thumb, #logged-in-view section.company-section .row .columns .sticky-note .column.my-ally img.profile-thumb {
+  width: 128px;
+  height: 128px;
+  display: block;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 641, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.skills, #logged-in-view section.company-section .row .columns .sticky-note .column.skills {
+  color: #fc5158;
+  padding: 10px 20px;
+  width: 100%;
+}
+/* line 645, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.skills ul, #logged-in-view section.company-section .row .columns .sticky-note .column.skills ul {
+  padding: 0;
+  font-weight: 300;
+}
+/* line 648, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.skills ul li, #logged-in-view section.company-section .row .columns .sticky-note .column.skills ul li {
+  line-height: 30px;
+  list-style: none;
+  display: block;
+}
+/* line 655, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.experience-summary, #logged-in-view section.company-section .row .columns .sticky-note .column.experience-summary {
+  padding: 10px 0 10px 0;
+}
+/* line 657, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.experience-summary h4.job-title, #logged-in-view section.company-section .row .columns .sticky-note .column.experience-summary h4.job-title {
+  font-size: 1em;
+}
+/* line 661, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.experience-summary p.company-name, #logged-in-view section.company-section .row .columns .sticky-note .column.experience-summary p.company-name {
+  font-size: 1em;
+  font-weight: 400;
+  color: #7d7d7f;
+}
+/* line 666, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .column.experience-summary p.time-location, #logged-in-view section.company-section .row .columns .sticky-note .column.experience-summary p.time-location {
+  font-size: 0.825em;
+  color: #7d7d7f;
+}
+/* line 673, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+/* line 677, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle.last, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams.last, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle.last, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams.last {
+  border: none;
+}
+/* line 680, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-class, #logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .department-name, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-class, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .department-name, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-class, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .department-name, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-class, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .department-name {
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 686, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-class a small, #logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .department-name a small, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-class a small, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .department-name a small, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-class a small, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .department-name a small, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-class a small, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .department-name a small {
+  font-size: 11px;
+}
+/* line 689, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-class a:hover, #logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .department-name a:hover, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-class a:hover, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .department-name a:hover, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-class a:hover, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .department-name a:hover, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-class a:hover, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .department-name a:hover {
+  color: inherit;
+}
+/* line 691, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-class a:hover .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .department-name a:hover .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-class a:hover .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .department-name a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-class a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .department-name a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-class a:hover .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .department-name a:hover .material-icons {
+  color: inherit;
+}
+/* line 696, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-class .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .department-name .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-class .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .department-name .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-class .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .department-name .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-class .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .department-name .material-icons {
+  vertical-align: middle;
+  display: inline-block;
+  color: #7d7d7f;
+  line-height: 36px;
+}
+/* line 701, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-class .material-icons.sub-menu, #logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .department-name .material-icons.sub-menu, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-class .material-icons.sub-menu, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .department-name .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-class .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .department-name .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-class .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .department-name .material-icons.sub-menu {
+  line-height: 36px;
+  font-size: 16px;
+  color: #bebebe;
+  text-align: right;
+}
+/* line 708, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-class h4, #logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .department-name h4, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-class h4, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .department-name h4, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-class h4, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .department-name h4, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-class h4, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .department-name h4 {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: #4c4846;
+  line-height: 36px;
+  margin-left: 0px;
+}
+/* line 717, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-class p, #logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .department-name p, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-class p, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .department-name p, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-class p, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .department-name p, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-class p, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .department-name p {
+  padding-left: 5px;
+  color: #bebebe;
+  font-size: 0.75em;
+  font-style: italic;
+}
+/* line 725, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-profile, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-profile, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-profile, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-profile {
+  vertical-align: top;
+  display: inline-block;
+  width: 112px;
+  margin: 2px;
+  text-align: center;
+  font-size: 0.825em;
+}
+/* line 732, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-profile a, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-profile a, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-profile a, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-profile a {
+  color: #fc5158;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+/* line 737, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-profile a:hover, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-profile a:hover, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-profile a:hover, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-profile a:hover {
+  color: #4c4846;
+}
+/* line 739, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-profile a:hover .ally-name, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-profile a:hover .ally-name, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-profile a:hover .ally-name, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-profile a:hover .ally-name {
+  color: #fc5158;
+}
+/* line 743, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-profile a .ally-name, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-profile a .ally-name, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-profile a .ally-name, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-profile a .ally-name {
+  font-weight: 400;
+  display: block;
+  line-height: 16px;
+  font-size: 10px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 112px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  color: #7d7d7f;
+}
+/* line 755, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .ally-profile img.profile-thumb, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .ally-profile img.profile-thumb, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .ally-profile img.profile-thumb, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .ally-profile img.profile-thumb {
+  width: 112px;
+  height: 112px;
+  display: block;
+  border-top: 4px solid rgba(255, 255, 255, 0.8);
+  border-right: 4px solid rgba(255, 255, 255, 0.8);
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 767, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .team-list ul, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .team-list ul, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .team-list ul, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .team-list ul {
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+/* line 771, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .team-list ul li, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .team-list ul li, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .team-list ul li, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .team-list ul li {
+  list-style: none;
+  width: 100%;
+  font-size: 0.925em;
+}
+/* line 775, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .team-list ul li .material-icons, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .team-list ul li .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .team-list ul li .material-icons, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .team-list ul li .material-icons {
+  font-size: 24px;
+  color: #bebebe;
+  line-height: 42px;
+}
+/* line 779, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .team-list ul li .material-icons.sub-menu, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .team-list ul li .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .team-list ul li .material-icons.sub-menu, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .team-list ul li .material-icons.sub-menu {
+  font-size: 14px;
+}
+/* line 785, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .team-list ul li a .material-icons:hover, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .team-list ul li a .material-icons:hover, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .team-list ul li a .material-icons:hover, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .team-list ul li a .material-icons:hover {
+  color: #4c4846;
+}
+/* line 791, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.profile-section .row .columns .sticky-note .ally-circle .team-list ul li .column.team-name, #logged-in-view section.profile-section .row .columns .sticky-note .departments-teams .team-list ul li .column.team-name, #logged-in-view section.company-section .row .columns .sticky-note .ally-circle .team-list ul li .column.team-name, #logged-in-view section.company-section .row .columns .sticky-note .departments-teams .team-list ul li .column.team-name {
+  color: #7d7d7f;
+  margin-left: 10px;
+  line-height: 42px;
+}
+
+/* line 811, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.hello {
+  display: block;
+}
+/* line 813, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.hello .table-cell {
+  height: 280px;
+  vertical-align: middle;
+  display: table-cell;
+  width: inherit;
+}
+/* line 818, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.hello .table-cell h3 {
+  font-size: 375.0%;
+  font-weight: 600;
+}
+/* line 822, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.hello .table-cell h4 {
+  font-size: 145.0%;
+  font-weight: 400;
+  line-height: 150%;
+  color: #7d7d7f;
+}
+/* line 828, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.hello .table-cell .highlight {
+  background-image: url(../images/highlight-hello.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+/* line 835, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.strip {
+  display: block;
+  border-top: 1px solid rgba(150, 150, 150, 0.1);
+  border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+/* line 841, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.strip #contact {
+  padding: 20px 0 60px 0;
+}
+/* line 843, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.strip #contact h3 {
+  font-family: Georgia, "Roboto Slab", "Times New Roman", Serif;
+  margin-bottom: 20px;
+}
+
+/* line 849, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.testimonial {
+  display: table-cell;
+  vertical-align: middle;
+  height: 400px;
+}
+/* line 853, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.testimonial p {
+  font-family: Georgia, "Roboto Slab", "Times New Roman", Serif;
+  font-style: italic;
+}
+
+/* line 858, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.picture {
+  display: block;
+  height: 400px;
+  background-image: url(../images/kissaah-app-screenshot.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 80px !important;
+}
+
+/* line 870, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view section {
+  width: 100%;
+}
+/* line 872, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view section.bottomfix {
+  padding-bottom: 360px;
+}
+/* line 876, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer {
+  height: 360px;
+  padding-top: 40px;
+}
+/* line 879, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .on-public-view {
+  display: block;
+}
+/* line 882, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .on-logged-in-view {
+  display: none;
+  visibility: hidden;
+}
+/* line 888, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer nav ul li {
+  display: block;
+  font-size: 1.125em;
+  line-height: 1.75em;
+}
+/* line 892, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer nav ul li a {
+  color: #bebebe;
+  font-weight: 300;
+}
+/* line 900, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .logo h2 {
+  display: block;
+}
+/* line 902, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .logo h2 img {
+  width: 240px;
+}
+/* line 907, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .social-icons ul li a.facebook {
+  background-image: url(../images/ic-social-facebook-gray.png);
+}
+/* line 910, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .social-icons ul li a.twitter {
+  background-image: url(../images/ic-social-twitter-gray.png);
+}
+/* line 913, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .social-icons ul li a.linkedin {
+  background-image: url(../images/ic-social-linkedin-gray.png);
+}
+/* line 916, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .social-icons ul li a.stack-overflow {
+  background-image: url(../images/ic-social-stackoverflow-gray.png);
+}
+/* line 919, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#public-view footer .social-icons ul li a.github {
+  background-image: url(../images/ic-social-github-gray.png);
+}
+
+/* line 926, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section {
+  width: 100%;
+}
+/* line 928, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view section.bottomfix {
+  padding-bottom: 120px;
+}
+/* line 933, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view footer .on-public-view {
+  display: none;
+  visibility: hidden;
+}
+/* line 937, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view footer .on-logged-in-view {
+  display: block;
+}
+/* line 940, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view footer nav {
+  text-align: right;
+}
+/* line 943, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view footer nav ul li {
+  display: inline-block;
+  font-size: 0.825em;
+  line-height: 1.75em;
+  margin-left: 20px;
+}
+/* line 948, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#logged-in-view footer nav ul li a {
+  color: #bebebe;
+  font-weight: 300;
+}
+
+/* line 960, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+footer {
+  color: #fcfcfa;
+  position: absolute;
+  bottom: 0;
+  background-color: #4c4846;
+  width: 100%;
+  border-top: 1px solid rgba(150, 150, 150, 0.1);
+  border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+}
+/* line 968, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+footer small {
+  font-size: 0.75em;
+  font-weight: 300;
+}
+/* line 973, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+footer .bottomfix {
+  padding-bottom: 64px;
+}
+/* line 976, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+footer .copyright {
+  border-top: 1px solid rgba(150, 150, 150, 0.1);
+  border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+  display: block;
+  min-height: 64px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  line-height: 44px;
+  position: absolute;
+  bottom: 0;
+  color: #7d7d7f;
+  font-size: 0.875em;
+}
+
+/* 3. Compornents */
+/* line 994, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons {
+  padding-top: 26px;
+}
+/* line 996, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul {
+  height: 20px;
+}
+/* line 998, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+/* line 1001, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+/* line 1007, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* line 1011, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul li a.facebook {
+  background-image: url(../images/ic-social-facebook.png);
+}
+/* line 1014, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul li a.twitter {
+  background-image: url(../images/ic-social-twitter.png);
+}
+/* line 1017, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul li a.linkedin {
+  background-image: url(../images/ic-social-linkedin.png);
+}
+/* line 1020, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul li a.stack-overflow {
+  background-image: url(../images/ic-social-stackoverflow.png);
+}
+/* line 1023, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.social-icons ul li a.github {
+  background-image: url(../images/ic-social-github.png);
+}
+
+/* line 1031, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 100%;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.005em;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 1042, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.button:hover {
+  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.1);
+}
+/* line 1045, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+a.button:active {
+  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.25);
+}
+
+/* line 1049, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.login {
+  text-align: center;
+  width: 130px;
+  border: 1px solid;
+  line-height: 2.5em;
+  font-size: 12px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+/* line 1059, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.extend {
+  width: 100%;
+  line-height: 3.5em;
+}
+
+/* line 1063, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.large {
+  width: 45%;
+  line-height: 3.75em;
+}
+
+/* line 1067, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.medium {
+  width: 30%;
+  line-height: 3.75em;
+}
+
+/* line 1071, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.small {
+  width: 18%;
+  line-height: 2.25em;
+  font-size: 0.8750em;
+  color: #fcfcfa;
+  font-weight: 400;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 1080, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.primary {
+  background-color: #faeb37;
+}
+
+/* line 1083, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.secondary {
+  background-color: #006db7;
+}
+
+/* line 1086, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.alert {
+  background-color: #fd594e;
+}
+
+/* line 1089, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.success {
+  background-color: #afda51;
+}
+
+/* line 1092, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.warning {
+  background-color: #ffbe3c;
+}
+
+/* line 1095, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.button.info {
+  background-color: #35afd8;
+}
+
+/* line 1102, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.search i {
+  color: #006db7;
+  width: 24px;
+  margin: 0 10px;
+  line-height: 29px;
+}
+/* line 1108, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.search input {
+  width: 80%;
+  padding: 5px 10px;
+  font-size: 1em;
+  font-family: Georgia, "Roboto Slab", "Times New Roman", Serif;
+  background-color: #fcfcfa;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 1118, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+input.button:hover {
+  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.1);
+}
+/* line 1121, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+input.button:active {
+  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.25);
+}
+
+/* line 1125, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#error_explanation {
+  color: #fd594e;
+}
+/* line 1127, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#error_explanation ul {
+  color: #fd594e;
+  margin: 0 0 30px 0;
+}
+
+/* line 1136, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+#session_remember_me {
+  width: auto;
+}
+
+/* line 1141, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 1144, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note.first {
+  padding-left: 0;
+}
+/* line 1147, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note.last {
+  padding-right: 0;
+}
+/* line 1150, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row {
+  background-color: #fcfcfa;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 1153, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row h2 {
+  margin-bottom: 25px;
+}
+/* line 1157, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row.feed .material-icons {
+  font-size: 26px !important;
+}
+/* line 1160, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row.feed .feed-item {
+  margin: 0 5px 0 5px;
+  padding: 0 0 15px 0;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+/* line 1164, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row.feed .feed-item p {
+  line-height: 125%;
+  color: #7d7d7f;
+  font-size: 0.875em !important;
+}
+/* line 1169, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row.feed .feed-item .caption {
+  font-size: 0.725em !important;
+  color: #bebebe;
+  font-weight: 400;
+  margin: 10px auto 0 auto;
+}
+/* line 1174, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row.feed .feed-item .caption .author {
+  font-weight: 500;
+  margin-right: 10px;
+  color: #fc5158;
+}
+/* line 1178, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row.feed .feed-item .caption .author a {
+  color: #fc5158;
+}
+/* line 1183, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .row.feed .feed-item.last {
+  margin-bottom: 0;
+  padding: 0 0 5px 0;
+  border: none;
+}
+/* line 1193, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note ul {
+  padding: 20px;
+}
+/* line 1195, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note ul li {
+  list-style: inherit;
+  line-height: 42px;
+}
+/* line 1200, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .bottom {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 0.75em;
+  background-color: #bebebe;
+  color: #fcfcfa;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 1208, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .bottom a {
+  display: block;
+  width: 100%;
+  color: #fcfcfa;
+  padding: 0 15px;
+  line-height: 30px;
+}
+/* line 1214, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .bottom a .sub-menu {
+  display: inline-block;
+  vertical-align: top;
+  height: 20px;
+}
+/* line 1219, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .bottom a .material-icons {
+  font-size: 14px;
+  line-height: 30px;
+}
+/* line 1223, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .bottom a:hover {
+  background-color: #7d7d7f;
+  color: #4c4846;
+}
+/* line 1227, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.sticky-note .bottom a:active {
+  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.25);
+}
+
+/* line 1235, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.gallery {
+  display: block;
+  width: 90%;
+  margin: 40px auto 20px auto;
+  text-align: center;
+}
+/* line 1240, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.gallery img {
+  display: inline-block;
+  width: 220px;
+  margin: 5px;
+  -webkit-filter: grayscale(100%);
+  /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+  border: solid 4px rgba(0, 0, 0, 0.1);
+}
+
+/* line 1251, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.debug_dump, .code {
+  display: block;
+  background-color: #444;
+  color: #c9ccce;
+  font-size: 0.9em;
+  font-family: monospace;
+  white-space: pre;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
+  padding: 2%;
+}
+
+/* line 1263, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.code {
+  margin: 1%;
+}
+
+/* Responsible Settings */
+/* .screen-full
+
+*/
+/* line 1271, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.hide {
+  display: none;
+  visibility: hidden;
+  text-indent: -9999px;
+}
+
+/* line 1276, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+.screen-m,
+.screen-s {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1280px) {
+  /* line 1284, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section, header .row, footer .row {
+    width: 1280px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1025px) {
+  /* line 1295, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown .trigger {
+    display: none;
+    visibility: hidden;
+  }
+  /* line 1299, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown .dropdown-content {
+    display: table-cell;
+    height: 98px;
+    vertical-align: middle;
+    width: 612px;
+  }
+}
+/* .screen-l
+   if screen width is btween 861px to 1024px */
+@media screen and (max-width: 1024px) {
+  /* line 1318, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* line 1322, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .trigger {
+    margin-top: 36px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    background-color: #006db7;
+  }
+  /* line 1331, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .trigger .bar {
+    display: block;
+    height: 2px;
+    width: 32px;
+    background-color: #fcfcfa;
+    margin-bottom: 6px;
+  }
+  /* line 1340, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .trigger:hover, #public-view header .trigger:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #7d7d7f;
+  }
+  /* line 1344, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 320px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    line-height: 48px;
+    text-align: left;
+    margin: 5px;
+  }
+  /* line 1356, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown-content a {
+    margin-left: 0;
+    font-weight: 300;
+    text-indent: 20px;
+    color: #4c4846;
+    display: block;
+    width: 320px;
+    height: 48px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 1365, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown-content a:hover {
+    color: #fcfcfa;
+    background-color: rgba(124, 203, 239, 0.9);
+  }
+  /* line 1370, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown-content a.last {
+    border: none;
+  }
+  /* line 1372, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown-content a.last.login {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 48px;
+    text-indent: 0;
+    color: #fcfcfa;
+    background-color: rgba(64, 183, 242, 0.9);
+  }
+  /* line 1379, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .dropdown-content a.last.login:hover {
+    box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2);
+  }
+  /* line 1385, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .show {
+    display: block;
+  }
+
+  /* line 1392, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .hello .table-cell h3 {
+    font-size: 350%;
+  }
+  /* line 1395, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .hello .table-cell h4 {
+    font-size: 115%;
+  }
+
+  /* line 1400, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .screen-m,
+  .screen-s {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 1405, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .screen-l {
+    display: inherit;
+    visibility: visible;
+  }
+
+  /* line 1412, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .gallery img {
+    width: 35%;
+  }
+}
+/* .screen-m
+   if screen width is btween 421px to 860px */
+@media screen and (max-width: 860px) {
+  /* line 1423, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header .grid-80 {
+    width: 80%;
+  }
+  /* line 1426, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header .logo {
+    float: left;
+  }
+  /* line 1428, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header .logo p {
+    line-height: 48px;
+  }
+  /* line 1431, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header .logo h1 {
+    width: 100%;
+  }
+  /* line 1433, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header .logo h1 a {
+    background-size: 100%;
+  }
+  /* line 1438, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav {
+    font-size: 16px;
+  }
+  /* line 1441, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .button {
+    display: block;
+    margin: 0;
+    min-height: inherit;
+    text-align: inherit;
+    letter-spacing: 0;
+    box-shadow: 0;
+  }
+  /* line 1449, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav a.button {
+    margin-left: 0;
+    font-weight: 300;
+    text-indent: 20px;
+    color: #4c4846;
+    display: block;
+    width: 360px;
+    height: 58px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 1450, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav a.button:hover {
+    box-shadow: inset 0px 0px 0 2000px transparent;
+  }
+  /* line 1453, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav a.button:active {
+    box-shadow: inset 0px 0px 0 2000px transparent;
+  }
+  /* line 1464, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav a.button:hover {
+    color: #fcfcfa;
+    background-color: rgba(124, 203, 239, 0.9);
+  }
+  /* line 1471, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* line 1475, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .trigger {
+    margin-top: 36px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    background-color: #006db7;
+  }
+  /* line 1484, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .trigger .bar {
+    display: block;
+    height: 2px;
+    width: 32px;
+    background-color: #fcfcfa;
+    margin-bottom: 6px;
+  }
+  /* line 1493, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .trigger:hover, header nav .trigger:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #7d7d7f;
+  }
+  /* line 1497, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 320px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    line-height: 48px;
+    text-align: left;
+    margin: 5px;
+  }
+  /* line 1509, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .dropdown-content a {
+    margin-left: 0;
+    font-weight: 300;
+    text-indent: 20px;
+    color: #4c4846;
+    display: block;
+    width: 320px;
+    height: 48px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 1518, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .dropdown-content a:hover {
+    color: #fcfcfa;
+    background-color: rgba(124, 203, 239, 0.9);
+  }
+  /* line 1523, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .dropdown-content a.last {
+    border: none;
+  }
+  /* line 1525, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .dropdown-content a.last.login {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 48px;
+    text-indent: 0;
+    color: #fcfcfa;
+    background-color: rgba(0, 109, 183, 0.9);
+  }
+  /* line 1532, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .dropdown-content a.last.login:hover {
+    box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2);
+  }
+  /* line 1538, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  header nav .show {
+    display: block;
+  }
+
+  /* line 1545, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .hello .table-cell {
+    height: 200px;
+  }
+  /* line 1547, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .hello .table-cell h3 {
+    font-size: 255%;
+  }
+  /* line 1550, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .hello .table-cell h4 {
+    font-size: 115%;
+  }
+  /* line 1555, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .picture {
+    height: 280px;
+    margin-bottom: 20px;
+  }
+
+  /* line 1561, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  footer .row.bottomfix {
+    display: table;
+  }
+  /* line 1563, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  footer .row.bottomfix .columns {
+    display: table-cell;
+    vertical-align: middle;
+    height: 210px;
+  }
+  /* line 1569, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  footer .copyright {
+    padding: 10px 20px;
+  }
+
+  /* line 1575, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .gallery img {
+    width: 47%;
+  }
+
+  /* line 1581, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .screen-full,
+  .screen-l,
+  .screen-s {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 1587, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .screen-m {
+    display: inherit;
+    visibility: visible;
+  }
+
+  /* line 1591, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .lefted,
+  .righted {
+    margin: 0 auto;
+  }
+
+  /* line 1595, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .logo {
+    text-align: center;
+  }
+
+  /* line 1598, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .sticky-note {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* line 1602, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .grid-80 {
+    width: 100%;
+  }
+
+  /* line 1606, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .columns .grid-10,
+  .columns .grid-20,
+  .columns .grid-30,
+  .columns .grid-40,
+  .columns .grid-50,
+  .columns .grid-60,
+  .columns .grid-70,
+  .columns .grid-80,
+  .columns .grid-90,
+  .columns .grid-100 {
+    float: none;
+    width: 100%;
+  }
+  /* line 1618, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .columns .grid-10 .row,
+  .columns .grid-20 .row,
+  .columns .grid-30 .row,
+  .columns .grid-40 .row,
+  .columns .grid-50 .row,
+  .columns .grid-60 .row,
+  .columns .grid-70 .row,
+  .columns .grid-80 .row,
+  .columns .grid-90 .row,
+  .columns .grid-100 .row {
+    padding: 20px;
+  }
+}
+/* .screen-s
+   if screen width is smaller than 420px */
+@media screen and (max-width: 420px) {
+  /* line 1630, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80, #public-view header .grid-50, #logged-in-view header .grid-80, #logged-in-view header .grid-50 {
+    height: auto;
+  }
+  /* line 1632, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav, #public-view header .grid-50 nav, #logged-in-view header .grid-80 nav, #logged-in-view header .grid-50 nav {
+    font-size: 0.9375em;
+  }
+  /* line 1634, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav a, #public-view header .grid-50 nav a, #logged-in-view header .grid-80 nav a, #logged-in-view header .grid-50 nav a {
+    margin: 0;
+  }
+  /* line 1638, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav .dropdown, #public-view header .grid-50 nav .dropdown, #logged-in-view header .grid-80 nav .dropdown, #logged-in-view header .grid-50 nav .dropdown {
+    position: relative;
+    display: block;
+    visibility: visible;
+    padding-bottom: 20px;
+  }
+  /* line 1644, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav .trigger, #public-view header .grid-50 nav .trigger, #logged-in-view header .grid-80 nav .trigger, #logged-in-view header .grid-50 nav .trigger {
+    display: none;
+    visibility: hidden;
+  }
+  /* line 1648, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav .trigger:hover, #public-view header .grid-80 nav .trigger:focus, #public-view header .grid-50 nav .trigger:hover, #public-view header .grid-50 nav .trigger:focus, #logged-in-view header .grid-80 nav .trigger:hover, #logged-in-view header .grid-80 nav .trigger:focus, #logged-in-view header .grid-50 nav .trigger:hover, #logged-in-view header .grid-50 nav .trigger:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #7d7d7f;
+  }
+  /* line 1652, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav .dropdown-content, #public-view header .grid-50 nav .dropdown-content, #logged-in-view header .grid-80 nav .dropdown-content, #logged-in-view header .grid-50 nav .dropdown-content {
+    display: block;
+    position: relative;
+    background-color: #fcfcfa;
+    min-width: 90%;
+  }
+  /* line 1659, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav .dropdown-content a, #public-view header .grid-50 nav .dropdown-content a, #logged-in-view header .grid-80 nav .dropdown-content a, #logged-in-view header .grid-50 nav .dropdown-content a {
+    font-weight: 300;
+    text-indent: 20px;
+    color: #4c4846;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 1666, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav .dropdown-content a:hover, #public-view header .grid-50 nav .dropdown-content a:hover, #logged-in-view header .grid-80 nav .dropdown-content a:hover, #logged-in-view header .grid-50 nav .dropdown-content a:hover {
+    color: #fcfcfa;
+    background-color: rgba(124, 203, 239, 0.9);
+  }
+  /* line 1671, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  #public-view header .grid-80 nav .dropdown-content a.last, #public-view header .grid-50 nav .dropdown-content a.last, #logged-in-view header .grid-80 nav .dropdown-content a.last, #logged-in-view header .grid-50 nav .dropdown-content a.last {
+    border: none;
+  }
+
+  /* line 1682, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .screen-full,
+  .screen-l,
+  .screen-m {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 1688, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .screen-s {
+    display: inherit;
+    visibility: visible;
+  }
+
+  /* line 1692, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section {
+    width: 320px;
+    margin: 0 auto;
+  }
+  /* line 1695, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .hello .table-cell {
+    height: 160px;
+  }
+  /* line 1697, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .hello .table-cell h3 {
+    font-size: 1.75em;
+    line-height: 100%;
+    display: block;
+    width: 320px;
+    margin-bottom: 0;
+  }
+  /* line 1704, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .hello .table-cell h4 {
+    font-size: 14px;
+    line-height: 150%;
+    margin: 0 auto;
+  }
+  /* line 1710, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .picture {
+    height: 180px;
+    margin-bottom: 30px !important;
+  }
+  /* line 1714, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section .testimonial {
+    display: block;
+    margin: 50px auto;
+  }
+  /* line 1718, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section.strip {
+    width: 100%;
+  }
+  /* line 1720, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section.strip .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* line 1723, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  section.strip .row .grid-80, section.strip .row .grid-70 {
+    width: 80%;
+  }
+
+  /* line 1729, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .grid-80, .grid-70 {
+    width: 90%;
+  }
+
+  /* line 1733, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .grid-40.logo {
+    width: 100%;
+  }
+
+  /* line 1736, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .grid-60 {
+    width: 100%;
+  }
+
+  /* line 1740, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .topbar .grid-80, .topbar .grid-70 {
+    width: 98%;
+  }
+  /* line 1742, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .topbar .grid-80 .lefted, .topbar .grid-80 .righted, .topbar .grid-70 .lefted, .topbar .grid-70 .righted {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+  }
+  /* line 1747, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .topbar .grid-80 .grid-50, .topbar .grid-70 .grid-50 {
+    width: 100%;
+  }
+  /* line 1750, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .topbar .grid-80 .logo a, .topbar .grid-70 .logo a {
+    margin: 0 auto;
+    width: 178px;
+    height: 48px;
+  }
+
+  /* line 1762, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .columns .grid-10,
+  .columns .grid-20,
+  .columns .grid-30,
+  .columns .grid-40,
+  .columns .grid-50,
+  .columns .grid-60,
+  .columns .grid-70,
+  .columns .grid-80,
+  .columns .grid-90,
+  .columns .grid-100 {
+    width: 100%;
+  }
+  /* line 1773, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .columns .grid-10.sticky-note,
+  .columns .grid-20.sticky-note,
+  .columns .grid-30.sticky-note,
+  .columns .grid-40.sticky-note,
+  .columns .grid-50.sticky-note,
+  .columns .grid-60.sticky-note,
+  .columns .grid-70.sticky-note,
+  .columns .grid-80.sticky-note,
+  .columns .grid-90.sticky-note,
+  .columns .grid-100.sticky-note {
+    width: 100%;
+  }
+
+  /* line 1781, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .gallery img {
+    width: 100%;
+  }
+
+  /* line 1785, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  h1 {
+    font-size: 1.75em;
+  }
+
+  /* line 1788, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  h2 {
+    font-size: 1.75em;
+  }
+
+  /* line 1792, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  h3 {
+    font-size: 1.5em;
+    line-height: 150%;
+  }
+
+  /* line 1796, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  h4 {
+    font-size: 1.125em;
+    line-height: 150%;
+  }
+
+  /* line 1800, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  h5 {
+    font-size: 1em;
+    line-height: 150%;
+  }
+
+  /* line 1804, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  p {
+    font-size: 1em;
+  }
+
+  /* line 1807, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .button.extend {
+    width: 100%;
+  }
+
+  /* line 1810, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .button.large {
+    width: 80%;
+    line-height: 3.75em;
+  }
+
+  /* line 1814, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .button.medium {
+    width: 80%;
+    line-height: 3.75em;
+  }
+
+  /* line 1818, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  .button.small {
+    width: 70%;
+    line-height: 3em;
+    font-size: 0.8750em;
+  }
+
+  /* line 1824, /Users/masaaki/rails/dev-345thrive/app/assets/stylesheets/style.css.scss.erb */
+  footer small {
+    font-size: 0.6875em;
+  }
+}
+/*
+HTML Cheatsheet
+
+a. Symboles
+Result	Description				Entity	Name	Entity Number
+ 		non-breaking space		&nbsp; 			&#160;
+<		less than 				&lt;		 	&#60;
+>	 	greater than		 	&gt; 			&#62;
+& 		ampersand			 	&amp; 			&#38;
+¢ 		cent 					&cent; 			&#162;
+£ 		pound 					&pound; 		&#163;
+¥ 		yen 					&yen; 			&#165;
+€ 		euro 					&euro; 			&#8364;
+© 		copyright 				&copy; 			&#169;
+® 		registered trademark 	&reg; 			&#174;
+
+b. Body Font Size
+px		em			percent
+0.25px	0.015625em	1.5625%
+0.5px	0.03125em	3.125%
+0.75px	0.046875em	4.6875%
+1px		0.5625em	6.25%
+1.25px	0.078125em	7.8125%
+1.5px	0.09375em	9.375%
+1.75px	0.109375em	10.9375%
+2px		0.125em		12.5%
+3px		0.1875em	18.75%
+5px		0.3125em	31.25%
+9px		0.5625em	56.25%
+10px	0.625em		62.50%
+11px	0.6875em	68.75%
+12px	0.75em		75.00%
+13px	0.8125em	81.25%
+14px	0.8750em	87.50%
+15px	0.9375em	93.75%
+16px	1em			100.00%
+17px	1.0625em	106.25%
+18px	1.125em		112.50%
+19px	1.1875em	118.75%
+20px	1.25em		125.00%
+21px	1.3125em	131.25%
+22px	1.375em		137.50%
+23px	1.4375em	143.75%
+24px	1.5em		150.00%
+25px	1.5625em	156.25%
+26px	1.625em		162.50%
+27px	1.6875em	168.75%
+28px	1.75em		175.00%
+29px	1.8125em	181.25%
+30px	1.875em		187.50%
+31px	1.9375em	193.75%
+32px	2em			200.00%
+33px	2.0625em	206.25%
+34px	2.125em		212.50%
+35px	2.1875em	218.75%
+36px	2.25em		225.00%
+37px	2.3125em	231.25%
+38px	2.375em		237.50%
+39px	2.4375em	243.75%
+40px	2.5em		250.00%
+41px	2.5625em	256.25%
+42px	2.625em		262.50%
+43px	2.6875em	268.75%
+44px	2.75em		275.00%
+45px	2.8125em	281.25%
+46px	2.875em		287.50%
+47px	2.9375em	293.75%
+48px	3em			300.00%
+
+Hint:
+Em size following same sequence by every 16px
+
+*/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */

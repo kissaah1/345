@@ -5,7 +5,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
   test  "layout links" do
-  	get root_path
   	assert_template 'welcome/index'
   	assert_select "a[href=?]", about_path
   end

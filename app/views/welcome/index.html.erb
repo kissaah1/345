@@ -1,4 +1,26 @@
+
+<% if user_signed_in? %>
 <% provide(:title, "Welcome <user_name>") %>
 
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<section class="centered profile-section">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+		<h2>Signed In!</h2>
+
+		</div><!-- columns -->
+	</div><!-- row -->
+</section>
+
+<% else %>
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+		<h2>Welcome#index</h2>
+<%= render "devise/registrations/form" %>
+
+<%= render "devise/shared/links" %>
+
+		</div><!-- columns -->
+	</div><!-- row -->
+</section>
+<% end %>
