@@ -17,11 +17,11 @@
 	<%= render 'layouts/shim' %>
 </head>
 
-<%# if logged_in? %>
+<% if logged_in? %>
 <body id="logged-in-view">
-<%# else %>
-<!-- <body id="public-view"> -->
-<%# end %>
+<% else %>
+<body id="public-view">
+<% end %>
 <div id="container">
 <%= debug(params) if Rails.env.development? %>
 <%= render 'layouts/header' %>

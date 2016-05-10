@@ -1,3 +1,6 @@
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
 	<%= form_for(@user) do |f| %>
 		<%= render 'shared/error_messages' %>
 	
@@ -13,5 +16,9 @@
 		<%= f.label :password_confirmation, "Confirmation" %>
 		<%= f.password_field :password_confirmation, class: 'form-control' %>
 	
-		<%= f.submit "Create my account", class: "btn btn-primary" %>
+		<%= f.submit "Create my account", class: "button large" %>
 	<% end %>
+	<p>Have an account? <%= link_to "Log In", login_path %></p>
+			</div><!-- columns -->
+	</div><!-- row -->
+</section>

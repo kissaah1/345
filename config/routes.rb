@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'users/new'
 
   get 'static_pages/about'
@@ -21,9 +23,14 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'terms' => 'static_pages#terms'
   get 'privacy' => 'static_pages#privacy'
+ 
+  # User Authenticaitons
   get 'signup'  => 'users#new'
-
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
   resources :users
+  
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
