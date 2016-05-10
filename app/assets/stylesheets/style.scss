@@ -5,7 +5,17 @@
 */
 @import 'settings';
 
+/* Users index */
 
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
 // 2. Typography
 body {
 	background-color: $white;

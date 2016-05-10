@@ -25,14 +25,14 @@
 					</button>
 					<div id="dropdownList" class="dropdown-content">
 					<% if logged_in? %>
-					<%= link_to "USERS", '#' %>
+					<%= link_to "USERS", users_path %>
 					<% else %>
-					<%= link_to "HOME",    root_path %>
+					<%= link_to "HOME", root_path %>
 					<% end %>
-					<%= link_to "ABOUT",    about_path %>
+					<%= link_to "ABOUT", about_path %>
 					<% if logged_in? %>
 					<%= link_to "PROFILE", current_user %>
-					<%= link_to "SETTINGS", '#' %>
+					<%= link_to "SETTINGS", edit_user_path(current_user) %>
 					<%= link_to "LOG OUT", logout_path, class: "last login", method: "delete" %>
 					<% else %>
 					<%= link_to "SIGN UP", signup_path, class: "last login" %>
