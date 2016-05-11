@@ -1,0 +1,14 @@
+<% provide(:title, "Forgot Password") %>
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+		<h1>Forgot password</h1>
+		<%= form_for(:password_reset, url: password_resets_path) do |f| %>
+		<%= f.label :email %>
+		<%= f.email_field :email, class: 'form-control' %>
+		
+		<%= f.submit "Submit", class: "btn btn-primary" %>
+		<% end %>
+		</div><!-- columns -->
+	</div><!-- row -->
+</section><!-- bottomfix -->
