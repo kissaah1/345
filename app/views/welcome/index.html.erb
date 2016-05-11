@@ -1,17 +1,72 @@
 <% provide(:title, "Welcome") %>
+
+<% if logged_in? %>
 <section class="centered bottomfix">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
-
-<% if logged_in? %>
 		<%= render 'shared/user_info' %>
 		<%= render 'shared/stats' %>
 		<%= render 'shared/micropost_form' %>
 		<%= render 'shared/feed' %>
-<% else %>
-		<h1>Welcome#index</h1>
-		<p>Find me in app/views/welcome/index.html.erb</p>
-<% end %>
 		</div><!-- columns -->
 	</div><!-- row -->
 </section><!-- bottomfix -->
+<% else %>
+
+
+<section class="centered">
+	<div class="row">
+		<div class="grid-70 centered clearfix hello">
+			<div class="table-cell">
+				<h4>
+					Proparing organizations and individual to
+				</h4>
+				<h3>
+					THRIVE AND SUCCEED
+				</h3>
+			</div><!-- table-cell -->
+
+		</div><!-- hello -->
+			<div class="grid-70 centered picture">
+			<!-- Picture in background -->
+			</div>
+
+	</div><!-- row -->
+</section>
+
+<section class="centered">
+	<div class="row">
+		<div class="columns grid-70 centered clearfix">
+		<div class="testimonial">
+		<h3>
+		Kissaah has been an amazing tool for our associates.
+		</h3>
+		<br>
+		<p>
+		“We introduced the tool to our talent program and the feedback has been very positive.
+The Kissaah team worked hard to ensure the tool matched and worked with our program. The feedback from our associates has been that it’s great to be able to have an online platform to track their progress against heir life goals. I would recommend Kissaah to any organization.”
+		</p>
+		<br>
+		<p class="text-right">
+		—Director of Talent Development, Coca-Cola South Asia - 2015 Amy Stanley
+		</p>
+		</div>
+		</div><!-- columns grid-80 centered -->
+	</div><!-- row end -->
+
+</section><!-- centered -->
+
+<section class=" strip bottomfix">
+	<div class="row">
+			<div class="columns grid-80 centered text-center" id="contact">
+				<h3><span class="highlight">
+				It's time to get started.
+				</span></h3>
+				<a class="button medium centered primary" href="mailto:contact@hugehood.co">
+				CONTACT &gt;&gt;
+				</a>
+			</div>
+	</div><!-- row end -->
+</section><!-- bottomfix -->
+
+<% end %>

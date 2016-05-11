@@ -5,6 +5,26 @@
 */
 @import 'settings';
 
+form {
+	margin: 40px auto;
+	display: block;
+	width: 100%;
+	.form-control {
+		width: 100%;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		line-height: 24px;
+		padding: 5px;
+		font-size: 18px;
+		font-weight: 300;
+	}
+	label {
+		font-size: 0.725em;
+		color: $blue;
+	}
+}
+.alert {
+	color: $alert-color;
+}
 /* Users index */
 
 .users {
@@ -25,7 +45,7 @@ body {
 
 // Text Decolations
 .highlight {
-	background-image: url(../images/highlight.png);
+	background-image: image-url("highlight.png");
 	background-repeat: repeat-x;
 	background-position: bottom;
 	font-style: italic;
@@ -110,18 +130,18 @@ a.info, a.url {
 			min-height: 98px;
 			.logo {
 				h1 {
-					display: none;
-					visibility: hidden;
-				}
-				a {
+					text-indent:-9999px;
+									a {
 					display: table-cell;
 					vertical-align: middle;
 					height: 98px;
 					width: 216px;
-					background-image: url('../images/logo.png');
+					background-image: image-url("logo.png");
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: 100%;
+				}
+
 				}
 			}
 		}
@@ -142,7 +162,7 @@ a.info, a.url {
 					vertical-align: middle;
 					height: 48px;
 					width: 149px;
-					background-image: url(../images/logo.png);
+					background-image: image-url("logo.png");
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: 100%;
@@ -836,11 +856,6 @@ ul.holizontal {
 			line-height: 150%;
 			color: $dark-gray;
 		}
-		.highlight {
-			background-image: url(../images/highlight-hello.png);
-			background-repeat: repeat-x;
-			background-position: bottom;
-		}
 	}
 }
 .strip {
@@ -869,7 +884,7 @@ ul.holizontal {
 .picture {
 	display: block;
 	height: 400px;
-	background-image: url(../images/kissaah-app-screenshot.jpg);
+	background-image: image-url("kissaah-app-screenshot.jpg");
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -916,19 +931,19 @@ ul.holizontal {
  		}
  	}
 	.social-icons ul li a.facebook {
-		background-image: url(../images/ic-social-facebook-gray.png);
+		background-image: image-url("ic-social-facebook-gray.png");
 	}
 	.social-icons ul li a.twitter {
-		background-image: url(../images/ic-social-twitter-gray.png);
+		background-image: image-url("ic-social-twitter-gray.png");
 	}
 	.social-icons ul li a.linkedin {
-		background-image: url(../images/ic-social-linkedin-gray.png);
+		background-image: image-url("ic-social-linkedin-gray.png");
 	}
 	.social-icons ul li a.stack-overflow {
-		background-image: url(../images/ic-social-stackoverflow-gray.png);
+		background-image: image-url("ic-social-stackoverflow-gray.png");
 	}
 	.social-icons ul li a.github {
-		background-image: url(../images/ic-social-github-gray.png);
+		background-image: image-url("ic-social-github-gray.png");
 	}
 
 	}
@@ -1020,19 +1035,19 @@ footer {
 				}
 			}
 			a.facebook {
-				background-image: url(../images/ic-social-facebook.png);
+				background-image: image-url("ic-social-facebook.png");
 			}
 			a.twitter {
-				background-image: url(../images/ic-social-twitter.png);
+				background-image: image-url("ic-social-twitter.png");
 			}
 			a.linkedin {
-				background-image: url(../images/ic-social-linkedin.png);
+				background-image: image-url("ic-social-linkedin.png");
 			}
 			a.stack-overflow {
-				background-image: url(../images/ic-social-stackoverflow.png);
+				background-image: image-url("ic-social-stackoverflow.png");
 			}
 			a.github {
-				background-image: url(../images/ic-social-github.png);
+				background-image: image-url("ic-social-github.png");
 			}
 		}
 	}

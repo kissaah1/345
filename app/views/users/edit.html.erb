@@ -4,26 +4,32 @@
 		<div class="columns grid-80 centered clearfix">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
-
+      <div class="row-80 centered form-field">
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
-
+      </div>
+      <div class="row-80 centered form-field">
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
-
+</div>
+<div class="row-80 centered form-field">
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
-
+</div>
+<div class="row-80 centered form-field">
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-
+</div>
+<div class="row-80 centered form-field">
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
-
+</div>
+<div class="row-80 centered form-field">
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
       <a href="http://gravatar.com/emails" target="_blank">change</a>
     </div>
+</div>
 		</div><!-- columns -->
 	</div><!-- row -->
 </section><!-- bottomfix -->

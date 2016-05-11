@@ -5,25 +5,9 @@
 			<div class="grid-30">
 				<nav class="screen-full">
 					<ul class="footer-link"><li>
-						<a href="/">
-						Home
-						</a>
+						<%= link_to "HOME", root_path %>
 					</li><li>
-						<a href="#solutions">
-						Solutions
-						</a>
-					</li><li>
-						<a href="#technology">
-						Technology
-						</a>
-					</li><li>
-						<a href="#partners">
-						Partners
-						</a>
-					</li><li>
-						<a href="mailto:contact@hugehood.co">
-						Contact
-						</a>
+						<%= link_to "ABOUT", about_path %>
 					</li></ul>
 				</nav>
 			</div><!-- grid-30 -->
@@ -31,12 +15,13 @@
 			<div class="grid-30">
 				<nav class="screen-full">
 					<ul class="footer-link"><li>
-						<a href="#">
-						Terms
-						</a>
+
+						<%= link_to "TERMS", terms_path %>
 					</li><li>
-						<a href="#">
-						Privacy
+						<%= link_to "PRIVACY", privacy_path %>
+					</li><li>
+						<a href="mailto:contact@hugehood.co">
+						CONTACT
 						</a>
 					</li></ul>
 				</nav>
