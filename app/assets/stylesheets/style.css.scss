@@ -5,6 +5,29 @@
 */
 @import 'settings';
 
+h2 {
+	&.about-title {
+		line-height: 5.75em;
+		font-weight: 400;
+		color: $blue;
+		vertical-align: middle;
+	}
+	.material-icons {
+		font-size: 36px;
+		vertical-align: middle;
+	}
+}
+.pagination {
+	font-size: 11px;
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+	text-align: center;
+	padding: 15px 0 0 0;
+	a {
+		color: $red;
+	}
+}
 form {
 	margin: 40px auto;
 	display: block;
@@ -13,9 +36,10 @@ form {
 		width: 100%;
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		line-height: 24px;
-		padding: 5px;
-		font-size: 18px;
+		padding: 5px 8px;
+		font-size: 14px;
 		font-weight: 300;
+		color: $blue;
 	}
 	label {
 		font-size: 0.725em;
@@ -71,30 +95,7 @@ a {
 		}
 	}
 }
-a.primary {
-	color: $primary-color;
-	&:hover { color: $primary-dark; }
-}
-a.secondary {
-	color: $secondary-color;
-	&:hover { color: $secondary-dark; }
-}
-a.alert {
-	color: $alert-color;
-	&:hover { color: $alert-dark; }
-}
-a.success {
-	color: $success-color;
-	&:hover { color: $success-dark; }
-}
-a.warning {
-	color: $warning-color;
-	&:hover { color: $warning-dark; }
-}
-a.info, a.url {
-	color: $info-color;
-	&:hover { color: $info-dark; }
-}
+
 
 /* 2. Basic Layouts */
 #logged-in-view {
@@ -130,7 +131,7 @@ a.info, a.url {
 			min-height: 98px;
 			.logo {
 				h1 {
-					text-indent:-9999px;
+					text-indent: -9999px;
 									a {
 					display: table-cell;
 					vertical-align: middle;
@@ -154,18 +155,17 @@ a.info, a.url {
 			min-height: 40px;
 			.logo {
 				h1 {
-					display: none;
-					visibility: hidden;
-				}
-				a {
-					display: table-cell;
-					vertical-align: middle;
-					height: 48px;
-					width: 149px;
-					background-image: image-url("logo.png");
-					background-repeat: no-repeat;
-					background-position: center;
-					background-size: 100%;
+					text-indent: -9999px;
+					a {
+						display: table-cell;
+						vertical-align: middle;
+						height: 48px;
+						width: 149px;
+						background-image: image-url("logo.png");
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: 100%;
+					}
 				}
 			}
 		}		
@@ -837,12 +837,26 @@ ul.holizontal {
 	}
 }
 
+.signup {
+	h3 {
+		font-size: 18px;
+		font-weight: 600;
+		color: $blue;
+		margin: 56px 0 5px 0;
+	}
+	form {
+		margin-top: 10px;
+		label {
+			color: $dark-gray;
+		}
+	}
+}
 
 
 .hello {
 	display: block;
 	.table-cell {
-		height: 280px;
+		height: 450px;
 		vertical-align: middle;
 		display: table-cell;
 		width: inherit;
@@ -851,7 +865,7 @@ ul.holizontal {
 			font-weight: 600;
 		}
 		h4 {
-			font-size: 145.0%;
+			font-size: 125.0%;
 			font-weight: 400;
 			line-height: 150%;
 			color: $dark-gray;
@@ -923,10 +937,9 @@ ul.holizontal {
 			}
 		}
 	.logo {
- 		h2 {
- 			display: block;
+ 		h1 {
  			img {
- 				width: 240px;
+ 				width: 230px;
  			}
  		}
  	}
@@ -962,6 +975,10 @@ ul.holizontal {
 		}
 		.on-logged-in-view {
 			display: block;
+			.copyright {
+				line-height: normal;
+
+			}
 		}
 		nav {
 			text-align: right;
@@ -1006,7 +1023,6 @@ footer {
   		min-height: 64px;
   		background: $shadow;
   		padding: 10px 0;
-  		line-height: 44px;
   		position: absolute;
   		bottom: 0;
   		color: $dark-gray;
@@ -1063,6 +1079,8 @@ footer {
 	font-weight: 300;
 	letter-spacing: 0.005em;
 	box-shadow: 1px 1px 1px $shadow;
+	color: $white;
+	text-shadow: 1px 1px $shadow;
 }
 a.button {
 	&:hover {
@@ -1084,10 +1102,12 @@ a.button {
 
 .button.extend {
 	width: 100%;
+	font-weight: 500;
 	line-height: 3.5em;
 }
 .button.large {
 	width: 45%;
+	font-weight: 500;
 	line-height: 3.75em;
 }
 .button.medium {
@@ -1098,22 +1118,19 @@ a.button {
 	width: 18%;
 	line-height: 2.25em;
 	font-size: 0.8750em;
-	color: $white;
-	font-weight: 400;
-	text-shadow: 1px 1px $shadow;
-
 }
 .button.primary {
-	background-color: $yellow;
+	background-color: $blue;
 }
 .button.secondary {
-	background-color: $blue;
+	background-color: $secondary-color;
 }
 .button.alert {
 	background-color: $alert-color;
 }
 .button.success {
 	background-color: $success-color;
+	color: $white;
 }
 .button.warning {
 	background-color: $warning-color;
@@ -1194,6 +1211,13 @@ input[type='checkbox'] {
 				line-height: 125%;
 				color: $dark-gray;
 				font-size: 0.875em !important;
+				img {
+					width: 180px;
+					display: block;
+					margin: 2px auto;
+					border: 4px solid $light-gray;
+					box-shadow: 1px 1px 1px $shadow;
+				}
 			}
 			.caption {
 				font-size: 0.725em !important;
@@ -1334,6 +1358,14 @@ section, header .row, footer .row {
 		}
 	}
 } //#public-view
+
+section {
+	.hello {
+		.row-80 {
+			width: 100%;
+		}
+	}
+}
 
 } // media screen
 
@@ -1597,6 +1629,7 @@ footer {
 	}
 	.copyright {
 		padding: 10px 20px;
+		position: relative;
 	}
 }
 // Gallery
@@ -1629,7 +1662,7 @@ footer {
 		padding: 0;
 	}
 	.grid-80 {
-		width: 100%;
+		width: 90%;
 	}
 .columns {
 	.grid-10,

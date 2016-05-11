@@ -1,68 +1,65 @@
 <% provide(:title, "Welcome") %>
 
 <% if logged_in? %>
-<section class="centered bottomfix">
-	<div class="row">
-		<div class="columns grid-80 centered clearfix">
+
 		<%= render 'shared/user_info' %>
 		<%= render 'shared/stats' %>
 		<%= render 'shared/micropost_form' %>
 		<%= render 'shared/feed' %>
-		</div><!-- columns -->
-	</div><!-- row -->
-</section><!-- bottomfix -->
+
 <% else %>
+
 
 
 <section class="centered">
 	<div class="row">
-		<div class="grid-70 centered clearfix hello">
-			<div class="table-cell">
-				<h4>
+		<div class="columns grid-80 centered clearfix">
+			<div class="grid-50 hello">
+			<div class="row-80 centered">
+				<div class="table-cell">
+					<h4>
 					Proparing organizations and individual to
-				</h4>
-				<h3>
+					</h4>
+					<h3>
 					THRIVE AND SUCCEED
-				</h3>
-			</div><!-- table-cell -->
+					</h3>
+				</div>
+				</div>
 
-		</div><!-- hello -->
-			<div class="grid-70 centered picture">
+			</div><!-- columns grid-50 -->
+			<div class="grid-50">
+				<div class="signup">
+					<div class="row-80 centered signup">
+					<h3>
+					<!-- Start your 90 days free trial! -->
+					Get early access and updates!
+					</h3>
+					</div>
+					<%= render 'users/form' %>
+				</div>
+			</div><!-- columns grid-50 -->
+		</div>
+	</div><!-- row end -->
+
+</section><!-- centered -->
+
+<section class="centered">
+	<div class="row">
+		<div class="grid-70 centered clearfix hello">
+			<div class="grid-100 centered picture">
 			<!-- Picture in background -->
 			</div>
 
 	</div><!-- row -->
 </section>
 
-<section class="centered">
-	<div class="row">
-		<div class="columns grid-70 centered clearfix">
-		<div class="testimonial">
-		<h3>
-		Kissaah has been an amazing tool for our associates.
-		</h3>
-		<br>
-		<p>
-		“We introduced the tool to our talent program and the feedback has been very positive.
-The Kissaah team worked hard to ensure the tool matched and worked with our program. The feedback from our associates has been that it’s great to be able to have an online platform to track their progress against heir life goals. I would recommend Kissaah to any organization.”
-		</p>
-		<br>
-		<p class="text-right">
-		—Director of Talent Development, Coca-Cola South Asia - 2015 Amy Stanley
-		</p>
-		</div>
-		</div><!-- columns grid-80 centered -->
-	</div><!-- row end -->
-
-</section><!-- centered -->
-
 <section class=" strip bottomfix">
 	<div class="row">
 			<div class="columns grid-80 centered text-center" id="contact">
-				<h3><span class="highlight">
-				It's time to get started.
-				</span></h3>
-				<a class="button medium centered primary" href="mailto:contact@hugehood.co">
+				<h3 class="italic">
+				It's time to get THRIVE.
+				</h3>
+				<a class="button medium centered success" href="mailto:contact@hugehood.co">
 				CONTACT &gt;&gt;
 				</a>
 			</div>

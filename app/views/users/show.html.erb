@@ -1,5 +1,11 @@
 <% provide(:title, @user.name) %>
+
+
+
 <section class="centered profile-section">
+
+<%= render 'shared/micropost_form' %>
+
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
 		<div class="grid-60 sticky-note first">
@@ -30,12 +36,14 @@
 			</small>
 			</div>
 			<div class="column righted clearfix">
-				<a href="">
+			<% if current_user %>
+				<%= link_to edit_user_path(current_user) do%>
 				<small>
 				Settings
 				</small>
 				<i class="material-icons sub-menu">settings</i>
-				</a>
+				<% end %>
+			<% end %>
 			</div>
 			</div><!-- row -->
 			<div class="bottom text-center">

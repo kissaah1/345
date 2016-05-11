@@ -1,30 +1,8 @@
+<% provide(:title, "Sign Up") %>
 <section class="centered bottomfix">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
-		<%= form_for(@user) do |f| %>
-
-			<%= render 'shared/error_messages', object: f.object %>
-			<div class="row-80 centered form-field">
-			<%= f.label :name %>
-			<%= f.text_field :name, class: 'form-control' %>
-			</div>
-			<div class="row-80 centered form-field">
-			<%= f.label :email %>
-			<%= f.email_field :email, class: 'form-control' %>
-			</div>
-			<div class="row-80 centered form-field">
-			<%= f.label :password %>
-			<%= f.password_field :password, class: 'form-control' %>
-			</div>
-			<div class="row-80 centered form-field">
-			<%= f.label :password_confirmation, "Confirmation" %>
-			<%= f.password_field :password_confirmation, class: 'form-control' %>
-			</div>
-			<div class="row-80 centered form-field">
-			<%= f.submit "Create my account", class: "button large" %>
-			<small>Have an account? <%= link_to "Log In", login_path %></small>
-			</div>
-			<% end %>
+		<%= render 'form' %>
 		</div><!-- columns -->
 	</div><!-- row -->
 </section>

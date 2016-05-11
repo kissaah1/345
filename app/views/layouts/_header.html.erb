@@ -9,7 +9,7 @@
 			<h1>
 			<%= link_to "345 Thrive", root_path %>
 			</h1>
-			</div><!-- grid-50 lefted -->
+			</div><!-- grid-40 lefted -->
 
 			<div class="grid-60 righted text-right">
 			<nav>
@@ -31,7 +31,7 @@
 					<%= link_to "SETTINGS", edit_user_path(current_user) %>
 					<%= link_to "LOG OUT", logout_path, class: "last login", method: "delete" %>
 					<% else %>
-					<%= link_to "SIGN UP", signup_path, class: "last login" %>
+					<%= link_to "LOG IN | SIGN UP", login_path, class: "last login" %>
 					<% end %>
 					</div><!-- dropdown-content -->
 
