@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  follower: masaaki
+  followed: lana
+
+two:
+  follower: masaaki
+  followed: malory
+
+three:
+  follower: lana
+  followed: masaaki
+
+four:
+  follower: victoria
+  followed: masaaki
