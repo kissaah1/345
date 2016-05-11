@@ -1,0 +1,28 @@
+
+<%= form_for(@micropost, html: { multipart: true }) do |f| %>
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+				<div class="grid-100 sticky-note first last">
+					<h3>
+					<span class="update">
+					Post Update
+					</span>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :content, placeholder: "Compose new micropost..." %>
+					</div>
+					<%= f.submit "Post", class: "button small secondary righted" %>
+					<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+					<% end %>
+<script type="text/javascript">
+  $('#micropost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>
+				</div><!-- sticky-note -->
+		</div><!-- columns grid-100 centered -->
+	</div><!-- row end -->

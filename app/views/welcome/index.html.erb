@@ -2,10 +2,15 @@
 <section class="centered bottomfix">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
-		
+
+<% if logged_in? %>
+		<%= render 'shared/user_info' %>
+		<%= render 'shared/micropost_form' %>
+		<%= render 'shared/feed' %>
+<% else %>
 		<h1>Welcome#index</h1>
 		<p>Find me in app/views/welcome/index.html.erb</p>
-
+<% end %>
 		</div><!-- columns -->
 	</div><!-- row -->
 </section><!-- bottomfix -->

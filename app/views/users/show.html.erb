@@ -56,31 +56,12 @@
 						<i class="material-icons">rss_feed</i>
 						</span>
 						</h3>
-					<div class="feed-item">
-						<p class="caption">
-						<span class="author">345 Thrive Team</span>Jan 7 2016
-						</p><!-- caption -->
-						<p>
-						Natalie Malloy just joined &lt;Your company&gt;.
-						</p>
-					</div><!-- news-item -->
-					<div class="feed-item">
-						<p class="caption">
-						<span class="author">345 Thrive Team</span>Jan 7 2016
-						</p><!-- caption -->
-						<p>
-						Our travel guide app project <a href="https://www.travelwithryne.com">RYNE</a> joined incubator program The Batchery.
-						</p>
-					</div><!-- news-item -->
-					<div class="feed-item last">
-						<p class="caption">
-						<span class="author">345 Thrive Team</span>Apr 6 2016
-						</p><!-- caption -->
-						<p>
-						Blog update: How to organize your project files?
-						</p>
-					</div>
-					<!-- feed-item -->
+						<ol class="microposts">
+						<% if @user.microposts.any? %>
+						<%= render @microposts %>
+						</ol>
+						<%= will_paginate @microposts %>
+						<% end %>
 					
 				</div><!-- row sticky-note -->
 				<div class="bottom text-center">
