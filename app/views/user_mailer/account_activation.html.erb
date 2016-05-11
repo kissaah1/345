@@ -1,0 +1,10 @@
+<h2>345 Thrive</h2>
+
+<p>Hi <%= @user.name %>,</p>
+
+<p>
+Welcome to 345 Thrive! Click on the link below to activate your account:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+	email: @user.email) %>
