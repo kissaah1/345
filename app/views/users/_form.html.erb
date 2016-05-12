@@ -28,7 +28,7 @@
 			</div><!-- gravator -->
 			</div><!-- form-field -->
 		<% else %>
-			<%= form_for User.new do |f| %>
+			<%= form_for @user do |f| %>
 			<%= render 'shared/error_messages', object: f.object %>
 			<div class="row-80 centered form-field">
 				<%= f.label :name %>

@@ -1,11 +1,8 @@
-<% provide(:title, "Welcome") %>
+<% provide(:title, @user.name) %>
 
 <% if logged_in? %>
 
-		<%= render 'shared/user_info' %>
-		<%= render 'shared/stats' %>
-		<%= render 'shared/micropost_form' %>
-		<%= render 'shared/feed' %>
+		<%= render 'user' %>
 
 <% else %>
 

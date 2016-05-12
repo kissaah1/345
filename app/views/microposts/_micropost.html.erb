@@ -1,6 +1,7 @@
 					<div class="feed-item post-<%= micropost.id %>">
 						<p class="caption">
-						<span class="author"><%= link_to micropost.user.name, micropost.user %></span> <%= time_ago_in_words(micropost.created_at) %> ago.
+						<span class="author"><%= link_to micropost.user.name, micropost.user %></span>
+						<%#= time_ago_in_words(micropost.created_at) %> ago.
 						</p><!-- caption -->
 						<p>
 						<%= micropost.content %>

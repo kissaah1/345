@@ -1,4 +1,47 @@
-<%= link_to gravatar_for(current_user, size: 50), current_user %>
-<h1><%= current_user.name %></h1>
-<span><%= link_to "view my profile", current_user %></span>
-<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+
+			<div class="row profile-card">
+			<div class="column">
+					<%= link_to gravatar_for(current_user), current_user %>
+			</div>
+			<div class="column taglines">
+			<h2 class="user-name">
+					<%= link_to current_user do%>
+					<%= current_user.name %>
+					<% end %>
+			</h2>
+			<p class="location">
+			San Francisco Bay Area
+			</p>
+			<p class="industry">
+			IT Service
+			</p>
+			<p class="headline">
+			Business Development
+			</p>
+			<p class="current-position">
+			Partnership Program Manager
+			</p>
+			<small>
+			<%= render 'shared/stats' %>
+			</small>
+			</div>
+			<div class="column righted clearfix">
+			<% if current_user %>
+				<%= link_to edit_user_path(current_user) do%>
+				<small>
+				Settings
+				</small>
+				<i class="material-icons sub-menu">settings</i>
+				<% end %>
+			<% end %>
+			</div>
+			</div><!-- row -->
+			<div class="bottom text-center">
+				<a href="#">
+				<span class="sub-menu">
+				More
+				</span>
+				<i class="material-icons">launch</i>
+				</a>
+			</div><!-- bottom end -->
+

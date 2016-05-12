@@ -1335,8 +1335,11 @@ input[type='checkbox'] {
 @media screen and (min-width: 1280px) {
 
 section, header .row, footer .row {
-	width: 1280px;
+	width: 1280px !important;
 	margin: 0 auto;
+	&.strip {
+		width: 100% !important;
+	}
 }
 
 } // media screen
