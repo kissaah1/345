@@ -21,16 +21,54 @@
 					</button>
 					<div id="dropdownList" class="dropdown-content">
 					<% if logged_in? %>
-					<%= link_to "USERS", users_path %>
-					<% else %>
-					<%= link_to "HOME", root_path %>
+					<%= link_to user_path(current_user) do%>
+					<i class="material-icons">account_circle</i>
+					<span class="nav-item">
+					<%= current_user.name %>
+					</span>
 					<% end %>
-					<%= link_to "ABOUT", about_path %>
-					<% if logged_in? %>
-					<%= link_to "PROFILE", current_user %>
-					<%= link_to "SETTINGS", edit_user_path(current_user) %>
-					<%= link_to "LOG OUT", logout_path, class: "last login", method: "delete" %>
+					<%= link_to root_path do%>
+					<i class="material-icons">apps</i>
+					<span class="nav-item">
+					Demo App
+					</span>
+					<% end %>
+					<%= link_to root_path do%>
+					<i class="material-icons">business</i>
+					<span class="nav-item">
+					My Company
+					</span>
+					<% end %>
+					<%= link_to root_path do%>
+					<i class="material-icons">add_circle</i>
+					<span class="nav-item">
+					Create Company
+					</span>
+					<% end %>
+					<%= link_to edit_user_path(current_user) do%>
+					<i class="material-icons">settings</i>
+					<span class="nav-item">
+					Settings
+					</span>
+					<% end %>
+					<%= link_to root_path do%>
+					<i class="material-icons">credit_card</i>
+					<span class="nav-item">
+					Manage Subscription
+					</span>
+					<% end %>
+
+					<%= link_to logout_path, class: "last login", method: "delete" do%>
+					<span class="nav-item">
+					LOG OUT
+					</span>
+					<i class="material-icons">directions_run</i>
+					<% end %>
+
 					<% else %>
+
+					<%= link_to "HOME", root_path %>
+					<%= link_to "ABOUT", about_path %>
 					<%= link_to "LOG IN | SIGN UP", login_path, class: "last login" %>
 					<% end %>
 					</div><!-- dropdown-content -->

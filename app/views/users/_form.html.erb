@@ -1,6 +1,6 @@
 		<% if logged_in? %>
 				<%= form_for User.find(params[:id]) do |f| %>
-				<%= render 'shared/error_messages', object: f.object %>
+				<%= render 'shared/error_messages', object: @user %>
 			<div class="row-80 centered form-field">
 				<%= f.label :name %>
 				<%= f.text_field :name, class: 'form-control' %>

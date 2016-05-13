@@ -250,6 +250,9 @@ a {
 					text-indent: 0;
 					color: $white;
 					background-color: rgba(64, 183, 242, 0.9);
+					.material-icons {
+						color: $white;
+					}
 					&:hover {
 						box-shadow:inset 0px 0px 0 2000px rgba(0,0,0, 0.2);
 					}
@@ -320,7 +323,20 @@ ul.holizontal {
 			&.bottomfix {
 				padding-bottom: 420px;
 			}
-		&.profile-section, &.company-section {
+		&.dashboard, &.profile-section, &.company-section {
+			h2 {
+				font-size: 22px;
+				color: #afb2b5;
+				font-weight: 400;
+				margin-bottom: 5px;
+				line-height: 40px;
+				.material-icons {
+					line-height: 40px;
+					color: $gray;
+					font-size: 28px;
+					vertical-align: inherit;
+				}
+			}
 			h3 {
 				font-size: 22px;
 				color: #afb2b5;

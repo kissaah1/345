@@ -1,8 +1,8 @@
-<% provide(:title, @user.name) %>
+<% provide(:title, "Welcome") %>
 
 <% if logged_in? %>
 
-		<%= render 'user' %>
+		<%= render 'dashboard' %>
 
 <% else %>
 
