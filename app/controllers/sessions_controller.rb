@@ -2,7 +2,9 @@ class SessionsController < ApplicationController
 	def new
 
 	end
+
 	def create
+		# raise User.find_by(email: params[:session][:email].downcase).to_yaml
 		user = User.find_by(email: params[:session][:email].downcase)
 		if user && user.authenticate(params[:session][:password])
 
@@ -20,6 +22,15 @@ class SessionsController < ApplicationController
   			flash.now[:danger] = 'Invalid email/password combination'
   			render 'new'
 		end
+	end
+
+	def create_linkedin
+		# raise env["omniauth.auth"].to_yaml
+		user = User.from_omniauth(env["omniauth.auth"])
+		# session[:user_id] = user.id
+		log_in user
+		# redirect_to root_url, notice: "It went though! xD"
+		redirect_back_or user
 	end
 
 	def destroy
