@@ -31,6 +31,22 @@
 			<%= form_for @user do |f| %>
 			<%= render 'shared/error_messages', object: f.object %>
 			<div class="row-80 centered form-field">
+			<%= link_to "auth/linkedin", class: "button linkedin extend" do%>
+			<span class="column icon">
+			</span>
+			<span class="column">
+			Sign Up with LinkedIn
+			</span>
+			<% end %>
+			</div><!-- form-field -->
+			<div class="row-80 centered form-field">
+			<h4 class="email-form">
+			<span class="column">
+			Or
+			</span>
+			</h4>
+			</div><!-- form-field -->
+			<div class="row-80 centered form-field">
 				<%= f.label :name %>
 				<%= f.text_field :name, class: 'form-control' %>
 			</div><!-- form-field -->
@@ -47,7 +63,15 @@
 				<%= f.password_field :password_confirmation, class: 'form-control' %>
 			</div><!-- form-field -->
 			<div class="row-80 centered form-field">
-				<%= f.submit "Sign Up", class: "button success extend" %>
+				<%= f.button :submit, class: "button success extend" do %>
+					<span class="column">
+					<i class="material-icons">email</i>
+					</span>
+					<span class="column">
+					Sign Up with Email
+					</span>
+				<% end %>
+				<%# = f.submit "Sign Up", class: "button success extend" %>
 				<small>Have an account? <%= link_to "Log In", login_path %></small>
 			</div><!-- form-field -->
 		<% end %>

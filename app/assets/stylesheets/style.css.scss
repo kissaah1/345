@@ -200,7 +200,7 @@ a {
 			display: none;
 			position: absolute;
 			right: 0;
-			background-color: rgba(255,255,255, 0.9);
+			background-color: $white;
 			min-width: 320px;
 			box-shadow: 1px 1px 1px $shadow;
 			line-height: 48px;
@@ -222,7 +222,7 @@ a {
 				border-bottom: 1px solid $shadow;
 				&:hover {
 					color: $white;
-					background-color: rgba(124, 203, 239, 1.0);
+					background-color: $light-blue;
 					.material-icons {
 						color: $white;
 					}
@@ -249,7 +249,7 @@ a {
 					line-height: 48px;
 					text-indent: 0;
 					color: $white;
-					background-color: rgba(64, 183, 242, 0.9);
+					background-color: $secondary-color;
 					.material-icons {
 						color: $white;
 					}
@@ -854,14 +854,37 @@ ul.holizontal {
 }
 
 .signup {
+	&.index-form {
+			margin: 56px 0 5px 0;
+			form {
+				margin-top: 10px;
+			}
+	}
 	h3 {
 		font-size: 18px;
 		font-weight: 600;
 		color: $blue;
-		margin: 56px 0 5px 0;
+		&.email-form {
+			margin: 0;
+		}
 	}
 	form {
-		margin-top: 10px;
+		margin-top: 60px;
+		margin-bottom: 60px;
+		h4 {
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 300;
+			color: $dark-gray;
+			&.email-form {
+				margin: 0;
+				text-align: center;
+				.material-icons {
+					font-size: 20px;
+					line-height: 20px;
+				}
+			}
+		}
 		label {
 			color: $dark-gray;
 		}
@@ -1097,6 +1120,26 @@ footer {
 	box-shadow: 1px 1px 1px $shadow;
 	color: $white;
 	text-shadow: 1px 1px $shadow;
+	&.linkedin {
+		.icon {
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-image: image-url("ic-social-linkedin-white.png");
+			background-size: 20px;
+			background-position: center;
+			background-repeat: no-repeat;
+			vertical-align: middle;
+		}
+	}
+	&:hover {
+		color: $white;
+	}
+	.material-icons {
+		font-size: 20px;
+		vertical-align: middle;
+		text-shadow: none;
+	}
 }
 a.button {
 	&:hover {
@@ -1106,7 +1149,7 @@ a.button {
 		box-shadow:inset 0px 0px 0 2000px rgba(0,0,0, 0.25);
 	}
 }
-.login {
+.login, .linkedin {
 	text-align: center;
 	width: 130px;
 	border: 1px solid;
@@ -1115,6 +1158,7 @@ a.button {
 	display: inline-block;
 	font-weight: 300;
 }
+
 
 .button.extend {
 	width: 100%;
@@ -1134,6 +1178,9 @@ a.button {
 	width: 18%;
 	line-height: 2.25em;
 	font-size: 0.8750em;
+}
+.button.linkedin {
+	background-color: $linkedin;
 }
 .button.primary {
 	background-color: $blue;

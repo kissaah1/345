@@ -1,8 +1,26 @@
-<% provide(:title, "Log in") %>
+<% provide(:title, "Log In") %>
 <section class="centered bottomfix">
 	<div class="row">
-		<div class="columns grid-80 centered clearfix">
+		<div class="columns grid-80 centered clearfix signup">
+
+
 <%= form_for(:session, url: login_path) do |f| %>
+			<div class="row-80 centered form-field">
+			<%= link_to "auth/linkedin", class: "button linkedin extend" do%>
+			<span class="column icon">
+			</span>
+			<span class="column">
+			Log In with LinkedIn
+			</span>
+			<% end %>
+			</div><!-- form-field -->
+			<div class="row-80 centered form-field">
+			<h4 class="email-form">
+			<span class="column">
+			Or
+			</span>
+			</h4>
+			</div><!-- form-field -->
 <div class="row-80 centered form-field">
 <%= f.label :email %>
 <%= f.email_field :email, class: 'form-control' %>
@@ -21,7 +39,15 @@
 <% end %>
 </div>
 <div class="row-80 centered form-field">
-<%= f.submit "Log in", class: "button primary extend" %>
+<%#= f.submit "Log in", class: "button primary extend" %>
+				<%= f.button :submit, class: "button secondary extend" do %>
+					<span class="column">
+					<i class="material-icons">email</i>
+					</span>
+					<span class="column">
+					Log In
+					</span>
+				<% end %>
 </div>
 <div class="row-80 centered form-field">
 <small>Don't have an account? <%= link_to "Sign Up", signup_path %></small>
