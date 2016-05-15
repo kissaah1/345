@@ -34,6 +34,10 @@ class User < ActiveRecord::Base
     		user.activated = true
 			user.provider = auth["provider"]
 			user.uid = auth["uid"]
+			user.location = auth["info"]["location"]
+			user.industry = auth["info"]["industry"]
+			user.headline = auth["info"]["headline"]
+			user.linkedin = auth["info"]["urls"]["public_profile"]
     		user.save!
 		end
 	end

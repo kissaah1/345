@@ -17,6 +17,29 @@
 				<%= f.label :password_confirmation, "Confirmation" %>
 				<%= f.password_field :password_confirmation, class: 'form-control' %>
 			</div><!-- form-field -->
+
+			<div class="row-80 centered form-field">
+				<%= f.label :location %>
+				<%= f.text_field :location, class: 'form-control' %>
+			</div><!-- form-field -->
+			<div class="row-80 centered form-field">
+				<%= f.label :headline %>
+				<%= f.text_field :headline, class: 'form-control' %>
+			</div><!-- form-field -->
+			<div class="row-80 centered form-field">
+				<%= f.label :industry %>
+				<%= f.text_field :industry, class: 'form-control' %>
+			</div><!-- form-field -->
+			<div class="row-80 centered form-field">
+				<%= f.label :linkedin %>
+				<%= f.text_field :linkedin, class: 'form-control' %>
+			</div><!-- form-field -->
+			<div class="row-80 centered form-field">
+				<%= f.label :summary %>
+				<%= f.text_area :summary, class: 'form-control' %>
+			</div><!-- form-field -->
+
+
 			<div class="row-80 centered form-field">
 				<%= f.submit "Save changes", class: "button secondary extend" %>
 				<% end %>
@@ -27,6 +50,7 @@
 				<a href="http://gravatar.com/emails" target="_blank" class="button secondary small">change</a>
 			</div><!-- gravator -->
 			</div><!-- form-field -->
+
 		<% else %>
 			<%= form_for @user do |f| %>
 			<%= render 'shared/error_messages', object: f.object %>

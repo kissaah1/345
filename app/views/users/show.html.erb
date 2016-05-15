@@ -18,26 +18,31 @@
 			<h2 class="user-name">
 				Hi <%= @user.name %>!
 			</h2>
+
 			<p class="location">
-			San Francisco Bay Area
-			</p>
-			<p class="industry">
-			IT Service
+			<%= @user.location %>
 			</p>
 			<p class="headline">
-			Business Development
+			<%= @user.headline %>
 			</p>
-			<p class="current-position">
-			Partnership Program Manager
+			<p class="industry">
+			<%= @user.industry %>
 			</p>
+			<p class="linkedin-url">
+			<%= link_to @user.linkedin do %>
+			<%= @user.linkedin %>
+			<% end %>
+			</p>
+			<p>
 			<small>
 			<%= render 'shared/stats' %>
 			<%= render 'follow_form' if logged_in? %>
 			</small>
+			</p>
 			</div>
 			<div class="column righted clearfix">
 			<% if current_user %>
-				<%= link_to edit_user_path(current_user) do%>
+				<%= link_to edit_user_path(current_user) do %>
 				<small>
 				Settings
 				</small>
@@ -47,12 +52,14 @@
 			</div>
 			</div><!-- row -->
 			<div class="bottom text-center">
-				<a href="#">
+			<% if current_user %>
+				<%= link_to edit_user_path(current_user) do %>
 				<span class="sub-menu">
-				More
+				Edit
 				</span>
-				<i class="material-icons">launch</i>
-				</a>
+				<i class="material-icons">mode_edit</i>
+				<% end %>
+			<% end %>
 			</div><!-- bottom end -->
 		</div><!-- sticky-note -->
 
@@ -94,7 +101,8 @@
 
 
 <section class="centered profile-section bottomfix">
-	<div class="row">
+	<div class="row quickform">
+
 		<div class="columns grid-80 centered clearfix">
 			<div class="grid-100 sticky-note first last clear-float">
 				<div class="row summary">
@@ -107,20 +115,23 @@
 					</span>
 					</h3>
 					<p>
-					Entrepreneurial spirited professional with broad skills in start-ups, international business development, and bridging academia with business communities. I am passionate about helping individuals harness the power of their awesome story to connection.
+					<%= @user.summary %>
 					</p>
-				</div><!-- row -->
+				</div><!-- row summary -->
+
 				<div class="bottom text-center">
-				<a href="#">
+				<%= link_to edit_user_path do %>
 				<span class="sub-menu">
 				Edit
 				</span>
 				<i class="material-icons">mode_edit</i>
-				</a>
+				<% end %>
 				</div><!-- bottom end -->
 			</div><!-- grid-100 sticky-note end -->
-		</div><!-- columns grid-90 centered -->
-	</div><!-- row end -->
+
+		</div><!-- columns grid-80 centered -->
+	</div><!-- row quickform -->
+
 
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">

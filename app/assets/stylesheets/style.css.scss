@@ -263,6 +263,7 @@ a {
 			display:block;
 		}
 	}
+
 } // #logged-in-view
 
 header {
@@ -432,6 +433,8 @@ ul.holizontal {
 							h2.user-name, h2.company-name {
 								font-size: 21px;
 								margin-bottom: 10px;
+								color: $black;
+								font-weight: 500;
 							}
 							p {
 								line-height: 150%;
@@ -452,8 +455,8 @@ ul.holizontal {
 									font-size: 16px;
 									font-weight: 500;
 								}
-								&.current-position {
-									font-size: 14px;
+								&.linkedin-url {
+									font-size: 0.725em;
 									color: $dark-gray;
 								}
 								&.company-summary {
