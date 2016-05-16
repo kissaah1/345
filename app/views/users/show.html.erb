@@ -28,11 +28,6 @@
 			<p class="industry">
 			<%= @user.industry %>
 			</p>
-			<p class="linkedin-url">
-			<%= link_to @user.linkedin do %>
-			<%= @user.linkedin %>
-			<% end %>
-			</p>
 			<p>
 			<small>
 			<%= render 'shared/stats' %>
@@ -53,18 +48,20 @@
 			</div><!-- row -->
 			<div class="bottom text-center">
 			<% if current_user %>
-				<%= link_to edit_user_path(current_user) do %>
+				<%= link_to @user.linkedin, target: "_blank" do %>
 				<span class="sub-menu">
-				Edit
+				<small>
+				<%= @user.linkedin %>
+				</small>
 				</span>
-				<i class="material-icons">mode_edit</i>
+				<i class="material-icons">launch</i>
 				<% end %>
 			<% end %>
 			</div><!-- bottom end -->
 		</div><!-- sticky-note -->
 
 		<div class="screen-m screen-s spacer"></div>
-
+<% if @user.microposts.any? %>
 			<div class="grid-40 sticky-note last">
 				<div class="row feed">
 						<h3>
@@ -75,24 +72,16 @@
 						<i class="material-icons">rss_feed</i>
 						</span>
 						</h3>
-						<ol class="microposts">
+						<span class="microposts">
 						<% if @user.microposts.any? %>
 						<%= render @microposts %>
-						</ol>
+						</span>
 						<%= will_paginate @microposts %>
 						<% end %>
 					
 				</div><!-- row sticky-note -->
-				<div class="bottom text-center">
-				<a href="#">
-				<span class="sub-menu">
-				More
-				</span>
-				<i class="material-icons">launch</i>
-				</a>
-				</div><!-- bottom end -->
 			</div><!-- grid-40 end -->
-
+<% end %>
 		</div><!-- columns -->
 
 	</div><!-- row -->
@@ -101,8 +90,9 @@
 
 
 <section class="centered profile-section bottomfix">
-	<div class="row quickform">
 
+<% if @user.summary %>
+	<div class="row">
 		<div class="columns grid-80 centered clearfix">
 			<div class="grid-100 sticky-note first last clear-float">
 				<div class="row summary">
@@ -128,10 +118,39 @@
 				<% end %>
 				</div><!-- bottom end -->
 			</div><!-- grid-100 sticky-note end -->
-
 		</div><!-- columns grid-80 centered -->
-	</div><!-- row quickform -->
+	</div><!-- row -->
+<% else %>
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+			<div class="grid-100 sticky-note first last clear-float">
+				<div class="row summary">
+					<h3>
+					<span class="column">
+					<i class="material-icons">assignment_ind</i>
+					</span>
+					<span class="column">
+					Summary
+					</span>
+					</h3>
+					<p class="italic f500">
+							<%= link_to edit_user_path do%>
+							<span class="column">
+							<small>
+							"Update your summary.."
+							</small>
+							</span>
+							<span class="column">
+							<i class="material-icons">mode_edit</i>
+							</span>
+							<% end %>
+					</p>
+				</div><!-- row summary -->
 
+			</div><!-- grid-100 sticky-note end -->
+		</div><!-- columns grid-80 centered -->
+	</div><!-- row -->
+<% end %>
 
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
@@ -828,10 +847,12 @@
 		</div><!-- columns grid-90 centered -->
 	</div><!-- row end -->
 
+<% if @user.skills %>
 	<div class="row">
 	<div class="columns grid-80 centered clearfix">
 			<div class="grid-50 sticky-note first">
-				<div class="row">
+				<div class="row skills-card">
+				<div class="column">
 					<h3>
 					<span class="column">
 					<i class="material-icons">assignment</i>
@@ -840,29 +861,30 @@
 					Skills
 					</span>
 					</h3>
+				</div>
+				<div class="column righted clearfix">
+					<%= link_to edit_user_path do %>
+					<small>
+					Settings
+					</small>
+					<i class="material-icons sub-menu">settings</i>
+					<% end %>
+				</div>
 						<div class="column skills">
-						<ul><li>
-							Business Development
-						</li><li>
-							Employee Success
-						</li><li>
-							Out Reach
-						</li></ul>
-							
-						</div>
-					
+						<ul>
+						<li>
+							<%= @user.skills %>
+						</li>
+						</ul>
+						</div><!-- column skills -->
 				</div><!-- row sticky-note -->
-				<div class="bottom text-center">
-					<a href="#">
-					Edit
-					</a>
-				</div><!-- bottom end -->
 			</div><!-- grid-30 end -->
 
 		<div class="screen-m screen-s spacer"></div>
 
 			<div class="grid-50 sticky-note last">
-				<div class="row">
+				<div class="row skills-card">
+				<div class="column">
 					<h3>
 					<span class="column">
 					<i class="material-icons">assignment</i>
@@ -871,27 +893,107 @@
 					Other Skills
 					</span>
 					</h3>
-
+				</div>
+				<div class="column righted clearfix">
+					<%= link_to edit_user_path do %>
+					<small>
+					Settings
+					</small>
+					<i class="material-icons sub-menu">settings</i>
+					<% end %>
+				</div>
 						<div class="column skills">
-						<ul><li>
-							Japanese
-						</li><li>
-							Leadership
-						</li><li>
-							Social Impact
-						</li></ul>
-							
-						</div>
-
+						<ul>
+						<li>
+							<%= @user.other_skills %>
+						</li>
+						</ul>
+						</div><!-- column other_skills -->
 				</div><!-- row sticky-note -->
-				<div class="bottom text-center">
-					<a href="#">
-					Edit
-					</a>
-				</div><!-- bottom end -->
 			</div><!-- grid-70 end -->
-	</div>
-	</div>
+	</div><!-- columns -->
+	</div><!-- row -->
+<% else %>
+	<div class="row">
+	<div class="columns grid-80 centered clearfix">
+			<div class="grid-50 sticky-note first">
+				<div class="row skills-card">
+				<div class="column">
+					<h3>
+					<span class="column">
+					<i class="material-icons">assignment</i>
+					</span>
+					<span class="column">
+					Skills
+					</span>
+					</h3>
+				</div>
+				<div class="column righted clearfix">
+					<%= link_to edit_user_path do %>
+					<small>
+					Settings
+					</small>
+					<i class="material-icons sub-menu">settings</i>
+					<% end %>
+				</div>
+						<div class="column skills">
+						<p class="italic f500">
+							<%= link_to edit_user_path do%>
+							<span class="column">
+							<small>
+							"Update your skills.."
+							</small>
+							</span>
+							<span class="column">
+							<i class="material-icons">mode_edit</i>
+							</span>
+							<% end %>
+						</p>
+						</div><!-- column skills -->
+				</div><!-- row sticky-note -->
+			</div><!-- grid-30 end -->
+
+		<div class="screen-m screen-s spacer"></div>
+
+			<div class="grid-50 sticky-note last">
+				<div class="row skills-card">
+				<div class="column">
+					<h3>
+					<span class="column">
+					<i class="material-icons">assignment</i>
+					</span>
+					<span class="column">
+					Other Skills
+					</span>
+					</h3>
+				</div>
+				<div class="column righted clearfix">
+					<%= link_to edit_user_path do %>
+					<small>
+					Settings
+					</small>
+					<i class="material-icons sub-menu">settings</i>
+					<% end %>
+				</div>
+						<div class="column skills">
+						<p class="italic f500">
+							<%= link_to edit_user_path do%>
+							<span class="column">
+							<small>
+							"Update your skills.."
+							</small>
+							</span>
+							<span class="column">
+							<i class="material-icons">mode_edit</i>
+							</span>
+							<% end %>
+						</p>
+						</div><!-- column other_skills -->
+				</div><!-- row sticky-note -->
+			</div><!-- grid-70 end -->
+	</div><!-- columns -->
+	</div><!-- row -->
+<% end %>
 
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
@@ -905,17 +1007,16 @@
 					<span class="column">
 					Work Experience
 					</span>
-				</h3>
+					</h3>
 				</div>
-			<div class="column righted clearfix">
-				<a href="">
-				<small>
-				Settings
-				</small>
-				<i class="material-icons sub-menu">settings</i>
-				</a>
-			</div>
-
+				<div class="column righted clearfix">
+					<a href="">
+					<small>
+					Settings
+					</small>
+					<i class="material-icons sub-menu">settings</i>
+					</a>
+				</div>
 			<div class="row-90 centered experience-card">
 			<div class="column">
 			<%= image_tag "company-logo-default.png", class: "company-logo" %>

@@ -387,7 +387,7 @@ ul.holizontal {
 								line-height: 36px;
 							}
 						}
-						.profile-card, .work-experience, .howrudoing {
+						.profile-card, .work-experience, .howrudoing, .skills-card {
 							.material-icons {
 								&.sub-menu {
 									vertical-align: middle;
@@ -572,6 +572,10 @@ ul.holizontal {
 						.summary {
 							p {
 								color: $dark-gray;
+								.material-icons {
+									font-size: 14px;
+									vertical-align: middle;
+								}
 							}
 						}
 						.column {
@@ -692,15 +696,28 @@ ul.holizontal {
 								color: $red;
 								padding: 10px 20px;
 								width: 100%;
-								ul {
-									padding: 0;
-									font-weight: 300;
-									li {
-										line-height: 30px;
-										list-style: none;
-										display: block;
+								p {
+									line-height: 30px;
+									list-style: none;
+									display: block;
+									.material-icons {
+										font-size: 14px;
+										vertical-align: middle;
+										color: $dark-gray;
 									}
-								}
+									a {
+										color: $gray;
+										.material-icons {
+											color: $gray;
+										}
+										&:hover {
+											.material-icons {
+												color: $black;
+											}
+											color: $black;
+										}
+									}
+								}	
 							}
 							&.experience-summary {
 								padding: 10px 0 10px 0;

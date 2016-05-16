@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160515003648) do
     t.string   "linkedin"
     t.text     "summary"
     t.text     "skills"
+    t.text     "other_skills"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

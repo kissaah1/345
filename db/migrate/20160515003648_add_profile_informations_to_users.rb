@@ -6,5 +6,6 @@ class AddProfileInformationsToUsers < ActiveRecord::Migration
     add_column :users, :linkedin, :string
     add_column :users, :summary, :text
     add_column :users, :skills, :text
+    add_column :users, :other_skills, :text
   end
 end
