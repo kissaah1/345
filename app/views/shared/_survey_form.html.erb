@@ -1,0 +1,55 @@
+
+<%= form_for current_user.surveys.build do |f| %>
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+				<div class="grid-100 sticky-note first last">
+					<h3 class="text-left">
+					<span class="update">
+					How RUDoing?
+					</span>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_1, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_2, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_3, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_4, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_5, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_6, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_7, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_8, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_9, placeholder: "Enter your answer..." %>
+					</div>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :question_10, placeholder: "Enter your answer..." %>
+					</div>
+					<%= f.submit "Update", class: "button small secondary righted" %>
+					<% end %>
+				</div><!-- sticky-note -->
+		</div><!-- columns grid-100 centered -->
+	</div><!-- row end -->

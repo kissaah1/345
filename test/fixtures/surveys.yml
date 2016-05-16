@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question1: MyText
+  question2: MyText
+  question3: MyText
+  question4: MyText
+  question5: MyText
+  question6: MyText
+  question7: MyText
+  question8: MyText
+  question9: MyText
+  question10: MyText
+  user_id: 
+
+two:
+  question1: MyText
+  question2: MyText
+  question3: MyText
+  question4: MyText
+  question5: MyText
+  question6: MyText
+  question7: MyText
+  question8: MyText
+  question9: MyText
+  question10: MyText
+  user_id: 

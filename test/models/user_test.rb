@@ -115,4 +115,14 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "associated survey should be destroyed" do
+    @user.save
+    @user.surveys.create!(question1: "Most Likely", question2: "Most Likely", question3: "Most Likely",
+    	question4: "Most Likely", question5: "Most Likely", question6: "Most Likely", question7: "Most Likely",
+    	question8: "Most Likely", question9: "Most Likely", question10: "Most Likely")
+    assert_difference 'Survey.count', -1 do
+      @user.destroy
+    end
+  end
+
 end
