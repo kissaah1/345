@@ -1,0 +1,22 @@
+<% if @user.microposts.any? %>
+			<div class="grid-40 sticky-note last">
+				<div class="row feed">
+						<h3>
+						<span class="column">
+						Feed
+						</span>
+						<span class="column righted clearfix">
+						<i class="material-icons">rss_feed</i>
+						</span>
+						</h3>
+						<span class="microposts">
+						<% if @user.microposts.any? %>
+						<%= render @microposts %>
+						</span>
+						<%= will_paginate @microposts %>
+						<% end %>
+					
+				</div><!-- row sticky-note -->
+			</div><!-- grid-40 end -->
+<% end %>
+

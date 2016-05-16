@@ -47,7 +47,7 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
-  resources :microposts, only: [:create, :destroy]
+  resources :microposts, only: [:create, :edit, :update, :destroy]
   resources :relationships, only: [:create, :destroy]
   
   # Example of named route that can be invoked with purchase_url(id: product.id)

@@ -6,7 +6,8 @@ class MicropostTest < ActiveSupport::TestCase
 	# end
 	def setup
 		@user = users(:masaaki)
-		@micropost = @user.microposts.build(content: "Lorem ipsum")
+		@micropost = @user.microposts.build(content: "Lorem ipsum", survey_1: "Most likey I agree..",
+			survey_2: "aaa", survey_3: "diaobdgidapid")
 	end
 
 	test "should be valid" do
@@ -18,10 +19,10 @@ class MicropostTest < ActiveSupport::TestCase
 		assert_not @micropost.valid?
 	end
 
-	test "content should be present" do
-		@micropost.content = "    "
-		assert_not @micropost.valid?
-	end
+	# test "content should be present" do
+	# 	@micropost.content = "    "
+	# 	assert_not @micropost.valid?
+	# end
 
 	test "content should be at most 140 characters" do
 		@micropost.content = "a" * 141
@@ -29,6 +30,21 @@ class MicropostTest < ActiveSupport::TestCase
 	end
 	test "order should be most recent first" do
 		assert_equal microposts(:most_recent), Micropost.first
+	end
+
+	test "survey_1 should be at most 140 characters" do
+		@micropost.survey_1 = "a" * 141
+		assert_not @micropost.valid?
+	end
+
+	test "survey_2 should be at most 140 characters" do
+		@micropost.survey_1 = "a" * 141
+		assert_not @micropost.valid?
+	end
+
+	test "survey_3 should be at most 140 characters" do
+		@micropost.survey_1 = "a" * 141
+		assert_not @micropost.valid?
 	end
 
 end

@@ -1,0 +1,21 @@
+
+			<%= form_for Micropost.find(params[:id]) do |f| %>
+		<div class="row-80 centered form-field">
+			<%= f.label :survey_1 %>
+			<%= f.text_area :survey_1, class: 'form-control' %>
+		</div><!-- form-field -->
+		<div class="row-80 centered form-field">
+			<%= f.label :survey_2 %>
+			<%= f.text_area :survey_2, class: 'form-control' %>
+		</div><!-- form-field -->
+		<div class="row-80 centered form-field">
+			<%= f.label :survey_3 %>
+			<%= f.text_area :survey_3, class: 'form-control' %>
+		</div><!-- form-field -->
+
+
+		<div class="row-80 centered form-field">
+			<%= f.submit "Save changes", class: "button secondary extend" %>
+			<% end %>
+		</div><!-- form-field -->
+
