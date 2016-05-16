@@ -4,7 +4,7 @@
 
 <section class="centered profile-section">
 
-<%= render 'shared/micropost_form' %>
+<%#= render 'shared/micropost_form' %>
 
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
@@ -39,9 +39,9 @@
 			<% if current_user %>
 				<%= link_to edit_user_path(current_user) do %>
 				<small>
-				Settings
+				Edit
 				</small>
-				<i class="material-icons sub-menu">settings</i>
+				<i class="material-icons sub-menu">mode_edit</i>
 				<% end %>
 			<% end %>
 			</div>
@@ -91,7 +91,6 @@
 
 <section class="centered profile-section bottomfix">
 
-<% if @user.summary %>
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
 			<div class="grid-100 sticky-note first last clear-float">
@@ -102,55 +101,39 @@
 					</span>
 					<span class="column">
 					Summary
+					</span>
+					<span class="column righted clearfix sub-menu">
+			<% if current_user %>
+				<%= link_to edit_user_path(current_user) do %>
+				<small>
+				Edit
+				</small>
+				<i class="material-icons sub-menu">mode_edit</i>
+				<% end %>
+			<% end %>
 					</span>
 					</h3>
 					<p>
+					<% if @user.summary? %>
 					<%= @user.summary %>
-					</p>
-				</div><!-- row summary -->
-
-				<div class="bottom text-center">
-				<%= link_to edit_user_path do %>
-				<span class="sub-menu">
-				Edit
-				</span>
-				<i class="material-icons">mode_edit</i>
-				<% end %>
-				</div><!-- bottom end -->
-			</div><!-- grid-100 sticky-note end -->
-		</div><!-- columns grid-80 centered -->
-	</div><!-- row -->
-<% else %>
-	<div class="row">
-		<div class="columns grid-80 centered clearfix">
-			<div class="grid-100 sticky-note first last clear-float">
-				<div class="row summary">
-					<h3>
-					<span class="column">
-					<i class="material-icons">assignment_ind</i>
-					</span>
-					<span class="column">
-					Summary
-					</span>
-					</h3>
-					<p class="italic f500">
-							<%= link_to edit_user_path do%>
-							<span class="column">
-							<small>
-							"Update your summary.."
-							</small>
-							</span>
-							<span class="column">
-							<i class="material-icons">mode_edit</i>
-							</span>
-							<% end %>
+					<% else %>
+						<%= link_to edit_user_path do%>
+						<span class="column">
+						<small>
+						"Update your summary.."
+						</small>
+						</span>
+						<span class="column">
+						<i class="material-icons">mode_edit</i>
+						</span>
+						<% end %>
+					<% end %>
 					</p>
 				</div><!-- row summary -->
 
 			</div><!-- grid-100 sticky-note end -->
 		</div><!-- columns grid-80 centered -->
 	</div><!-- row -->
-<% end %>
 
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
@@ -847,7 +830,6 @@
 		</div><!-- columns grid-90 centered -->
 	</div><!-- row end -->
 
-<% if @user.skills %>
 	<div class="row">
 	<div class="columns grid-80 centered clearfix">
 			<div class="grid-50 sticky-note first">
@@ -865,79 +847,16 @@
 				<div class="column righted clearfix">
 					<%= link_to edit_user_path do %>
 					<small>
-					Settings
+					Edit
 					</small>
-					<i class="material-icons sub-menu">settings</i>
+					<i class="material-icons sub-menu">mode_edit</i>
 					<% end %>
 				</div>
 						<div class="column skills">
-						<ul>
-						<li>
-							<%= @user.skills %>
-						</li>
-						</ul>
-						</div><!-- column skills -->
-				</div><!-- row sticky-note -->
-			</div><!-- grid-30 end -->
-
-		<div class="screen-m screen-s spacer"></div>
-
-			<div class="grid-50 sticky-note last">
-				<div class="row skills-card">
-				<div class="column">
-					<h3>
-					<span class="column">
-					<i class="material-icons">assignment</i>
-					</span>
-					<span class="column">
-					Other Skills
-					</span>
-					</h3>
-				</div>
-				<div class="column righted clearfix">
-					<%= link_to edit_user_path do %>
-					<small>
-					Settings
-					</small>
-					<i class="material-icons sub-menu">settings</i>
-					<% end %>
-				</div>
-						<div class="column skills">
-						<ul>
-						<li>
-							<%= @user.other_skills %>
-						</li>
-						</ul>
-						</div><!-- column other_skills -->
-				</div><!-- row sticky-note -->
-			</div><!-- grid-70 end -->
-	</div><!-- columns -->
-	</div><!-- row -->
-<% else %>
-	<div class="row">
-	<div class="columns grid-80 centered clearfix">
-			<div class="grid-50 sticky-note first">
-				<div class="row skills-card">
-				<div class="column">
-					<h3>
-					<span class="column">
-					<i class="material-icons">assignment</i>
-					</span>
-					<span class="column">
-					Skills
-					</span>
-					</h3>
-				</div>
-				<div class="column righted clearfix">
-					<%= link_to edit_user_path do %>
-					<small>
-					Settings
-					</small>
-					<i class="material-icons sub-menu">settings</i>
-					<% end %>
-				</div>
-						<div class="column skills">
-						<p class="italic f500">
+						<p>
+						<% if @user.skills? %>
+						<%= @user.skills %>
+						<% else %>
 							<%= link_to edit_user_path do%>
 							<span class="column">
 							<small>
@@ -948,6 +867,7 @@
 							<i class="material-icons">mode_edit</i>
 							</span>
 							<% end %>
+						<% end %>
 						</p>
 						</div><!-- column skills -->
 				</div><!-- row sticky-note -->
@@ -970,30 +890,34 @@
 				<div class="column righted clearfix">
 					<%= link_to edit_user_path do %>
 					<small>
-					Settings
+					Edit
 					</small>
-					<i class="material-icons sub-menu">settings</i>
+					<i class="material-icons sub-menu">mode_edit</i>
 					<% end %>
 				</div>
 						<div class="column skills">
-						<p class="italic f500">
+						<p>
+						<% if @user.other_skills? %>
+						<%= @user.other_skills %>
+						<% else %>
 							<%= link_to edit_user_path do%>
 							<span class="column">
 							<small>
-							"Update your skills.."
+							"Update your other skills.."
 							</small>
 							</span>
 							<span class="column">
 							<i class="material-icons">mode_edit</i>
 							</span>
 							<% end %>
+						<% end %>
 						</p>
 						</div><!-- column other_skills -->
 				</div><!-- row sticky-note -->
 			</div><!-- grid-70 end -->
 	</div><!-- columns -->
 	</div><!-- row -->
-<% end %>
+
 
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
