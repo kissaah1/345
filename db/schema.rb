@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160516190021) do
     t.text     "survey_1"
     t.text     "survey_2"
     t.text     "survey_3"
+    t.string   "survey_4"
   end
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at", using: :btree

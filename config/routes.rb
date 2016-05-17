@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create_linkedin'
 
+  get 'microposts/survey'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -33,6 +35,7 @@ Rails.application.routes.draw do
  
   # User Authenticaitons
   get 'signup'  => 'users#new'
+  get 'survey' => 'microposts#survey'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

@@ -1,21 +1,77 @@
 
 			<%= form_for Micropost.find(params[:id]) do |f| %>
-		<div class="row-80 centered form-field">
-			<%= f.label :survey_1 %>
-			<%= f.text_area :survey_1, class: 'form-control' %>
-		</div><!-- form-field -->
-		<div class="row-80 centered form-field">
-			<%= f.label :survey_2 %>
-			<%= f.text_area :survey_2, class: 'form-control' %>
-		</div><!-- form-field -->
-		<div class="row-80 centered form-field">
-			<%= f.label :survey_3 %>
-			<%= f.text_area :survey_3, class: 'form-control' %>
-		</div><!-- form-field -->
+				<div class="row-90 centered question">
+					<p class="text-left">
+					<span class="column">
+					<i class="material-icons">format_quote</i>
+					</span>
+					<span class="column">
+					Do you believe ghost?
+					</span>
+					</p>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :survey_1, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
 
+				<div class="row-90 centered question">
+					<p class="text-left">
+					<span class="column">
+					<i class="material-icons">format_quote</i>
+					</span>
+					<span class="column">
+					Are you cat person or dog person?
+					</span>
+					</p>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :survey_2, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
 
-		<div class="row-80 centered form-field">
-			<%= f.submit "Save changes", class: "button secondary extend" %>
-			<% end %>
-		</div><!-- form-field -->
+				<div class="row-90 centered question">
+					<p class="text-left">
+					<span class="column">
+					<i class="material-icons">format_quote</i>
+					</span>
+					<span class="column">
+					If you can own a planet in our solor system, which planet is going to be yours?
+					</span>
+					</p>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :survey_3, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+				<div class="row-90 centered question">
+					<p class="text-left">
+					<span class="column">
+					<i class="material-icons">format_quote</i>
+					</span>
+					<span class="column">
+					How much do you like your job?
+					</span>
+					</p>
+					<div class="field">
+					<span class="column lefted clearfix">
+					<small>
+					Never like my job..
+					</small>
+					</span>
+					<span class="column righted clearfix">
+					<small>
+					Love my job!
+					</small>
+					</span>
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= range_field(:micropost, :survey_4, in: 1..100) %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+				<div class="row-90 question">
+					<%= f.submit "Update my answers!", class: "button extend primary" %>
+					<% end %>
+				</div><!-- question -->
 

@@ -104,3 +104,50 @@
 								<% end %>
 						</div>
 					</div><!-- question -->
+
+						<div class="question">
+							<h4>
+							<span class="column">
+							<i class="material-icons">format_quote</i>
+							</span>
+							<span class="column">
+							How much do you like your job?
+							</span>
+							</h4>
+							<div class="answer post-<%= micropost.id %>">
+								<h5>
+								Your Answer
+								</h5>
+								<small>
+								<%= time_ago_in_words(micropost.created_at) %> ago.
+								</small>
+								<p>
+								<dl>
+								<dt>
+								<span class="column lefted">
+								Never like my job
+								</span>
+								<span class="column righted">
+								Love my job!
+								</span>
+								</dt>
+								<dd class="percentage percentage-<%= micropost.survey_4 %>">
+								</dd>
+								</dl>
+								</p>
+								<% if current_user?(@user) %>
+								<div class="edit-answer">
+									<a href="../microposts/<%= micropost.id %>/edit">
+									<span class="column">
+									<i class="material-icons">mode_edit</i>
+									</span>
+									<span class="column">
+									<small>
+									Edit
+									</small>
+									</span>
+								</a>
+								</div><!-- edit-answer -->
+								<% end %>
+						</div>
+					</div><!-- question -->
