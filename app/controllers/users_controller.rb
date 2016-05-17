@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@microposts = @user.microposts.paginate(page: params[:page], :per_page => 3, :total_entries => 30)
 		@surveys = @user.microposts
+		@positions = @user.positions.paginate(page: params[:page], :per_page => 3)
 	end
 
 	def new

@@ -115,4 +115,14 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "associated positions should be destroyed" do
+    @user.save
+    @user.positions.create!(title: "Cptain EO", summary: "yabadaba yabadaba!", start_date: "2005/12/01",
+    	end_date: "2015/01/01", is_current: false, company: "Awesome Inc.")
+    assert_difference 'Position.count', -1 do
+      @user.destroy
+    end
+  end
+
+
 end

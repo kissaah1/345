@@ -641,79 +641,18 @@
 					</a>
 				<% end %>
 				</div>
-			<div class="row-90 centered experience-card">
-			<div class="column">
-			<%= image_tag "company-logo-default.png", class: "company-logo" %>
-			</div>
-			<div class="column experience-summary">
-			<span class="column">
-					<h4 class="job-title">
-					&lt;Job Title&gt;
-					</h4>
-			</span>
-					<p class="company-name">
-					&lt;Company Name&gt;
-					</p>
-					<p class="time-location">
-					April 2013 – Present (3 years 2 months) san francisco, california
-					</p>
-			</div>
-			<div class="column righted clearfix">
-			<% if current_user?(@user) %>
-				<a href="">
-				<small>
-				Edit
-				</small>
-				<i class="material-icons sub-menu">mode_edit</i>
-				</a>
-			<% end %>
-			</div>
-			<div class="column">
-			<p class="company-summary">
-			Entrepreneurial spirited professional with broad skills in start-ups, international business development, and bridging academia with business communities.
-			</p>
-			</div><!-- column -->
-			</div><!-- row-90 work-experience-card -->
 
-			<div class="row-90 centered experience-card last">
-			<div class="column">
-			<%= image_tag "company-logo-default.png", class: "company-logo" %>
-			</div>
-			<div class="column experience-summary">
-			<span class="column">
-					<h4 class="job-title">
-					&lt;Job Title&gt;
-					</h4>
-			</span>
-					<p class="company-name">
-					&lt;Company Name&gt;
-					</p>
-					<p class="time-location">
-					April 2013 – Present (3 years 2 months) san francisco, california
-					</p>
-			</div>
-			<div class="column righted clearfix">
-			<% if current_user?(@user) %>
-				<a href="">
-				<small>
-				Edit
-				</small>
-				<i class="material-icons sub-menu">mode_edit</i>
-				</a>
-			<% end %>
-			</div>
-			<div class="column">
-			<p class="company-summary">
-			Entrepreneurial spirited professional with broad skills in start-ups, international business development, and bridging academia with business communities.
-			</p>
-			</div><!-- column -->
-			</div><!-- row-90 work-experience-card -->
-			</div><!-- row -->
+				<% if @user.positions.any? %>
+				<%= render @positions %>
+				<%= will_paginate @positions %>
+				<% end %>
+
+			</div><!-- row work-experience -->
 			<% if current_user?(@user) %>
 				<div class="bottom text-center">
-					<a href="#">
-					Edit
-					</a>
+					<%= link_to '../positions' do %>
+					Add Work Experience
+					<% end %>
 				</div><!-- bottom end -->
 			<% end %>
 			</div><!-- grid-100 sticky-note end -->
