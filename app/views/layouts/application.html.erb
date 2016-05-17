@@ -25,9 +25,20 @@
 <div id="container">
 <%= debug(params) if Rails.env.development? %>
 <%= render 'layouts/header' %>
+
 	<% flash.each do |message_type, message| %>
-		<div class="alert alert-<%= message_type %>"><%= message %></div>
+    <div class="row">
+    <div class="columns grid-80 centered clearfix">
+
+		<div class="alert alert-<%= message_type %>">
+    <small>
+    <%= message %>
+    </small>
+    </div>
+    </div>
+    </div>
 	<% end %>
+
 <%= yield %>
 <%= render 'layouts/footer' %>
 </div><!-- container -->
