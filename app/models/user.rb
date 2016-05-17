@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+	has_many :memberships
+	has_many :groups, :through => :memberships
 	has_many :positions, dependent: :destroy
 	has_many :microposts, dependent: :destroy
 	has_many :active_relationships, class_name:	"Relationship",

@@ -21,6 +21,10 @@ Rails.application.routes.draw do
 
   get 'positions/new'
 
+  get 'memberships/new'
+
+  get 'group/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -43,6 +47,10 @@ Rails.application.routes.draw do
 
   get 'positions' => 'positions#new'
 
+# Groups
+resources :groups, only: [:show], shallow: true do
+  resources :memberships, only: [:new] #-> localhost:3000/2/memberships/new
+end
 
   resources :users do
     member do
