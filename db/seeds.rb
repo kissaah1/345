@@ -5,7 +5,7 @@
 #
 # cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 # Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(name: "Masaaki Furuki",
+User.create!(name: "Batman",
 	email: "masaaki@hugehood.co",
 	password: "password",
 	password_confirmation: "password",
@@ -13,7 +13,15 @@ User.create!(name: "Masaaki Furuki",
 	activated: true,
 	activated_at: Time.zone.now)
 
-99.times do |n|
+User.create!(name: "Victoria Woo",
+	email: "vic@kissaah.com",
+	password: "password",
+	password_confirmation: "password",
+	admin: true,
+	activated: true,
+	activated_at: Time.zone.now)
+
+29.times do |n|
 		name = Faker::Name.name
 		email = "user#{n+1}@hugehood.co"
 		password = "password"
@@ -25,16 +33,16 @@ User.create!(name: "Masaaki Furuki",
 			activated_at: Time.zone.now)
 end
 
-users = User.order(:created_at).take(6)
-50.times do
-	content = Faker::Lorem.sentence(5)
-	users.each { |user| user.microposts.create!(content: content) }
-end
+# users = User.order(:created_at).take(6)
+# 10.times do
+# 	content = Faker::Lorem.sentence(5)
+# 	users.each { |user| user.microposts.create!(content: content) }
+# end
 
 # Following relationships
 users = User.all
 user  = users.first
-following = users[2..50]
-followers = users[3..40]
+following = users[2..20]
+followers = users[3..10]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
