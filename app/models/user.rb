@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+include Mongoid::Document
+  groupify :group_member
+  groupify :named_group_member
 	has_many :positions, dependent: :destroy
 	has_many :microposts, dependent: :destroy
 	has_many :active_relationships, class_name:	"Relationship",

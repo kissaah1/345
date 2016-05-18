@@ -40,6 +40,9 @@ gem 'will_paginate', '3.0.7'
 gem 'omniauth'
 gem 'omniauth-linkedin'
 
+# User Group
+gem 'groupify'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
