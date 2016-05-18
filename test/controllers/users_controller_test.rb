@@ -7,9 +7,10 @@ class UsersControllerTest < ActionController::TestCase
 		@other_user = users(:victoria)
 	end
 
-	test "should redirect index when not logged in" do
+	test "non-admin user should not get users index" do
+		log_in_as(@other_user)
 		get :index
-		assert_redirected_to login_url
+		assert_redirected_to root_url
 	end
 
 	test "should get new" do
