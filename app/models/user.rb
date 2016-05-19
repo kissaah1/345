@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
 	attr_accessor :remember_token, :activation_token, :reset_token
 	before_save :downcase_email
 	before_create :create_activation_digest
-	validates :name, presence: true, length: { maximum: 50 }
+	validates :name, length: { maximum: 50 }
+	# validates :name, presence: true, length: { maximum: 50 }
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 	validates :email, presence: true, length: { maximum: 255 },
 	format: { with: VALID_EMAIL_REGEX },
@@ -43,16 +44,6 @@ class User < ActiveRecord::Base
     		user.save!
 		end
 	end
-
-	# def self.create_from_omniauth(auth)
-	# 	create! do |user|
-	# 		user.provider = auth["provider"]
-	# 		user.uid = auth["uid"]
-	# 		user.name = auth["name"]
-	# 		user.email = auth["email"]
-	# 		user.activated = true
-	# 	end
-	# end
 
 	# Returns a romdam token.
 	def User.new_token

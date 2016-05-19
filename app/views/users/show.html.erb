@@ -24,7 +24,7 @@
 						<div class="row-100">
 							<div class="column">
 							<h2 class="user-name">
-								Hi <%= @user.name %>!
+							<%= @user.name %>
 							</h2>
 							</div>
 						</div><!-- row-100 -->
@@ -66,16 +66,36 @@
 					<% end %>
 				<% end %>
 				</p>
+					<small>
+					<%= render 'shared/stats' %>
+					<%= render 'follow_form' if logged_in? %>
+					</small>
 
-					<p>
-						<small>
-						<%= render 'shared/stats' %>
-						<%= render 'follow_form' if logged_in? %>
-						</small>
-					</p>
 					</div><!-- taglines -->
 </div><!-- grid-100 -->
 <div class="grid-100">
+
+				<small>
+					<% if current_user.enthusiast? %>
+					Enthusiast
+					<% end %>
+					<% if current_user.skeptic? %>
+					Skeptic
+					<% end %>
+					<% if current_user.navigator? %>
+					Navigator
+					<% end %>
+					<% if current_user.pioneer? %>
+					Pioneer
+					<% end %>
+					<% if current_user.coach? %>
+					Coach		
+					<% end %>
+					<% if current_user.solo? %>
+					Solo			
+					<% end %>
+				</small>
+
 					<div class="grid-100 summary">
 						<h3>
 						Summary

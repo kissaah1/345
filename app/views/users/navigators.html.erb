@@ -1,0 +1,13 @@
+<% provide(:title, "Navigators") %>
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+		<h2>Navigators</h2>
+		<ul class="users">
+		<% @navigators.each do |user| %>
+		<%= render user %>
+		<% end %>
+		</ul>
+		</div><!-- columns -->
+	</div><!-- row -->
+</section><!-- bottomfix -->

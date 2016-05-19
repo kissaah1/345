@@ -21,6 +21,14 @@ Rails.application.routes.draw do
 
   get 'positions/new'
 
+  get 'users/admins'
+  get 'users/enthusiasts'
+  get 'users/skeptics'
+  get 'users/pioneers'
+  get 'users/navigators'
+  get 'users/coachs'
+  get 'users/solos'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -42,8 +50,14 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   get 'positions' => 'positions#new'
-
-
+  get 'enthusiasts' => 'users#enthusiasts'
+  get 'skeptics' => 'users#skeptics'
+  get 'pioneers' => 'users#pioneers'
+  get 'navigators' => 'users#navigators'
+  get 'coaches' => 'users#coachs'
+  get 'solos' => 'users#solos'
+  get 'users/coaches' => 'users#coachs'
+ 
   resources :users do
     member do
       get :following, :followers

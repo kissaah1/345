@@ -1,6 +1,40 @@
 		<li>
 		<%= gravatar_for user, size: 50 %>
+		<small>
+		Name:
+		</small>
 		<%= link_to user.name, user %>
+		|
+		<small>
+		Location:
+		</small>
+		<%= user.location %>
+			|
+		<small>
+		Tags:
+		</small>
+	
+		<% if user.admin? %>
+		#Admin
+		<% end %>
+		<% if user.enthusiast? %>
+		#Enthusiast
+		<% end %>
+		<% if user.skeptic? %>
+		#Skeptic
+		<% end %>
+		<% if user.pioneer? %>
+		#Pioneer
+		<% end %>
+		<% if user.navigator? %>
+		#Navigator
+		<% end %>
+		<% if user.coach? %>
+		#Coach
+		<% end %>
+		<% if user.solo? %>
+		#Solo
+		<% end %>
 		<% if current_user.admin? && !current_user?(user) %>
 				| <%= link_to "delete", user, method: :delete,
 		data: { confirm: "You sure?" } %>

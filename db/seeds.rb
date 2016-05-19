@@ -11,33 +11,83 @@ User.create!(name: "Batman",
 	password_confirmation: "password",
 	admin: true,
 	activated: true,
-	activated_at: Time.zone.now)
+	activated_at: Time.zone.now,
+	location: "Gothan City, New York",
+	industry: "Pacekeeping",
+	headline: "Billionaire, Bruce Wayne, Single, Celebrity, I am Batman.",
+	summary: "I am Batman. I am Batman. I am Batman. I am Batman. I am Batman. I am Batman. I am Batman. I am Batman.",
+	skills: "Karate Voice Acting HTML CSS Investment Problem Solving",
+	other_skills: "Ruby on Rails Ruby Coding",
+	enthusiast: true,
+	skeptic: true,
+	navigator: true,
+	pioneer: true,
+	coach: true,
+	solo: true
+	)
 
-User.create!(name: "Victoria Woo",
-	email: "vic@kissaah.com",
+User.create!(name: "Masaaki Furuki",
+	email: "masaakifuruki@me.com",
 	password: "password",
 	password_confirmation: "password",
-	admin: true,
+	admin: false,
 	activated: true,
-	activated_at: Time.zone.now)
+	activated_at: Time.zone.now,
+	location: "San Francisco Bay Area",
+	industry: "Internet",
+	headline: "Watch your six! Headsup! Sniper! Nice shot! Negative! Cover me I'm reloading!",
+	summary: "Tokyo to San Francisco. Lost in transrations. Looking for something better and will.",
+	skills: "Video gaming Zen Coding Branding",
+	other_skills: "Business Development Writing",
+	enthusiast: true
+	)
 
 29.times do |n|
 		name = Faker::Name.name
 		email = "user#{n+1}@hugehood.co"
 		password = "password"
+		location = Faker::Address.city
+		industry = Faker::Company.bs
+		headline = Faker::Name.title
+		summary = Faker::Lorem.paragraph
+		skills = Faker::Lorem.sentence
+		other_skills = Faker::Lorem.sentence
 		User.create!(name: name,
 			email: email,
 			password: password,
 			password_confirmation: password,
 			activated: true,
-			activated_at: Time.zone.now)
+			activated_at: Time.zone.now,
+			location: location,
+			industry: industry,
+			headline: headline,
+			summary: summary,
+			skills: skills,
+			other_skills: other_skills,
+			enthusiast: true,
+			skeptic: false,
+			navigator: true,
+			pioneer: false,
+			coach: false
+			)
 end
 
-# users = User.order(:created_at).take(6)
-# 10.times do
-# 	content = Faker::Lorem.sentence(5)
-# 	users.each { |user| user.microposts.create!(content: content) }
-# end
+users = User.order(:created_at).take(6)
+1.times do
+	survey_1 = Faker::Lorem.sentence
+	survey_2 = Faker::Lorem.sentence
+	survey_3 = Faker::Lorem.sentence
+	survey_4 = Faker::Number.between(1, 100)
+	users.each { |user| user.microposts.create!(survey_1: survey_1, survey_2: survey_2, survey_3: survey_3, survey_4: survey_4) }
+end
+
+users = User.order(:created_at).take(6)
+3.times do
+	title = Faker::Name.title
+	summary = Faker::Lorem.sentence
+	company = Faker::Company.name
+	users.each { |user| user.positions.create!(title: title, summary: summary, company: company, start_date: "2000-01-01", end_date: "2015-05-01") }
+end
 
 # Following relationships
 users = User.all

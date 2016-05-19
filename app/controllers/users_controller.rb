@@ -5,7 +5,38 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.paginate(page: params[:page])
+		# @users = User.paginate(page: params[:page])
 	end
+
+	def admins
+		@admins = User.where('users.admin = ?', true)
+	end
+
+	def enthusiasts
+		@enthusiasts = User.where('users.enthusiast = ?', true)
+	end
+
+	def skeptics
+		@skeptics = User.where('users.skeptic = ?', true)
+	end
+
+	def pioneers
+		@pioneers = User.where('users.pioneer = ?', true)
+	end
+
+	def navigators
+		@navigators = User.where('users.navigator = ?', true)
+	end
+
+	def coachs
+		@coachs = User.where('users.coach = ?', true)
+	end
+
+	def solos
+		@solos = User.where('users.solo = ?', true)
+	end
+
+
 
 	def show
 		@user = User.find(params[:id])
@@ -69,7 +100,8 @@ class UsersController < ApplicationController
 
 		def user_params
 			params.require(:user).permit(:name, :email, :password, :password_confirmation, 
-				:location, :headline, :industry, :linkedin, :summary, :skills, :other_skills)
+				:location, :headline, :industry, :linkedin, :summary, :skills, :other_skills,
+				:enthusiast, :skeptic, :navigator, :pioneer, :coach, :solo)
 		end
 
 		# Confirms a logged-in user.

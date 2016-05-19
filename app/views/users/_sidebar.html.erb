@@ -22,18 +22,19 @@
 					</a>
 				<% end %>
 				</div>
-	
+
 				<div class="column my-ally">
 					<div class="ally-profile">
 						<h4 class="ally-class">
+							<%= link_to 'enthusiasts' do %>
 							<span class="column">
 							<i class="material-icons">favorite</i>
 							</span>
 							<span class="column">
 							Enthusiast
 							</span>
+							<% end %>
 						</h4>
-
 					<div class="column ally-avator lefted">
 						<%= image_tag "profile-picture-deault.png", class: "profile-thumb" %>
 					</div><!-- ally-avator -->
@@ -97,12 +98,14 @@
 				<div class="column my-ally">
 					<div class="ally-profile">
 						<h4 class="ally-class">
+							<%= link_to 'skeptics' do %>
 							<span class="column">
 							<i class="material-icons">search</i>
 							</span>
 							<span class="column">
 							Skeptic
 							</span>
+							<% end %>
 						</h4>
 
 					<div class="column ally-avator lefted">
@@ -168,12 +171,14 @@
 				<div class="column my-ally">
 					<div class="ally-profile">
 						<h4 class="ally-class">
+							<%= link_to 'pioneers' do %>
 							<span class="column">
 							<i class="material-icons">near_me</i>
 							</span>
 							<span class="column">
 							Pioneer
 							</span>
+							<% end %>
 						</h4>
 
 					<div class="column ally-avator lefted">
@@ -239,12 +244,14 @@
 				<div class="column my-ally">
 					<div class="ally-profile">
 						<h4 class="ally-class">
+							<%= link_to 'navigators' do %>
 							<span class="column">
 							<i class="material-icons">explore</i>
 							</span>
 							<span class="column">
-							Navigator
+							<%= link_to "Navigator", 'navigators' %>
 							</span>
+							<% end %>
 						</h4>
 
 					<div class="column ally-avator lefted">
@@ -310,12 +317,14 @@
 				<div class="column my-ally">
 					<div class="ally-profile">
 						<h4 class="ally-class">
+							<%= link_to 'coaches' do %>
 							<span class="column">
 							<i class="material-icons">spa</i>
 							</span>
 							<span class="column">
 							Coach
 							</span>
+							<% end %>
 						</h4>
 
 					<div class="column ally-avator lefted">

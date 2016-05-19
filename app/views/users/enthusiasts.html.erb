@@ -1,0 +1,13 @@
+<% provide(:title, "Enthusiasts") %>
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+		<h2>Enthusiasts</h2>
+		<ul class="users">
+		<% @enthusiasts.each do |user| %>
+		<%= render user %>
+		<% end %>
+		</ul>
+		</div><!-- columns -->
+	</div><!-- row -->
+</section><!-- bottomfix -->
