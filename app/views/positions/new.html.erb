@@ -1,8 +1,22 @@
 <% provide(:title, "Add Work Experience") %>
-<section class="centered survey-section bottomfix">
+<section class="centered profile-section bottomfix">
 	<div class="row">
-		<div class="columns grid-80 centered clearfix signup">
-		<%= render 'shared/position_form' %>
-		</div><!-- columns -->
+		<div class="columns grid-80 centered clearfix">
+			<div class="grid-100 sticky-note first last clear-float">
+				<div class="row howrudoing">
+					<div class="row-90 centered questions">
+						<h2>
+						<span class="column">
+						<i class="material-icons">work</i>
+						</span>
+						<span class="column">
+						Add Position
+						</span>
+						</h2>
+					<%= render 'shared/position_form' %>
+					</div><!-- row-90 -->
+				</div><!-- row howrudoing -->
+			</div><!-- sticky-note -->
+		</div><!-- columns grid-80 -->
 	</div><!-- row -->
-</section><!-- survey-section -->
+</section><!-- bottomfix -->

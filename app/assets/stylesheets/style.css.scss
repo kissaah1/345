@@ -28,6 +28,11 @@ h2 {
 		color: $red;
 	}
 }
+.questions.survey-form {
+	 form {
+		margin: 0 auto !important;
+	}
+}
 form {
 	margin: 40px auto;
 	display: block;
@@ -496,7 +501,7 @@ a {
 				font-size: 22px;
 				color: #afb2b5;
 				font-weight: 400;
-				margin-bottom: 5px;
+				margin-bottom: 0;
 				line-height: 40px;
 				.material-icons {
 					line-height: 40px;
@@ -509,7 +514,6 @@ a {
 				font-size: 22px;
 				color: #afb2b5;
 				font-weight: 300;
-				margin-bottom: 5px;
 				line-height: 40px;
 				.sub-menu {
 					font-size: 0.625em;
@@ -614,6 +618,7 @@ a {
 							}
 							.taglines {
 								width: auto;
+								min-width: 30%;
 								display: inline-block;
 								p{
 									line-height: 175%;
@@ -692,29 +697,32 @@ a {
 										border: none;
 									}
 									h4 {
-										font-size: 1.125em;
-										color: $blue;
-										font-weight: 400;
-										line-height: 175%;
+										font-size: 1.1em;
+										color: $dark-gray;
+										font-weight: 300;
+										line-height: 125%;
 										font-style: italic;
+										margin-bottom: 5px;
 										.material-icons {
 											font-style: italic;
+											font-size: 18px;
 										}
 									}
 								.answer {
 									display: inline-block;
 									border: 1px solid rgba(0, 0, 0, 0.1);
 									border-radius: 10px;
-									width: 90%;
+									width: 100%;
 									background-color: $light-gray;
 									vertical-align: top;
-									margin: 5px 15px 15px 20px;
-									padding: 15px;
+									margin: 5px 0 20px 0;
+									padding: 8px 15px 9px 15px;
 									box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.1);
 									h5 {
-										font-size: 0.875em;
+										line-height: 14px;
+										font-size: 0.725em;
 										color: $dark-blue;
-										font-weight: 400;
+										font-weight: 300;
 										display: inline-block;
 										margin-right: 5px;
 									}
@@ -724,9 +732,15 @@ a {
 										display: inline-block;
 										font-weight: 300;
 									}
+									.material-icons {
+										line-height: 16px;
+									}
 									p {
-										font-size: 0.825em;
-										margin-top: 3px;
+										font-size: 0.925em;
+										margin-top: 5px;
+										color: $blue;
+										font-weight: 300;
+										font-style: italic;
 									}
 									.edit-answer {
 										color: $gray;
@@ -888,17 +902,23 @@ a {
 							} // .my-ally
 
 							&.skills {
-								color: $red;
-								padding: 10px 20px;
+								padding: 0 15px;
 								width: 100%;
 								p {
+									color: $blue;
+									font-size: 0.925em;
 									line-height: 30px;
 									list-style: none;
 									display: block;
+									font-weight: 300;
+									.sub-menu {
+										color: $gray;
+										font-size: 14px;
+									}
 									.material-icons {
 										font-size: 14px;
 										vertical-align: middle;
-										color: $dark-gray;
+										color: $gray;
 									}
 									a {
 										color: $gray;
@@ -1374,11 +1394,39 @@ a.button {
 	font-weight: 300;
 }
 
-
+.button.survey {
+	width: 100%;
+	margin: 0 auto;
+	background-color: $success-color;
+	font-size: 12px;
+	font-weight: 400;
+	height: 34px;
+	border-radius: 7px;
+	border: 1px solid $white;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	margin: 10px 0;
+}
+.button.follow {
+	background-color: $light-blue;
+}
+.button.unfollow {
+	background-color: $gray;
+}
+.button.follow, .button.unfollow {
+	border-radius: 3px;
+	border: 1px solid $white;
+	width: 68px;
+	height: 22px;
+	font-size: 0.7525em;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
 .button.extend {
 	width: 100%;
 	font-weight: 500;
 	line-height: 3.5em;
+}
+.button.min-extend {
+	width: 100%;
 }
 .button.large {
 	width: 45%;

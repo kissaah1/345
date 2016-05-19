@@ -1,46 +1,69 @@
 <%= form_for current_user.positions.build do |f| %>
-	<div class="row">
-		<div class="columns grid-80 centered clearfix">
-				<div class="grid-100 sticky-note first last">
+				<div class="row-90 centered">
 					<h3 class="text-left">
-					<i class="material-icons sub-menu">work</i>
-					<span class="update">
-					Add Work Experience
-					</span>
+					<%= label_tag(:company, "Company Name", class: 'form-control') %>
 					</h3>
 					<div class="field">
 					<%= render 'shared/error_messages', object: f.object %>
-					<%= label_tag(:company, "Company Name") %>
-					<%= f.text_field :company, class: "form-controll" %>
-					</div>
-					<div class="field">
-					<%= render 'shared/error_messages', object: f.object %>
-					<%= label_tag(:title, "Title") %>
-					<%= f.text_field :title, class: "form-controll" %>
-					</div>
-					<div class="field">
-					<%= render 'shared/error_messages', object: f.object %>
-					<%= label_tag(:summary, "Summary") %>
-					<%= f.text_area :summary, class: "form-controll" %>
-					</div>
-					<div class="field">
-					<%= render 'shared/error_messages', object: f.object %>
-					<%= label_tag(:start_date, "Start Date") %>
-					<%= f.date_select :start_date, class: "form-controll" %>
-					</div>
-					<div class="field">
-					<%= render 'shared/error_messages', object: f.object %>
-					<%= label_tag(:end_date, "End Date") %>
-					<%= f.date_select :end_date, class: "form-controll" %>
-					</div>
-					<div class="field">
-					<%= render 'shared/error_messages', object: f.object %>
-					<%= f.check_box :is_current, class: "form-controll" %>
-					<%= label_tag(:is_current, "Is this current position?") %>
+					<%= f.text_field :company, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
 
-					</div>
-					<%= f.submit "Add Work Experience", class: "button small secondary righted" %>
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:title, "Title", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_field :title, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:summary, "Summary", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :summary, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+				<div class="row-90 centered">
+
+					<div class="column">
+					<h3 class="text-left">
+					<%= label_tag(:start_date, "Start Date", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= select_date Date.today, prefix: :start_date %>
+					</div><!-- field -->
+					</div><!-- column -->
+
+					<div class="column">
+					<h3 class="text-left">
+					<%= label_tag(:end_date, "End Date", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= select_date Date.today, prefix: :end_date %>
+					</div><!-- field -->
+					</div><!-- column -->
+
+				</div><!-- row-90 centered -->
+
+
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:is_current, "Is this current position?") %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= check_box_tag(:is_current) %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+
+				<div class="row-90 centered question">
+					<%= f.submit "Add position", class: "button extend primary" %>
 					<% end %>
-				</div><!-- sticky-note -->
-		</div><!-- columns grid-100 centered -->
-	</div><!-- row end -->
+				</div><!-- question -->
