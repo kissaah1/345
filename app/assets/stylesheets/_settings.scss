@@ -191,8 +191,12 @@ $japanese-serif:
 	'游明朝体','YuMincho', '游明朝','Yu Mincho',
 	'ＭＳ Ｐ明朝', 'MS PMincho';
 
+form, input, textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
 
-
+.row-100 { width: 100%; *width: 99.9%; }
 .row-90 { width: 90%; *width: 89.9%; }
 .row-80 { width: 80%; *width: 79.9%; }
 .row-70 { width: 70%; *width: 69.9%; }

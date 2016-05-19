@@ -32,6 +32,11 @@ form {
 	margin: 40px auto;
 	display: block;
 	width: 100%;
+	h3 {
+		vertical-align: bottom;
+	}
+	.field, .form-field {
+		text-align: left;
 	.form-control {
 		width: 100%;
 		border: 1px solid rgba(0, 0, 0, 0.1);
@@ -41,10 +46,17 @@ form {
 		font-weight: 300;
 		color: $blue;
 	}
+select {
+	height: 40px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	}
+}
+
 	label {
 		font-size: 0.725em;
 		color: $blue;
 	}
+
 }
 .alert {
 	color: $alert-color;
@@ -457,6 +469,19 @@ input[type=range]::-ms-fill-upper {
 input[type=range]:focus::-ms-fill-upper {
   background: $light-blue;
 }
+a {
+	color: $dark-gray;
+	.material-icons {
+		color: $gray;
+	}
+	&:hover {
+		color: $black;
+		.material-icons {
+			color: $black;
+		}
+	}
+}
+
 // Sections
 #public-view {
 
@@ -503,10 +528,9 @@ input[type=range]:focus::-ms-fill-upper {
 			form {
 				display: block;
 				width: 100%;
-				text-align: right;
 				.field {
 					textarea {
-						border: solid 1px $gray;
+		border: 1px solid rgba(0, 0, 0, 0.1);
 						max-width: 100%;
 						min-width: 100%;
 						min-height: 80px;
@@ -527,6 +551,26 @@ input[type=range]:focus::-ms-fill-upper {
 								color: $dark-gray;
 								line-height: 36px;
 							}
+						.summary {
+							margin: 5px;
+							h3 {
+								color: $dark-gray;
+								font-size: 18px;
+								line-height: 24px;
+								margin-top: 5px;
+								margin-bottom: 3px;
+							}
+							p {
+								font-size: 14px;
+								line-height: 1.25em;
+								color: $gray !important;
+								.material-icons {
+									font-size: 14px;
+									vertical-align: middle;
+								}
+							}
+						}
+
 						}
 						.profile-card, .summary, .work-experience, .howrudoing, .skills-card {
 							.material-icons {
@@ -549,31 +593,39 @@ input[type=range]:focus::-ms-fill-upper {
 									}
 								}
 							}
-							img.profile-pic {
-								display: relative;
+
+							.profile-pic {
+								float: left;
 								width: 180px;
 								height: 180px;
-								margin: 10px;
+								margin-right: 15px;
+								img {
 								border: 6px solid rgba(255, 255, 255, 0.8);
 								box-shadow: 1px 1px 1px $shadow;
+								}
 							}
 							img.company-logo {
 								display: relative;
 								width: 80px;
 								height: 80px;
-								margin: 10px;
+								margin-right: 10px;
 								border: 4px solid rgba(255, 255, 255, 0.8);
 								box-shadow: 1px 1px 1px $shadow;
 							}
 							.taglines {
-								margin-top: 10px;
+								width: auto;
+								display: inline-block;
 								p{
 									line-height: 175%;
+								}
+								.stats {
+									.column {
+										margin-right: 7px;
+									}
 								}
 							}
 							h2.user-name, h2.company-name {
 								font-size: 21px;
-								margin-bottom: 10px;
 								color: $black;
 								font-weight: 500;
 							}
@@ -599,6 +651,24 @@ input[type=range]:focus::-ms-fill-upper {
 								&.linkedin-url {
 									font-size: 0.725em;
 									color: $dark-gray;
+									vertical-align: middle;
+									a{
+										color: $dark-gray;
+									&.link-launch {
+										line-height: 36px;
+										.material-icons {
+											color: $gray;
+											font-size: 14px;
+										}
+									}
+									&:hover {
+										color: $black;
+										.material-icons {
+											color: $black;
+										}
+
+									}
+									}
 								}
 								&.company-summary {
 									font-size: 0.825em;
@@ -607,7 +677,8 @@ input[type=range]:focus::-ms-fill-upper {
 								}			
 							}
 							.experience-card {
-								padding-bottom: 15px;
+								display: inline-block;
+								padding: 15px;
 								margin-bottom: 15px;
 								border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 								&.last {
@@ -617,7 +688,6 @@ input[type=range]:focus::-ms-fill-upper {
 							}
 							.questions {
 								.question {
-									margin: 20px;
 									&.last {
 										border: none;
 									}
@@ -635,11 +705,11 @@ input[type=range]:focus::-ms-fill-upper {
 									display: inline-block;
 									border: 1px solid rgba(0, 0, 0, 0.1);
 									border-radius: 10px;
-									width: 85%;
+									width: 90%;
 									background-color: $light-gray;
 									vertical-align: top;
-									margin: 12px 20px 20px 40px;
-									padding: 20px;
+									margin: 5px 15px 15px 20px;
+									padding: 15px;
 									box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.1);
 									h5 {
 										font-size: 0.875em;
@@ -710,21 +780,11 @@ input[type=range]:focus::-ms-fill-upper {
 								}
 							}
 						}
-						.summary {
-							p {
-								color: $dark-gray;
-								.material-icons {
-									font-size: 14px;
-									vertical-align: middle;
-								}
-							}
-						}
 						.column {
 							&.my-ally {
-								width: 90%;
 								display: block !important;
-								margin: 0 auto 20px auto;
-								padding: 5px 20px 20px 20px;
+								margin: 0 auto;
+								padding: 5px;
 								border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 								&.last {
 									border: none;
@@ -735,7 +795,7 @@ input[type=range]:focus::-ms-fill-upper {
 										color: $dark-gray;
 										line-height: 40px;
 										.material-icons {
-											font-size: 24px;
+											font-size: 18px;
 											line-height: 40px;
 										}
 									}
@@ -743,12 +803,11 @@ input[type=range]:focus::-ms-fill-upper {
 								.ally-comment {
 									display: inline-block;
 									border: 1px solid rgba(0, 0, 0, 0.1);
-									border-radius: 10px;
-									width: 65%;
+									border-radius: 5px;
 									background-color: $light-gray;
 									vertical-align: top;
-									margin: 12px 20px 20px 20px;
-									padding: 20px;
+									margin: 10px 0;
+									padding: 10px;
 									box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.1);
 									h5 {
 										font-size: 0.875em;
@@ -785,7 +844,14 @@ input[type=range]:focus::-ms-fill-upper {
 								}
 								.ally-profile {
 									display: inline-block;
-									width: 128px;
+									width: 100%;
+
+									.ally-info {
+										padding-left: 10px;
+									}
+									.sub-menu {
+										float: right;
+									}
 									p {
 										width: 100%;
 										padding-left: 0;
@@ -794,18 +860,9 @@ input[type=range]:focus::-ms-fill-upper {
 											font-weight: 500;
 											display: inline-block;
 											line-height: 36px;
-												a {
-													color: $dark-gray;
-													.material-icons {
-														color: $gray;
-													}
-													&:hover {
-														color: $black;
-														.material-icons {
-															color: $black;
-														}
-													}
-												}
+											.sub-menu {
+												margin-left: 3px;
+											}
 										}
 										&.ally-title {
 											color: $gray;
@@ -821,14 +878,11 @@ input[type=range]:focus::-ms-fill-upper {
 										line-height: normal;
 									}
 								}
-								a {
-									color: $red;
-								}
 								img.profile-thumb {
-									width: 128px;
-									height: 128px;
+									width: 78px;
+									height: 78px;
 									display: block;
-									border: 6px solid rgba(255, 255, 255, 0.8);
+									border: 4px solid rgba(255, 255, 255, 0.8);
 									box-shadow: 1px 1px 1px $shadow;
 								}
 							} // .my-ally
@@ -961,8 +1015,8 @@ input[type=range]:focus::-ms-fill-upper {
 								}
 							}
 							img.profile-thumb {
-								width: 112px;
-								height: 112px;
+								width: 128px;
+								height: 128px;
 								display: block;
 								border-top: 4px solid rgba(255, 255, 255, 0.8);
 								border-right: 4px solid rgba(255, 255, 255, 0.8);
@@ -1494,12 +1548,16 @@ input[type='checkbox'] {
 					height: 20px;
 				}
 			.material-icons {
+				color: $white;
 				font-size: 14px;
 				line-height: 30px;
 			}
 		&:hover {
 			background-color: $dark-gray;
 			color: $black;
+			.material-icons {
+				color: $black;
+			}
 		}
 		&:active {
 			box-shadow:inset 0px 0px 0 2000px rgba(0,0,0, 0.25);

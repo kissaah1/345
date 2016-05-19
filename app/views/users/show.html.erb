@@ -12,15 +12,33 @@
 		<div class="columns grid-80 centered clearfix">
 			<div class="grid-60">
 				<div class="sticky-note first">
-					<div class="row profile-card">
-						<div class="column">
+					<div class="row profile-card clearfix">
+						<div class="column profile-pic clearfix">
 						<%= gravatar_for @user %>
 						<%#= image_tag src="ploads/profile-picture-1.jpg", class: "profile-pic" %>
 						</div>
 					<div class="column taglines">
-					<h2 class="user-name">
-						Hi <%= @user.name %>!
-					</h2>
+					<div class="row-100">
+						<div class="column">
+						<h2 class="user-name">
+							Hi <%= @user.name %>!
+						</h2>
+						</div>
+					</div><!-- row-100 -->
+					</div><!-- taglines -->
+					<div class="column righted">
+						<% if current_user?(@user) %>
+						<%= link_to edit_user_path(current_user) do %>
+						<small>
+						Settings
+						</small>
+						<i class="material-icons sub-menu">settings</i>
+						<% end %>
+						<% else %>
+					<% end %>
+					</div><!-- column -->
+
+					<div class="taglines">
 					<p class="location">
 						<%= @user.location %>
 					</p>
@@ -30,31 +48,32 @@
 					<p class="industry">
 						<%= @user.industry %>
 					</p>
+				<% if @user.linkedin? %>
+				<p class="linkedin-url">
+					<%= link_to @user.linkedin, class: "link-launch", target: "_blank" do %>
+					<span class="column">
+					<small>
+					<%= @user.linkedin %>
+					</small>
+					</span>
+					<span class="column">
+					<i class="material-icons sub-menu">launch</i>
+					</span>
+					<% end %>
+				<% end %>
+				</p>
 					<p>
 						<small>
 						<%= render 'shared/stats' %>
 						<%= render 'follow_form' if logged_in? %>
 						</small>
 					</p>
-					</div>
-					<div class="column righted clearfix">
-						<% if current_user?(@user) %>
-						<%= link_to edit_user_path(current_user) do %>
-						<small>
-						Edit
-						</small>
-						<i class="material-icons sub-menu">mode_edit</i>
-						<% end %>
-						<% else %>
-					<% end %>
-					</div>
+					</div><!-- taglines -->
 
-					<div class="row-100">
+					<div class="grid-100 summary">
 						<h3>
 						Summary
 						</h3>
-					</p>
-					</div>
 					<p>
 				<% if @user.summary? %>
 					<%= @user.summary %>
@@ -82,20 +101,22 @@
 					<% end %>
 				<% end %>
 					</p>
+					</div><!-- summary -->
+
 					</div><!-- row profile-card -->
 
+				<% if current_user?(@user) %>
 					<div class="bottom text-center">
-				<% if @user.linkedin? %>
-						<%= link_to @user.linkedin, target: "_blank" do %>
+					<%= link_to edit_user_path do %>
 					<span class="sub-menu">
 					<small>
-						<%= @user.linkedin %>
+						Edit
 					</small>
 					</span>
-					<i class="material-icons">launch</i>
-						<% end %>
-				<% end %>
+					<i class="material-icons">mode_edit</i>
+					<% end %>
 				</div><!-- bottom end -->
+				<% end %>
 			</div><!-- sticky-note -->
 			<div class="spacer"></div>
 			<div class="sticky-note first">
@@ -112,12 +133,12 @@
 				</div>
 				<div class="column righted clearfix">
 				<% if current_user?(@user) %>
-					<a href="">
+					<%= link_to '../positions' do %>
+					<i class="material-icons sub-menu">add_box</i>
 					<small>
-					Settings
+					Add Experience
 					</small>
-					<i class="material-icons sub-menu">settings</i>
-					</a>
+					<% end %>
 				<% end %>
 				</div>
 
@@ -127,13 +148,6 @@
 				<% end %>
 
 			</div><!-- row work-experience -->
-			<% if current_user?(@user) %>
-				<div class="bottom text-center">
-					<%= link_to '../positions' do %>
-					Add Work Experience
-					<% end %>
-				</div><!-- bottom end -->
-			<% end %>
 			</div><!-- sticky-note end -->
 			<div class="spacer"></div>
 			<div class="sticky-note first">

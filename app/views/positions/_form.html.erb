@@ -1,74 +1,62 @@
 
 			<%= form_for Position.find(params[:id]) do |f| %>
-				<div class="row-90 centered question">
-					<p class="text-left">
-					<span class="column">
-					<i class="material-icons">format_quote</i>
-					</span>
-					<span class="column">
-					<%= label_tag(:company, "Company Name") %>
-					</span>
-					</p>
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:company, "Company Name", class: 'form-control') %>
+					</h3>
 					<div class="field">
 					<%= render 'shared/error_messages', object: f.object %>
 					<%= f.text_field :company, class: 'form-control' %>
 					</div><!-- field -->
 				</div><!-- question -->
 
-				<div class="row-90 centered question">
-					<p class="text-left">
-					<span class="column">
-					<i class="material-icons">format_quote</i>
-					</span>
-					<span class="column">
-					<%= label_tag(:title, "Title") %>
-					</span>
-					</p>
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:title, "Title", class: 'form-control') %>
+					</h3>
 					<div class="field">
 					<%= render 'shared/error_messages', object: f.object %>
 					<%= f.text_field :title, class: 'form-control' %>
 					</div><!-- field -->
 				</div><!-- question -->
 
-				<div class="row-90 centered question">
-					<p class="text-left">
-					<span class="column">
-					<i class="material-icons">format_quote</i>
-					</span>
-					<span class="column">
-					<%= label_tag(:start_date, "Start Date") %>
-					</span>
-					</p>
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:summary, "Summary", class: 'form-control') %>
+					</h3>
 					<div class="field">
 					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :summary, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+				<div class="row-90 centered">
+
+					<div class="column">
+					<h3 class="text-left">
+					<%= label_tag(:start_date, "Start Date", class: 'form-control') %>
+					</h3>
+					<div class="field">
 					<%= select_date Date.today, prefix: :start_date %>
 					</div><!-- field -->
-				</div><!-- question -->
+					</div><!-- column -->
 
-				<div class="row-90 centered question">
-					<p class="text-left">
-					<span class="column">
-					<i class="material-icons">format_quote</i>
-					</span>
-					<span class="column">
-					<%= label_tag(:end_date, "Start Date") %>
-					</span>
-					</p>
+					<div class="column">
+					<h3 class="text-left">
+					<%= label_tag(:end_date, "End Date", class: 'form-control') %>
+					</h3>
 					<div class="field">
-					<%= render 'shared/error_messages', object: f.object %>
 					<%= select_date Date.today, prefix: :end_date %>
 					</div><!-- field -->
-				</div><!-- question -->
+					</div><!-- column -->
 
-				<div class="row-90 centered question">
-					<p class="text-left">
-					<span class="column">
-					<i class="material-icons">format_quote</i>
-					</span>
-					<span class="column">
+				</div><!-- row-90 centered -->
+
+
+				<div class="row-90 centered">
+					<h3 class="text-left">
 					<%= label_tag(:is_current, "Is this current position?") %>
-					</span>
-					</p>
+					</h3>
 					<div class="field">
 					<%= render 'shared/error_messages', object: f.object %>
 					<%= check_box_tag(:is_current) %>
