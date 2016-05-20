@@ -1,0 +1,16 @@
+<% provide(:title, "My Company") %>
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+		<h2>My Company</h2>
+		<%= will_paginate %>
+		<ul class="companies">
+		<% @companies.each do |company| %>
+		<%= render company %>
+		<% end %>
+		</ul>
+		<%= will_paginate %>
+		</div><!-- columns -->
+	</div><!-- row -->
+</section><!-- bottomfix -->
+

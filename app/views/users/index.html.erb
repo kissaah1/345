@@ -1,7 +1,9 @@
 <% provide(:title, "All Users") %>
-<section class="centered bottomfix">
+<section class="centered bottomfix profile-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
+			<div class="grid-100">
+				<div class="sticky-note first">
 		<h2>All Users</h2>
 		<%= will_paginate %>
 		<ul class="users">
@@ -10,6 +12,8 @@
 		<% end %>
 		</ul>
 		<%= will_paginate %>
+		</div>
+		</div>
 		</div><!-- columns -->
 	</div><!-- row -->
 </section><!-- bottomfix -->

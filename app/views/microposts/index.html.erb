@@ -1,0 +1,15 @@
+<% provide(:title, "All Microposts") %>
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+		<h2>All Microposts</h2>
+		<%= will_paginate %>
+		<ul class="microposts">
+		<% @microposts.each do |micropost| %>
+		<%= render micropost %>
+		<% end %>
+		</ul>
+		<%= will_paginate %>
+		</div><!-- columns -->
+	</div><!-- row -->
+</section><!-- bottomfix -->

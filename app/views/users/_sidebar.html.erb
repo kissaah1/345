@@ -1,4 +1,38 @@
+			<% if @user.companies.any? %>
+			<div class="grid-40">
+			<div class="sticky-note last">
+				<div class="row allies">
+				<div class="column">
+					<h3>
+						<span class="column">
+						<i class="material-icons">work</i>
+						</span>
+						<span class="column">
+						Company
+						</span>
+					</h3>
+				</div>
+				<div class="column righted clearfix sub-menu">
+				<% if current_user?(@user) %>
+					<a href="">
+					<small>
+					Settings
+					</small>
+					<i class="material-icons">settings</i>
+					</a>
+				<% end %>
+				</div>
+
+				<%= render @companies %>
+				<%= will_paginate @companies %>
+
+				</div><!-- row sticky-note -->
+			</div><!-- sticky-note end -->
+		</div><!-- grid-40 -->
+		<% end %>
+
 		<% if current_user?(@user) %>
+
 			<div class="grid-40">
 			<div class="sticky-note last">
 				<div class="row allies">

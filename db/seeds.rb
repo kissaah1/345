@@ -89,6 +89,16 @@ users = User.order(:created_at).take(6)
 	users.each { |user| user.positions.create!(title: title, summary: summary, company: company, start_date: "2000-01-01", end_date: "2015-05-01") }
 end
 
+users = User.order(:created_at).take(6)
+3.times do
+	name = Faker::Company.name
+	industry = Faker::Name.title
+	website = Faker::Internet.url
+	summary = Faker::Lorem.sentence
+	users.each { |user| user.companies.create!(name: name, industry: industry, website: website, summary: summary) }
+end
+
+
 # Following relationships
 users = User.all
 user  = users.first

@@ -124,5 +124,14 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "associated companies should be destroyed" do
+    @user.save
+    @user.companies.create!(name: "Awesome Inc.", industry: "Internet", website: "http://www.hugehood.co",
+    summary: "HUGEHOOD is a digital consultancy that helps leaders to build a startup and brand that drives 
+    long-term impact for the better.")
+    assert_difference 'Company.count', -1 do
+      @user.destroy
+    end
+  end
 
 end

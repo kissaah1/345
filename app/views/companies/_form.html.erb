@@ -1,0 +1,47 @@
+<%= form_for Company.find(params[:id]) do |f| %>
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:name, "Company Name", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_field :name, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:industry, "Industry", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_field :industry, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:website, "Website", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_field :website, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:summary, "Website", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :summary, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- question -->
+
+
+
+				<div class="row-90 centered question">
+					<%= f.submit "Create a Company", class: "button extend primary" %>
+					<% end %>
+				</div><!-- question -->

@@ -10,7 +10,7 @@ class UsersControllerTest < ActionController::TestCase
 	test "non-admin user should not get users index" do
 		log_in_as(@other_user)
 		get :index
-		assert_redirected_to root_url
+		assert_redirected_to @other_user
 	end
 
 	test "should get new" do
@@ -56,7 +56,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_no_difference 'User.count' do
       delete :destroy, id: @user
     end
-    assert_redirected_to root_url
+    assert_redirected_to @other_user
   end
 
   test "should redirect following when not logged in" do

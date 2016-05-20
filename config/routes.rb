@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'microposts/survey'
 
   get 'positions/new'
+  get 'companies/new'
 
   get 'users/admins'
   get 'users/enthusiasts'
@@ -28,6 +29,10 @@ Rails.application.routes.draw do
   get 'users/navigators'
   get 'users/coachs'
   get 'users/solos'
+  get 'users/mycompany'
+
+  get 'companies/index'
+  get 'companies/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -50,6 +55,9 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   get 'positions' => 'positions#new'
+  get 'companies' => 'companies#index'
+  
+
   get 'enthusiasts' => 'users#enthusiasts'
   get 'skeptics' => 'users#skeptics'
   get 'pioneers' => 'users#pioneers'
@@ -57,7 +65,8 @@ Rails.application.routes.draw do
   get 'coaches' => 'users#coachs'
   get 'solos' => 'users#solos'
   get 'users/coaches' => 'users#coachs'
- 
+
+
   resources :users do
     member do
       get :following, :followers
@@ -67,9 +76,10 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
-  resources :microposts, only: [:create, :edit, :update, :destroy]
+  resources :microposts, only: [:index, :create, :edit, :update, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :positions, only: [:create, :edit, :update, :destroy]
+  resources :companies, only: [:index, :show, :create, :edit, :update, :destroy]
   
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

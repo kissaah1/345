@@ -4,45 +4,36 @@ class UsersController < ApplicationController
 	before_action :admin_user, only: [:index, :destroy]
 
 	def index
-		@users = User.paginate(page: params[:page])
-		# @users = User.paginate(page: params[:page])
+		@users = User.paginate(page: params[:page], :per_page => 30)
 	end
-
 	def admins
 		@admins = User.where('users.admin = ?', true)
 	end
-
 	def enthusiasts
 		@enthusiasts = User.where('users.enthusiast = ?', true)
 	end
-
 	def skeptics
 		@skeptics = User.where('users.skeptic = ?', true)
 	end
-
 	def pioneers
 		@pioneers = User.where('users.pioneer = ?', true)
 	end
-
 	def navigators
 		@navigators = User.where('users.navigator = ?', true)
 	end
-
 	def coachs
 		@coachs = User.where('users.coach = ?', true)
 	end
-
 	def solos
 		@solos = User.where('users.solo = ?', true)
 	end
-
-
 
 	def show
 		@user = User.find(params[:id])
 		@microposts = @user.microposts.paginate(page: params[:page], :per_page => 3, :total_entries => 30)
 		@surveys = @user.microposts
 		@positions = @user.positions.paginate(page: params[:page], :per_page => 3)
+		@companies = @user.companies.paginate(page: params[:page], :per_page => 3)
 	end
 
 	def new
@@ -121,7 +112,7 @@ class UsersController < ApplicationController
 	
 		# Confirms an admin user.
 		def admin_user
-			redirect_to(root_url) unless current_user.admin?
+			redirect_to current_user unless current_user.admin?
 		end
 
 end

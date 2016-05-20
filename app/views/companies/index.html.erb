@@ -1,0 +1,39 @@
+<% provide(:title, "All Companies") %>
+<section class="centered bottomfix company-section">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+
+		<div class="grid-100">
+
+			<div class="sticky-note first last">
+				<div class="row index">
+				<div class="column">
+					<h3>
+						<span class="column">
+						<i class="material-icons">work</i>
+						</span>
+						<span class="column">
+						My Company
+						</span>
+					</h3>
+				</div>
+				<div class="grid-100 paginate">
+				<%= will_paginate %>
+				</div>
+				<div class="row-100 columns list">
+				<% @companies.each do |company| %>
+				<%= render company %>
+				<% end %>
+				</div>
+				<div class="paginate">
+				<%= will_paginate %>
+				</div>
+				</div><!-- row companies -->
+			</div><!-- sticky-note end -->
+
+			</div>
+
+		</div><!-- columns -->
+	</div><!-- row -->
+</section><!-- bottomfix -->
+
