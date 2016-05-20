@@ -55,6 +55,27 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
+	def setting
+		@user = User.find(params[:id])
+	end
+
+	def summary
+		@user = User.find(params[:id])
+	end
+
+	def skills
+		@user = User.find(params[:id])
+	end
+
+	def allies
+		@user = User.find(params[:id])
+	end
+
+	def avatar
+		@user = User.find(params[:id])
+	end
+
+
 	def update
 		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)

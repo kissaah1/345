@@ -1,0 +1,20 @@
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+				<%= form_for User.find(params[:id]) do |f| %>
+				<%= render 'shared/error_messages', object: @user %>
+
+			<div class="row-80 centered form-field">
+				<%= f.label :summary %>
+				<%= f.text_area :summary, class: 'form-control' %>
+			</div><!-- form-field -->
+
+
+			<div class="row-80 centered form-field">
+				<%= f.submit "Save changes", class: "button secondary extend" %>
+				<% end %>
+			</div><!-- form-field -->
+
+		</div><!-- columns grid-80 -->
+	</div><!-- row -->
+</section><!-- bottomfix -->

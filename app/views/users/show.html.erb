@@ -15,7 +15,9 @@
 					<div class="row profile-card clearfix">
 					<div class="grid-100">
 						<div class="column profile-pic clearfix">
+<%= link_to avatar_path(current_user) do %>
 						<%= gravatar_for @user %>
+<% end %>
 						<%#= image_tag src="ploads/profile-picture-1.jpg", class: "profile-pic" %>
 						</div>
 
@@ -31,7 +33,7 @@
 						</div><!-- taglines -->
 						<div class="column righted">
 							<% if current_user?(@user) %>
-							<%= link_to edit_user_path(current_user) do %>
+							<%= link_to setting_path(current_user) do %>
 							<small>
 							Settings
 							</small>
@@ -74,28 +76,78 @@
 					</div><!-- taglines -->
 </div><!-- grid-100 -->
 <div class="grid-100">
-
-				<small>
+<div class="grid-100">
 					<% if current_user.enthusiast? %>
-					Enthusiast
-					<% end %>
-					<% if current_user.skeptic? %>
-					Skeptic
-					<% end %>
-					<% if current_user.navigator? %>
-					Navigator
-					<% end %>
-					<% if current_user.pioneer? %>
-					Pioneer
-					<% end %>
-					<% if current_user.coach? %>
-					Coach		
-					<% end %>
-					<% if current_user.solo? %>
-					Solo			
-					<% end %>
-				</small>
 
+					<div class="badge enthusiast">
+					<span>
+					<i class="material-icons">favorite</i>
+					</span>
+					<span class="label">
+					Enthusiast
+					</span>
+					</div>
+					<% end %>
+
+					<% if current_user.skeptic? %>
+					<div class="badge skeptic">
+					<span>
+					<i class="material-icons">search</i>
+					</span>
+					<span class="label">
+					Skeptic
+					</span>
+					</div>
+					<% end %>
+
+					<% if current_user.pioneer? %>
+					<div class="badge pioneer">
+					<span>
+					<i class="material-icons">near_me</i>
+					</span>
+					<span class="label">
+					Pioneer
+					</span>
+					</div>
+					<% end %>
+
+					<% if current_user.navigator? %>
+					<div class="badge navigator">
+					<span>
+					<i class="material-icons">explore</i>
+					</span>
+					<span class="label">
+					Navigator
+					</span>
+					</div>
+					<% end %>
+
+					<% if current_user.coach? %>
+					<div class="badge coach">
+					<span>
+					<i class="material-icons">spa</i>
+					</span>
+					<span class="label">
+					Coach
+					</span>
+					</div>
+					<% end %>
+
+					<% if current_user.solo? %>
+				<% if current_user?(@user) %>
+					<%= link_to allies_path do %>
+					<div class="badge solo">
+					<span>
+					<i class="material-icons sub-menu">add_box</i>
+					</span>
+					<span class="label">
+					Join Ally
+					</span>
+					</div>
+					<% end %>
+				<% end %>	
+					<% end %>
+</div>
 					<div class="grid-100 summary">
 						<h3>
 						Summary
@@ -105,7 +157,7 @@
 					<%= @user.summary %>
 				<% else %>
 					<% if current_user?(@user) %>
-					<%= link_to edit_user_path do%>
+					<%= link_to summary_path do%>
 						<span class="column">
 						<small>
 						"Update your summary.."
@@ -154,7 +206,7 @@
 				</div>
 				<div class="column righted clearfix">
 				<% if current_user?(@user) %>
-					<%= link_to '../positions' do %>
+					<%= link_to positions_new_path do %>
 					<i class="material-icons sub-menu">add_box</i>
 					<small>
 					Add Experience
@@ -185,7 +237,7 @@
 				</div>
 				<div class="column righted clearfix">
 				<% if current_user?(@user) %>
-					<%= link_to edit_user_path do %>
+					<%= link_to skills_path do %>
 						<small>
 						Edit
 						</small>
@@ -199,7 +251,7 @@
 						<%= @user.skills %>
 					<% else %>
 					<% if current_user?(@user) %>
-						<%= link_to edit_user_path do%>
+						<%= link_to skills_path do%>
 							<span class="column">
 							<small>
 							"Update your skills.."
@@ -234,7 +286,7 @@
 				</div>
 				<div class="column righted clearfix">
 				<% if current_user?(@user) %>
-					<%= link_to edit_user_path do %>
+					<%= link_to skills_path do %>
 						<small>
 						Edit
 						</small>
@@ -248,7 +300,7 @@
 						<%= @user.other_skills %>
 					<% else %>
 					<% if current_user?(@user) %>
-						<%= link_to edit_user_path do%>
+						<%= link_to skills_path do%>
 						<span class="column">
 						<small>
 						"Update your other skills.."

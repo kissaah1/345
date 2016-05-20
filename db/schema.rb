@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 20160520002001) do
     t.boolean  "navigator",         default: false
     t.boolean  "pioneer",           default: false
     t.boolean  "coach",             default: false
-    t.boolean  "solo",              default: false
+    t.boolean  "solo",              default: true
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

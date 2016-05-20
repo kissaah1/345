@@ -66,6 +66,11 @@ Rails.application.routes.draw do
   get 'solos' => 'users#solos'
   get 'users/coaches' => 'users#coachs'
 
+  get 'users/:id/setting' => 'users#setting', as: :setting
+  get 'users/:id/summary' => 'users#summary', as: :summary
+  get 'users/:id/allies' => 'users#allies', as: :allies
+  get 'users/:id/skills' => 'users#skills', as: :skills
+  get 'users/:id/avatar' => 'users#avatar', as: :avatar
 
   resources :users do
     member do

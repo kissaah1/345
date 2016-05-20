@@ -5,6 +5,6 @@ class AddAlliesToUsers < ActiveRecord::Migration
     add_column :users, :navigator, :boolean, default: false
     add_column :users, :pioneer, :boolean, default: false
     add_column :users, :coach, :boolean, default: false
-    add_column :users, :solo, :boolean, default: false
+    add_column :users, :solo, :boolean, default: true
   end
 end
