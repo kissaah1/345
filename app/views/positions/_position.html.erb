@@ -12,7 +12,7 @@
 					<%= position.company %>
 					</p>
 					<p class="time-location">
-					<%= position.start_date %> to <%= position.end_date %>
+					<%= position.start_date.strftime("%B %e %Y") %> to <%= position.end_date.strftime("%B %e %Y") %>
 					</p>
 			</div>
 			<div class="column righted clearfix">

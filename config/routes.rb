@@ -56,6 +56,7 @@ Rails.application.routes.draw do
 
   get 'positions' => 'positions#new'
   get 'companies' => 'companies#index'
+  get 'positions/:id/edit' => 'positions#edit'
   
 
   get 'enthusiasts' => 'users#enthusiasts'
@@ -65,6 +66,7 @@ Rails.application.routes.draw do
   get 'coaches' => 'users#coachs'
   get 'solos' => 'users#solos'
   get 'users/coaches' => 'users#coachs'
+
 
   get 'users/:id/setting' => 'users#setting', as: :setting
   get 'users/:id/summary' => 'users#summary', as: :summary

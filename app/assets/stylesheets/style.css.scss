@@ -493,9 +493,6 @@ a {
 }
 #logged-in-view {
 	section {
-			&.bottomfix {
-				padding-bottom: 420px;
-			}
 		&.dashboard, &.survey-section, &.profile-section, &.company-section {
 			h2 {
 				font-size: 22px;
@@ -1274,11 +1271,11 @@ a {
 	}
 }
 #logged-in-view {
-	section {
-		width: 100%;
-		&.bottomfix {
+		.bottomfix {
 			padding-bottom: $small-footer;
 		}
+	section {
+		width: 100%;
 	}
 	footer {
 		.on-public-view {
@@ -1326,13 +1323,13 @@ footer {
 	}
 
  	.bottomfix {
- 		padding-bottom: 64px;
+ 		padding-bottom: $small-footer;
  	}
  	.copyright {
 		border-top: 1px solid rgba(150, 150, 150, 0.1);
 		border-bottom: 1px solid rgba(150, 150, 150, 0.1);
   		display: block;
-  		min-height: 64px;
+  		height: $small-footer;
   		background: $shadow;
   		padding: 10px 0;
   		position: absolute;
