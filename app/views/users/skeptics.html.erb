@@ -1,13 +1,18 @@
 <% provide(:title, "Skeptics") %>
-<section class="centered bottomfix">
+
+<section class="centered index-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
-		<h2>Skeptics</h2>
-		<ul class="users">
-		<% @skeptics.each do |user| %>
-		<%= render user %>
-		<% end %>
-		</ul>
+			<div class="grid-100">
+					<h2><i class="material-icons">search</i>Skeptics</h2>
+					<ul class="users">
+					<% @skeptics.each do |user| %>
+					<%= render user %>
+					<% end %>
+					</ul>
+					<%= will_paginate @skeptics %>
+
+			</div><!-- grid-100 -->
 		</div><!-- columns -->
 	</div><!-- row -->
-</section><!-- bottomfix -->
+</section><!-- index-section -->

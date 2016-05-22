@@ -1,8 +1,8 @@
 <% provide(:title, "Admin Users") %>
-<section class="centered bottomfix">
+<section class="centered index-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
-		<h2>All Users</h2>
+		<h2>Admin Users</h2>
 		<ul class="users">
 		<% @admins.each do |user| %>
 		<%= render user %>
@@ -10,4 +10,4 @@
 		</ul>
 		</div><!-- columns -->
 	</div><!-- row -->
-</section><!-- bottomfix -->
+</section><!-- index-section -->

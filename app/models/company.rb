@@ -9,5 +9,12 @@ class Company < ActiveRecord::Base
 	format: { with: VALID_URI_REGEX }
 	validates :summary, presence: true, length: { maximum: 140 }
 
+def self.search(search)
+  if search
+    where("name like ?", "%#{search}%")
+  else
+    all
+  end
+end
 
 end

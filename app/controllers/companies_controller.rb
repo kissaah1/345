@@ -1,10 +1,13 @@
 class CompaniesController < ApplicationController
-	before_action :logged_in_user, only: [:create, :edit, :update, :destroy]
+	before_action :logged_in_user, only: [:index, :create, :edit, :update, :destroy]
 	before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
 
 	def index
-		@companies = Company.paginate(page: params[:page], :per_page => 10)
+		@companies = Company.all
+	    @companies = Company.search(params[:search]) if params[:search].present?
+		@companies = Company.find_by_name(params[:name])
+		@companies = Company.paginate(page: params[:page], :per_page => 5)
 	end
 
 	def create

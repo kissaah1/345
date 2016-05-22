@@ -97,6 +97,17 @@ class User < ActiveRecord::Base
 		reset_sent_at < 2.hours.ago
 	end
 
+	def self.search(query)
+		if query.present?
+			rank = <<-RANK
+			ts_rank(to_tsvector(name), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(email), plainto_tsquery(#{sanitize(query)}))
+			RANK
+			where("name @@ :q  or email @@ :q", q: query).order("#{rank} desc")
+		end
+	end
+
+
 	# Defines a proto-feed.
 	# See "Following users" for the full implementation.
 	def feed

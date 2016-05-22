@@ -1,31 +1,33 @@
 class UsersController < ApplicationController
 	before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy, :following, :followers]
 	before_action :correct_user, only: [:edit, :update]
-	before_action :admin_user, only: [:index, :destroy]
+	before_action :admin_user, only: [:destroy]
 
 	def index
-		@users = User.paginate(page: params[:page], :per_page => 30)
+		@users = User.search(params[:query]).page(params[:page]).per_page(10)
+#		@users = User.paginate(page: params[:page], :per_page => 10)
 	end
+
 	def admins
-		@admins = User.where('users.admin = ?', true)
+		@admins = User.where('users.admin = ?', true).page(params[:page]).per_page(10)
 	end
 	def enthusiasts
-		@enthusiasts = User.where('users.enthusiast = ?', true)
+		@enthusiasts = User.where('users.enthusiast = ?', true).page(params[:page]).per_page(10)
 	end
 	def skeptics
-		@skeptics = User.where('users.skeptic = ?', true)
+		@skeptics = User.where('users.skeptic = ?', true).page(params[:page]).per_page(10)
 	end
 	def pioneers
-		@pioneers = User.where('users.pioneer = ?', true)
+		@pioneers = User.where('users.pioneer = ?', true).page(params[:page]).per_page(10)
 	end
 	def navigators
-		@navigators = User.where('users.navigator = ?', true)
+		@navigators = User.where('users.navigator = ?', true).page(params[:page]).per_page(10)
 	end
 	def coachs
-		@coachs = User.where('users.coach = ?', true)
+		@coachs = User.where('users.coach = ?', true).page(params[:page]).per_page(10)
 	end
 	def solos
-		@solos = User.where('users.solo = ?', true)
+		@solos = User.where('users.solo = ?', true).page(params[:page]).per_page(10)
 	end
 
 	def show
