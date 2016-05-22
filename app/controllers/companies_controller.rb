@@ -1,13 +1,14 @@
 class CompaniesController < ApplicationController
 	before_action :logged_in_user, only: [:index, :create, :edit, :update, :destroy]
-	before_action :correct_user, only: [:show, :edit, :update, :destroy]
+	before_action :correct_user, only: [:edit, :update, :destroy]
 
 
 	def index
-		@companies = Company.all
-	    @companies = Company.search(params[:search]) if params[:search].present?
-		@companies = Company.find_by_name(params[:name])
-		@companies = Company.paginate(page: params[:page], :per_page => 5)
+		if params[:query].present?
+			@companies = Company.search(params[:query]).page(params[:page]).per_page(5)
+		else
+			@companies = Company.paginate(page: params[:page], :per_page => 5)
+		end
 	end
 
 	def create
@@ -49,6 +50,15 @@ class CompaniesController < ApplicationController
 
 		def company_params
 			params.require(:company).permit(:name, :industry, :website, :summary)
+		end
+
+		# Confirms a logged-in user.
+		def logged_in_user
+			unless logged_in?
+				store_location
+				flash[:danger] = "Please log in."
+				redirect_to login_url
+			end
 		end
 
 		def correct_user

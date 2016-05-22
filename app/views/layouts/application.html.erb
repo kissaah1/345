@@ -9,9 +9,9 @@
 	<meta name="robots" content="all">
 	<title><%= full_title(yield(:title)) %></title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+			rel="stylesheet">
 	<%= favicon_link_tag 'favicon.ico' %>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= stylesheet_link_tag		'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 	<%= render 'layouts/shim' %>
@@ -27,62 +27,59 @@
 <%= render 'layouts/header' %>
 <div class="bottomfix">
 	<% flash.each do |message_type, message| %>
-    <div class="row">
-    <div class="columns grid-80 centered clearfix">
+		<div class="row">
+		<div class="columns grid-80 centered clearfix">
 
 		<div class="alert alert-<%= message_type %>">
-    <small>
-    <%= message %>
-    </small>
-    </div>
-    </div>
-    </div>
+		<small>
+		<%= message %>
+		</small>
+		</div>
+		</div>
+		</div>
 	<% end %>
 
 <%= yield %>
 </div><!-- bottomfix -->
 <%= render 'layouts/footer' %>
 </div><!-- container -->
+<% if logged_in? %>
+<%= render 'joyride_contents' %>
+<script>
+$(window).load(function() {
+	$('#joyRideTipContent').joyride({
+		autoStart : true,
+		postStepCallback : function (index, tip) {
+			if (index == 2) {
+				$(this).joyride('set_li', false, 1);
+			}
+		},
+		modal:true,
+		expose: true
+	});
+});
+</script>
+<% end %>
+
 <script type="text/javascript">
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function expandDropdown() {
-    document.getElementById("dropdownList").classList.toggle("show");
+		document.getElementById("dropdownList").classList.toggle("show");
 }
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.trigger')) {
+	if (!event.target.matches('.trigger')) {
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-<script type="text/javascript">
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function launchQuickeditor() {
-    document.getElementById("quickeditorForm").classList.toggle("show");
-}
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.trigger')) {
-
-    var dropdowns = document.getElementsByClassName("quickeditor-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+	}
 }
 </script>
 </body>

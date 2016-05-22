@@ -12,7 +12,7 @@
 		<div class="columns grid-80 centered clearfix">
 			<div class="grid-60">
 				<div class="sticky-note first">
-					<div class="row profile-card clearfix">
+					<div id="numero2" class="row profile-card clearfix">
 					<div class="grid-100">
 						<div class="column profile-pic clearfix">
 						<%= link_to avatar_path(current_user) do %>
@@ -192,7 +192,7 @@
 				<% end %>
 			</div><!-- sticky-note -->
 			<div class="spacer"></div>
-			<div class="sticky-note first">
+			<div id="numero3" class="sticky-note first">
 				<div class="row work-experience">
 				<div class="column">
 					<h3>
@@ -322,7 +322,7 @@
 			</div><!-- sticky-note -->
 			<div class="spacer"></div>
 			<% if current_user?(@user) %>
-			<div class="sticky-note first">
+			<div class="sticky-note first someclass">
 				<div class="row howrudoing">
 					<h3>
 						<span class="column">

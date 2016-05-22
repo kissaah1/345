@@ -9,12 +9,15 @@ class Company < ActiveRecord::Base
 	format: { with: VALID_URI_REGEX }
 	validates :summary, presence: true, length: { maximum: 140 }
 
-def self.search(search)
-  if search
-    where("name like ?", "%#{search}%")
-  else
-    all
-  end
-end
+	def self.search(query)
+		if query.present?
+			rank = <<-RANK
+			ts_rank(to_tsvector(name), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(industry), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(summary), plainto_tsquery(#{sanitize(query)}))
+			RANK
+			where("name @@ :q or industry @@ :q or summary @@ :q", q: query).order("#{rank} desc")
+		end
+	end
 
 end
