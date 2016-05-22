@@ -103,10 +103,15 @@ class User < ActiveRecord::Base
 		if query.present?
 			rank = <<-RANK
 			ts_rank(to_tsvector(name), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(email), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(location), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(industry), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(headline), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(summary), plainto_tsquery(#{sanitize(query)})) +
 			ts_rank(to_tsvector(skills), plainto_tsquery(#{sanitize(query)})) +
 			ts_rank(to_tsvector(other_skills), plainto_tsquery(#{sanitize(query)}))
 			RANK
-			where("name @@ :q  or skills @@ :q or other_skills @@ :q", q: query).order("#{rank} desc")
+			where("name @@ :q  or email @@ :q  or location @@ :q  or industry @@ :q  or headline @@ :q  or summary @@ :q or skills @@ :q or other_skills @@ :q", q: query).order("#{rank} desc")
 		end
 	end
 
