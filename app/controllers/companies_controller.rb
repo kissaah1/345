@@ -1,6 +1,7 @@
 class CompaniesController < ApplicationController
 	before_action :logged_in_user, only: [:index, :create, :edit, :update, :destroy]
 	before_action :correct_user, only: [:edit, :update, :destroy]
+	before_action :cadmin_user, only: [:create, :edit, :update, :destroy]
 
 
 	def index
@@ -13,11 +14,13 @@ class CompaniesController < ApplicationController
 
 	def create
 		@company = current_user.companies.build(company_params)
+		#@company = Company.new(params[:company])
+		#@company.users << current_user
 		if @company.save
 			flash[:success] = "Company Created!"
 			redirect_to current_user
 		else
-			render 'users/show'
+			render 'index'
 		end
 	end
 
@@ -65,6 +68,17 @@ class CompaniesController < ApplicationController
 			@company = current_user.companies.find_by(id: params[:id])
 			redirect_to root_url if @company.nil?
 		end
+
+		# Confirms a company admin user.
+		def cadmin_user
+			#redirect_to(root_url) unless current_user.cadmin?
+			unless current_user.cadmin?
+				store_location
+				flash[:danger] = "You don't have previlege to create a company. Please update your role."
+				redirect_to current_user
+			end
+		end
+
 		# Confirms an admin user.
 		def admin_user
 			redirect_to(root_url) unless current_user.admin?
