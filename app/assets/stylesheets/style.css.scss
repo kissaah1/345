@@ -1391,7 +1391,6 @@ footer {
 		border-top: 1px solid rgba(150, 150, 150, 0.1);
 		border-bottom: 1px solid rgba(150, 150, 150, 0.1);
   		display: block;
-  		height: $small-footer;
   		background: $shadow;
   		padding: 10px 0;
   		position: absolute;
@@ -1854,6 +1853,15 @@ section {
 			display:block;
 		}
 	}
+
+	.signup {
+		&.index-form {
+			margin: 0 0 5px 0;
+			form {
+				margin-top: 10px;
+			}
+		}
+	}
 }
 .hello {
 	.table-cell {
@@ -2157,7 +2165,6 @@ nav {
 	visibility: visible;
 }
 section {
-	width: 320px;
 	margin: 0 auto;
 	.hello .table-cell {
 		height: 160px;	
@@ -2165,7 +2172,6 @@ section {
 			font-size: 1.75em;
 			line-height: 100%;
 			display: block;
-			width: 320px;
 			margin-bottom: 0;
 			}
 		h4 {
@@ -2211,7 +2217,7 @@ section {
 			float: none;
 			text-align: center;
 		}
-		.grid-50 {
+		.grid-50, .grid-60 {
 			width: 100%;
 		}
 		.logo a {
