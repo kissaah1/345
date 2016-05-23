@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+#	include PgSearch
+#	pg_search_scope :search, :against => [:name, :email]
+	has_many :employments, dependent: :destroy
 	has_many :companies, dependent: :destroy
 	has_many :positions, dependent: :destroy
 	has_many :microposts, dependent: :destroy
@@ -101,11 +104,25 @@ class User < ActiveRecord::Base
 		if query.present?
 			rank = <<-RANK
 			ts_rank(to_tsvector(name), plainto_tsquery(#{sanitize(query)})) +
-			ts_rank(to_tsvector(email), plainto_tsquery(#{sanitize(query)}))
+			ts_rank(to_tsvector(email), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(location), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(industry), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(headline), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(summary), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(skills), plainto_tsquery(#{sanitize(query)})) +
+			ts_rank(to_tsvector(other_skills), plainto_tsquery(#{sanitize(query)}))
 			RANK
-			where("name @@ :q  or email @@ :q", q: query).order("#{rank} desc")
+			where("name @@ :q  or email @@ :q  or location @@ :q  or industry @@ :q  or headline @@ :q  or summary @@ :q or skills @@ :q or other_skills @@ :q", q: query).order("#{rank} desc")
 		end
 	end
+
+#	def self.search(query)
+#		if query.present?
+#			search(query)
+#		else
+#			scoped
+#		end
+#	end
 
 
 	# Defines a proto-feed.

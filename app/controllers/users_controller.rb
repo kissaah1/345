@@ -4,12 +4,18 @@ class UsersController < ApplicationController
 	before_action :admin_user, only: [:destroy]
 
 	def index
-		@users = User.search(params[:query]).page(params[:page]).per_page(10)
-#		@users = User.paginate(page: params[:page], :per_page => 10)
+		if params[:query].present?
+			@users = User.search(params[:query]).page(params[:page]).per_page(10)
+		else
+			@users = User.paginate(page: params[:page], :per_page => 10)
+		end
 	end
 
 	def admins
 		@admins = User.where('users.admin = ?', true).page(params[:page]).per_page(10)
+	end
+	def cadmins
+		@cadmins = User.where('users.cadmin = ?', true).page(params[:page]).per_page(10)
 	end
 	def enthusiasts
 		@enthusiasts = User.where('users.enthusiast = ?', true).page(params[:page]).per_page(10)
@@ -133,6 +139,16 @@ class UsersController < ApplicationController
 			redirect_to(root_url) unless @user == current_user
 		end
 	
+		# Confirms a company admin user.
+		def cadmin_user
+			#redirect_to(root_url) unless current_user.cadmin?
+			unless current_user.cadmin?
+				store_location
+				flash[:danger] = "You are not company admin."
+				redirect_to current_user
+			end
+		end
+
 		# Confirms an admin user.
 		def admin_user
 			redirect_to current_user unless current_user.admin?

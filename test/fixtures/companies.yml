@@ -1,10 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 orange:
-  name: MyString
-  industry: MyString
-  website: MyString
-  summary: MyText
+  name: Awesome Inc.
+  industry: Internet
+  website: http://www.awesome.co
+  summary: I am awesome!
   user_id: 
   created_at: <%= 10.minutes.ago %>
 
