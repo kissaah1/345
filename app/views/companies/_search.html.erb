@@ -1,7 +1,7 @@
-			<div id="numero1" class="column grid-50 search">
+			<div class="column grid-50 search">
 			<%= form_tag companies_path, method: 'get' do %>
 			<p>
-			<%= text_field_tag :query, params[:query], placeholder: "Search Compnaies..", class: "search-field" %>
+			<%= text_field_tag :query, params[:query], placeholder: "Search Compnaies..", id: "numero1", class: "search-field" %>
 			</p>
 			<% end %>
 			</div>
