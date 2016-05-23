@@ -36,7 +36,7 @@
 					<%= label_tag(:start_date, "Start Date", class: 'form-control') %>
 					</h3>
 					<div class="field">
-					<%= select_date Date.today, prefix: :start_date %>
+					<%= f.text_field :start_date, class: 'form-control' %>
 					</div><!-- field -->
 					</div><!-- column -->
 
@@ -45,7 +45,7 @@
 					<%= label_tag(:end_date, "End Date", class: 'form-control') %>
 					</h3>
 					<div class="field">
-					<%= select_date Date.today, prefix: :end_date %>
+					<%= f.text_field :end_date, class: 'form-control' %>
 					</div><!-- field -->
 					</div><!-- column -->
 

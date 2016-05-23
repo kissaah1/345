@@ -1,13 +1,19 @@
 <% provide(:title, "Navigators") %>
-<section class="centered bottomfix">
+
+
+<section class="centered index-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
-		<h2>Navigators</h2>
-		<ul class="users">
-		<% @navigators.each do |user| %>
-		<%= render user %>
-		<% end %>
-		</ul>
+			<div class="grid-100">
+					<h2><i class="material-icons">explore</i>Navigators</h2>
+					<ul class="users">
+					<% @navigators.each do |user| %>
+					<%= render user %>
+					<% end %>
+					</ul>
+					<%= will_paginate @navigators %>
+
+			</div><!-- grid-100 -->
 		</div><!-- columns -->
 	</div><!-- row -->
-</section><!-- bottomfix -->
+</section><!-- index-section -->

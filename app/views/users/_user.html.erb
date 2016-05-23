@@ -1,19 +1,24 @@
-		<li>
-		<%= gravatar_for user, size: 50 %>
-		<small>
-		Name:
-		</small>
+		<li class="row">
+		<div class="column">
+		<div class="column profile-pic clearfix">
+		<%= gravatar_for user %>
+		</div>
+		
+		</div>
+		<div class="column">
+		<h4>
 		<%= link_to user.name, user %>
-		|
+		</h4>
 		<small>
 		Location:
 		</small>
 		<%= user.location %>
-			|
+		</div>
+		
+		<div class="gird-50">
 		<small>
 		Tags:
-		</small>
-	
+		</small>		
 		<% if user.admin? %>
 		#Admin
 		<% end %>
@@ -35,6 +40,7 @@
 		<% if user.solo? %>
 		#Solo
 		<% end %>
+		</div>
 		<% if current_user.admin? && !current_user?(user) %>
 				| <%= link_to "delete", user, method: :delete,
 		data: { confirm: "You sure?" } %>

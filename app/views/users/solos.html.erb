@@ -1,13 +1,18 @@
 <% provide(:title, "Solos") %>
-<section class="centered bottomfix">
+
+<section class="centered index-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
-		<h2>Solos</h2>
-		<ul class="users">
-		<% @solos.each do |user| %>
-		<%= render user %>
-		<% end %>
-		</ul>
+			<div class="grid-100">
+					<h2><i class="material-icons">near_me</i>Solos</h2>
+					<ul class="users">
+					<% @solos.each do |user| %>
+					<%= render user %>
+					<% end %>
+					</ul>
+					<%= will_paginate @pioneers %>
+
+			</div><!-- grid-100 -->
 		</div><!-- columns -->
 	</div><!-- row -->
-</section><!-- bottomfix -->
+</section><!-- index-section -->

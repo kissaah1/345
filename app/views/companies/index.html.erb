@@ -21,6 +21,9 @@
 				<%= will_paginate %>
 				</div>
 				<div class="row-100 columns list">
+				<% if @companies.blank? %>
+				<h4>There are no companies containing the term <%= params[:search] %>.</h4>
+				<% end %>
 				<% @companies.each do |company| %>
 				<%= render company %>
 				<% end %>

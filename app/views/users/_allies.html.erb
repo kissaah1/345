@@ -1,6 +1,6 @@
-<section class="centered bottomfix">
+<section class="centered setting-section">
 	<div class="row">
-		<div class="columns grid-80 centered clearfix">
+		<div class="columns grid-100 centered clearfix">
 				<%= form_for User.find(params[:id]) do |f| %>
 				<%= render 'shared/error_messages', object: @user %>
 				<h3 class="text-center">
@@ -41,6 +41,6 @@
 				<% end %>
 			</div><!-- form-field -->
 
-		</div><!-- columns grid-80 -->
+		</div><!-- columns grid-100 -->
 	</div><!-- row -->
-</section><!-- bottomfix -->
+</section><!--  setting-section -->

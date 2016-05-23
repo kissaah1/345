@@ -1,12 +1,15 @@
 <% provide(:title, @title) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <%= gravatar_for @user %>
-      <h1><%= @user.name %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>Microposts:</b> <%= @user.microposts.count %></span>
-    </section>
+
+
+
+<section class="centered index-section">
+  <div class="row">
+    <div class="columns grid-80 centered clearfix">
+      <div class="grid-100">
+          <%= gravatar_for @user %>
+          <h2><%= @user.name %></h2>
+          <span><%= link_to "view my profile", @user %></span>
+          <ul class="users">
     <section class="stats">
       <%= render 'shared/stats' %>
       <% if @users.any? %>
@@ -17,14 +20,15 @@
         </div>
       <% end %>
     </section>
-  </aside>
-  <div class="col-md-8">
-    <h3><%= @title %></h3>
+          </ul>
+              <h3><%= @title %></h3>
     <% if @users.any? %>
       <ul class="users follow">
         <%= render @users %>
       </ul>
-      <%= will_paginate %>
-    <% end %>
-  </div>
-</div>
+          <%= will_paginate @users %>
+<% end %>
+      </div><!-- grid-100 -->
+    </div><!-- columns -->
+  </div><!-- row -->
+</section><!-- index-section -->

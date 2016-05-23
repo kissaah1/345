@@ -1,17 +1,29 @@
 <header>
-<%# if logged_in? %>
-<%# else %>
-<%# end %>
 	<div class="row topbar">
 
 		<div class="grid-80 centered clearfix">
+			<% if logged_in? %>
+			<div class="grid-80 lefted logo">
+			<% else %>
 			<div class="grid-40 lefted logo">
+			<% end %>
+			<div class="column">
 			<h1>
 			<%= link_to "345 Thrive", root_path %>
 			</h1>
-			</div><!-- grid-40 lefted -->
+			</div>
+			<% if logged_in? %>
+			<%= render 'search' %>
+			<% end %>
 
+			</div><!-- grid-20 lefted -->
+
+			
+			<% if logged_in? %>
+			<div class="grid-20 righted text-right">
+			<% else %>
 			<div class="grid-60 righted text-right">
+			<% end %>
 			<nav>
 				<div class="dropdown">
 					<button onclick="expandDropdown()" class="trigger">
@@ -45,7 +57,7 @@
 					Create Company
 					</span>
 					<% end %>
-					<%= link_to edit_user_path(current_user) do%>
+					<%= link_to setting_path(current_user) do%>
 					<i class="material-icons">settings</i>
 					<span class="nav-item">
 					Settings
@@ -77,7 +89,8 @@
 				</div><!-- dropdown -->
 
 			</nav>
-			</div><!-- grid-60 righted text-right -->
+
+			</div><!-- grid-20 righted text-right -->
 		</div><!-- grid-80 centered clearfix -->
 
 	</div><!-- row topbar -->

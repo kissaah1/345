@@ -1,6 +1,6 @@
 class PositionsController < ApplicationController
 	before_action :logged_in_user, only: [:create, :edit, :update, :destroy]
-	before_action :correct_user, only: [:edit, :update, :destroy]
+	before_action :correct_user, only: [:update, :destroy]
 
 	def create
 		@position = current_user.positions.build(position_params)

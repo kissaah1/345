@@ -1,19 +1,21 @@
-<% provide(:title, "All Users") %>
-<section class="centered bottomfix profile-section">
+<% provide(:title, "Search" ) %>
+<section class="centered index-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
 			<div class="grid-100">
-				<div class="sticky-note first">
-		<h2>All Users</h2>
-		<%= will_paginate %>
-		<ul class="users">
-		<% @users.each do |user| %>
-		<%= render user %>
-		<% end %>
-		</ul>
-		<%= will_paginate %>
-		</div>
-		</div>
+					<h2><i class="material-icons">search</i>Searching "<%= params[:query] %>"...</h2>
+					<% if @users.blank? %>
+					<h2>There are no User containing the term <%= params[:query] %>.</h2>
+					<% end %>
+					<%#= will_paginate %>
+					<ul class="users">
+					<% @users.each do |user| %>
+					<%= render user %>
+					<% end %>
+					</ul>
+					<%= will_paginate @users %>
+
+			</div><!-- grid-100 -->
 		</div><!-- columns -->
 	</div><!-- row -->
-</section><!-- bottomfix -->
+</section><!-- index-section -->

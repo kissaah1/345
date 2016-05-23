@@ -169,9 +169,11 @@ a {
 	header {
 		margin-bottom: 60px;
 		.topbar {
-			min-height: 40px;
+			min-height: 48px;
 			.logo {
 				h1 {
+					font-size: 12px;
+					line-height: 48px;
 					text-indent: -9999px;
 					a {
 						display: table-cell;
@@ -182,6 +184,37 @@ a {
 						background-repeat: no-repeat;
 						background-position: center;
 						background-size: 100%;
+					}
+				}
+			}
+			.search {
+				height: 48px;
+				vertical-align: middle;
+				text-align: left;
+				form {
+					margin: 0;
+				}
+				p {
+					vertical-align: middle;
+					line-height: 48px;
+
+					font-size: 0.825em;
+					color: $white;
+					input {
+						font-size: 0.925em;
+						padding: 5px;
+						width: 100%;
+						background-color: $white;
+						box-shadow:inset 1px 1px 1px rgba(0, 0, 0, 0.2);
+						color: $dark-blue;
+						&.search-field {
+	&:hover {
+		box-shadow:inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+	}
+	&:active {
+		box-shadow:inset 0px 0px 0 2000px rgba(250, 235, 55, 0.25);
+	}
+						}
 					}
 				}
 			}
@@ -493,16 +526,14 @@ a {
 }
 #logged-in-view {
 	section {
-			&.bottomfix {
-				padding-bottom: 420px;
-			}
-		&.dashboard, &.survey-section, &.profile-section, &.company-section {
+		&.dashboard, &.survey-section, &.profile-section, &.company-section, &.index-section {
 			h2 {
 				font-size: 22px;
 				color: #afb2b5;
 				font-weight: 400;
 				margin-bottom: 0;
 				line-height: 40px;
+				vertical-align: middle;
 				.material-icons {
 					line-height: 40px;
 					color: $gray;
@@ -1123,6 +1154,34 @@ a {
 				}
 			}
 		}
+		&.index-section {
+			ul {
+				&.users {
+					li {
+						.column {
+							line-height: noraml !important;
+						}
+						.profile-pic {
+							display: block;
+							width: 64px;
+							height: 64px;
+							img {
+								width:64px;
+								height: 64px;
+							}
+						}
+						h4 {
+							font-size: 0.9725em;
+							line-height: normal;
+							font-weight: 400;
+							a {
+								color: $blue;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1274,11 +1333,11 @@ a {
 	}
 }
 #logged-in-view {
-	section {
-		width: 100%;
-		&.bottomfix {
+		.bottomfix {
 			padding-bottom: $small-footer;
 		}
+	section {
+		width: 100%;
 	}
 	footer {
 		.on-public-view {
@@ -1326,13 +1385,13 @@ footer {
 	}
 
  	.bottomfix {
- 		padding-bottom: 64px;
+ 		padding-bottom: $small-footer;
  	}
  	.copyright {
 		border-top: 1px solid rgba(150, 150, 150, 0.1);
 		border-bottom: 1px solid rgba(150, 150, 150, 0.1);
   		display: block;
-  		min-height: 64px;
+  		height: $small-footer;
   		background: $shadow;
   		padding: 10px 0;
   		position: absolute;
@@ -1504,31 +1563,8 @@ a.button {
 }
 
 // 3-3. Form
-// Search
-.search {
-	i {
-		color: $blue;
-		width: 24px;
-		margin: 0 10px;
-		line-height: 29px;	
-	}
-	input {
-		width: 80%;
-		padding: 5px 10px;
-		font-size: 1em;
-		font-family: $serif;
-		background-color: $white;
-		box-shadow: 1px 1px 1px $shadow;
-	}
-}
-input.button {
-	&:hover {
-		box-shadow:inset 0px 0px 0 2000px rgba(0,0,0, 0.1);
-	}
-	&:active {
-		box-shadow:inset 0px 0px 0 2000px rgba(0,0,0, 0.25);
-	}
-}
+
+
 #error_explanation {
 	color: $alert-color;
 	ul {
@@ -2166,7 +2202,7 @@ section {
 .grid-40.logo {
 	width: 100%;
 }
-.grid-60 {
+.grid-20 {
 	width: 100%;
 }
 .topbar {

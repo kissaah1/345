@@ -1,13 +1,19 @@
 <% provide(:title, "Enthusiasts") %>
-<section class="centered bottomfix">
+
+
+<section class="centered index-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
-		<h2>Enthusiasts</h2>
-		<ul class="users">
-		<% @enthusiasts.each do |user| %>
-		<%= render user %>
-		<% end %>
-		</ul>
+			<div class="grid-100">
+					<h2><i class="material-icons">favorite</i>Enthusiasts</h2>
+					<ul class="users">
+					<% @enthusiasts.each do |user| %>
+					<%= render user %>
+					<% end %>
+					</ul>
+					<%= will_paginate @enthusiasts %>
+
+			</div><!-- grid-100 -->
 		</div><!-- columns -->
 	</div><!-- row -->
-</section><!-- bottomfix -->
+</section><!-- index-section -->

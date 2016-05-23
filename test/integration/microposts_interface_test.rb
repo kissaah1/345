@@ -11,8 +11,8 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
 
 	test "micropost interface" do
 		log_in_as(@user)
-		get users_path
-		assert_select 'div.pagination'
+#		get users_path
+#		assert_select 'div.pagination'
 		# Invalid submission
 		#assert_no_difference 'Micropost.count' do
 		#	post microposts_path, micropost: { content: "" }

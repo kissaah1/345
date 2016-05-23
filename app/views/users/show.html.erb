@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 
-<section class="centered profile-section bottomfix">
+<section class="centered profile-section">
 
 <% if current_user?(@user) %>
 <%#= render 'shared/micropost_form' %>
@@ -15,9 +15,9 @@
 					<div class="row profile-card clearfix">
 					<div class="grid-100">
 						<div class="column profile-pic clearfix">
-<%= link_to avatar_path(current_user) do %>
+						<%= link_to avatar_path(current_user) do %>
 						<%= gravatar_for @user %>
-<% end %>
+						<% end %>
 						<%#= image_tag src="ploads/profile-picture-1.jpg", class: "profile-pic" %>
 						</div>
 
