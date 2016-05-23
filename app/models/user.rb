@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 #	include PgSearch
 #	pg_search_scope :search, :against => [:name, :email]
+	has_many :employments, dependent: :destroy
 	has_many :companies, dependent: :destroy
 	has_many :positions, dependent: :destroy
 	has_many :microposts, dependent: :destroy

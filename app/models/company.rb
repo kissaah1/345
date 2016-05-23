@@ -1,5 +1,6 @@
 class Company < ActiveRecord::Base
 	belongs_to :user
+	has_many :employments
 	default_scope -> { order(created_at: :desc) }
 	validates :user_id, presence: true
 	validates :name, presence: true

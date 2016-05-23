@@ -25,7 +25,7 @@ class CompaniesController < ApplicationController
 	end
 
 	def show
-		@companies = Company.paginate(page: params[:page])
+		@company = Company.find(params[:id])
 	end
 
 	def edit

@@ -22,8 +22,6 @@ Rails.application.routes.draw do
   get 'positions/new'
   get 'companies/new'
 
-  get 'employments/new'
-
   get 'users/admins'
   get 'users/enthusiasts'
   get 'users/skeptics'
@@ -69,6 +67,7 @@ Rails.application.routes.draw do
   get 'solos' => 'users#solos'
   get 'users/coaches' => 'users#coachs'
 
+
   get 'users/:id/setting' => 'users#setting', as: :setting
   get 'users/:id/summary' => 'users#summary', as: :summary
   get 'users/:id/allies' => 'users#allies', as: :allies
@@ -87,10 +86,8 @@ Rails.application.routes.draw do
   resources :microposts, only: [:index, :create, :edit, :update, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :positions, only: [:create, :edit, :update, :destroy]
-  resources :companies, only: [:index, :show, :create, :edit, :update, :destroy], shallow: true do
-    resources :employment, only: [:new]
-  end
-
+  resources :companies, only: [:index, :show, :create, :edit, :update, :destroy]
+  
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

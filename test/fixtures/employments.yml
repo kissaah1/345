@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  senior: true
+  manager: false
+  staff: false
+  user_id: 
+  company_id: 
+
+two:
+  senior: false
+  manager: false
+  staff: true
+  user_id: 
+  company_id: 

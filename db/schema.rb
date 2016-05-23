@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523164909) do
+ActiveRecord::Schema.define(version: 20160523191502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20160523164909) do
 
   add_index "companies", ["user_id", "created_at"], name: "index_companies_on_user_id_and_created_at", using: :btree
   add_index "companies", ["user_id"], name: "index_companies_on_user_id", using: :btree
+
+  create_table "employments", force: :cascade do |t|
+    t.boolean  "senior"
+    t.boolean  "manager"
+    t.boolean  "staff"
+    t.integer  "user_id"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "employments", ["company_id", "created_at"], name: "index_employments_on_company_id_and_created_at", using: :btree
+  add_index "employments", ["company_id"], name: "index_employments_on_company_id", using: :btree
+  add_index "employments", ["user_id", "created_at"], name: "index_employments_on_user_id_and_created_at", using: :btree
+  add_index "employments", ["user_id"], name: "index_employments_on_user_id", using: :btree
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -104,6 +119,8 @@ ActiveRecord::Schema.define(version: 20160523164909) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   add_foreign_key "companies", "users"
+  add_foreign_key "employments", "companies"
+  add_foreign_key "employments", "users"
   add_foreign_key "microposts", "users"
   add_foreign_key "positions", "users"
 end
