@@ -40,6 +40,7 @@ gem 'will_paginate', '3.0.7'
 # LinkedIn Login
 gem 'omniauth'
 gem 'omniauth-linkedin'
+#gem 'omniauth-linkedin-oauth2'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
