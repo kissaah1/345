@@ -42,6 +42,7 @@ class UsersController < ApplicationController
 		@surveys = @user.microposts
 		@positions = @user.positions.paginate(page: params[:page], :per_page => 3)
 		@companies = @user.companies.paginate(page: params[:page], :per_page => 3)
+		@employments = @user.employments
 	end
 
 	def new

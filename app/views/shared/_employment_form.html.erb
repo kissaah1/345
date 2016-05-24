@@ -1,0 +1,36 @@
+<%= form_for current_user.employments.build do |f| %>
+	<div class="row-90 centered form-field">
+	<h3 class="text-left">
+	<%= f.label :senior %>
+	</h3>
+	<div class="field">
+	<%= f.check_box :senior %>
+	</div><!-- field -->
+	</div><!-- form-field -->
+
+	<div class="row-90 centered form-field">
+	<h3 class="text-left">
+	<%= f.label :manager %>
+	</h3>
+	<div class="field">
+	<%= f.check_box :manager %>
+	</div><!-- field -->
+	</div><!-- form-field -->
+
+	<div class="row-90 centered form-field">
+	<h3 class="text-left">
+	<%= f.label :staff %>
+	</h3>
+	<div class="field">
+	<%= f.check_box :staff %>
+	</div><!-- field -->
+	</div><!-- form-field -->
+
+	<div class="row-90 centered form-field">
+	<div class="field">
+	<%= f.submit "Submit!", class: "button secondary extend" %>
+	</div><!-- field -->
+	</div><!-- form-field -->
+
+
+<% end %>

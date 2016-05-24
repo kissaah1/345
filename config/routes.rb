@@ -1,27 +1,14 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
-
-  get 'password_resets/edit'
-
-  get 'sessions/new'
-
-  get 'users/new'
-
-  get 'static_pages/about'
-
-  get 'static_pages/terms'
-
-  get 'static_pages/privacy'
-
   get 'welcome/index'
-
+  get 'password_resets/new'
+  get 'password_resets/edit'
+  get 'sessions/new'
+  get 'static_pages/about'
+  get 'static_pages/terms'
+  get 'static_pages/privacy'
   get '/auth/:provider/callback', to: 'sessions#create_linkedin'
-
   get 'microposts/survey'
-
-  get 'positions/new'
-  get 'companies/new'
-
+  get 'users/new'
   get 'users/admins'
   get 'users/enthusiasts'
   get 'users/skeptics'
@@ -29,10 +16,12 @@ Rails.application.routes.draw do
   get 'users/navigators'
   get 'users/coachs'
   get 'users/solos'
-  get 'users/mycompany'
-
   get 'companies/index'
   get 'companies/show'
+  get 'companies/new'
+  get 'positions/new'
+
+  get 'employments/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -86,7 +75,8 @@ Rails.application.routes.draw do
   resources :microposts, only: [:index, :create, :edit, :update, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :positions, only: [:create, :edit, :update, :destroy]
-  resources :companies, only: [:index, :show, :create, :edit, :update, :destroy]
+  resources :companies
+  resources :employments
   
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
