@@ -1278,11 +1278,11 @@ a {
 
 // footer session fix
 #public-view {
-	section {
-		width: 100%;
-		&.bottomfix {
+		.bottomfix {
 			padding-bottom: $medium-footer;
 		}
+	section {
+		width: 100%;
 	}
 	footer {
 		height: $medium-footer;
