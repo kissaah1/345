@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 	# Returns the hash digest of the given string.
-	validate  :picture_size
+	validate	:picture_size
 
 
 	def User.digest(string)
@@ -39,8 +39,8 @@ class User < ActiveRecord::Base
 		where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 			user.name = auth["info"]["name"]
 			user.email = auth["info"]["email"]
-    		user.password = SecureRandom.urlsafe_base64 unless user.password != nil
-    		user.activated = true
+				user.password = SecureRandom.urlsafe_base64 unless user.password != nil
+				user.activated = true
 			user.provider = auth["provider"]
 			user.uid = auth["uid"]
 			user.location = auth["info"]["location"]
@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 			user.headline = auth["info"]["headline"]
 			user.linkedin = auth["info"]["urls"]["public_profile"]
 			user.picture = auth["info"]["image"]
-    		user.save!
+				user.save!
 		end
 	end
 
@@ -115,7 +115,7 @@ class User < ActiveRecord::Base
 			ts_rank(to_tsvector(skills), plainto_tsquery(#{sanitize(query)})) +
 			ts_rank(to_tsvector(other_skills), plainto_tsquery(#{sanitize(query)}))
 			RANK
-			where("name @@ :q  or email @@ :q  or location @@ :q  or industry @@ :q  or headline @@ :q  or summary @@ :q or skills @@ :q or other_skills @@ :q", q: query).order("#{rank} desc")
+			where("name @@ :q	or email @@ :q	or location @@ :q	or industry @@ :q	or headline @@ :q	or summary @@ :q or skills @@ :q or other_skills @@ :q", q: query).order("#{rank} desc")
 		end
 	end
 
@@ -165,12 +165,12 @@ class User < ActiveRecord::Base
 				self.activation_digest = User.digest(activation_token)
 		end
 
-    # Validates the size of an uploaded picture.
-    def picture_size
-      if picture.size > 5.megabytes
-        errors.add(:picture, "should be less than 5MB")
-      end
-    end
+		# Validates the size of an uploaded picture.
+		def picture_size
+			if picture.size > 5.megabytes
+				errors.add(:picture, "should be less than 5MB")
+			end
+		end
 
 
 end

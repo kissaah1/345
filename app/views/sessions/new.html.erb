@@ -1,8 +1,7 @@
 <% provide(:title, "Log In") %>
-<section class="centered bottomfix">
+<section class="centered setting-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix signup">
-
 
 <%= form_for(:session, url: login_path) do |f| %>
 			<div class="row-80 centered form-field">
@@ -21,25 +20,24 @@
 			</span>
 			</h4>
 			</div><!-- form-field -->
-<div class="row-80 centered form-field">
-<%= f.label :email %>
-<%= f.email_field :email, class: 'form-control' %>
-</div>
-<div class="row-80 centered form-field">
-<%= f.label :password %>
-<small>
-<%= link_to "(forgot password)", new_password_reset_path %>
-</small>
-<%= f.password_field :password, class: 'form-control' %>
-</div>
-<div class="row-80 centered form-field">
-<%= f.label :remember_me, class: "checkbox inline" do %>
-<%= f.check_box :remember_me %>
-<span>Remember me</span>
-<% end %>
-</div>
-<div class="row-80 centered form-field">
-<%#= f.submit "Log in", class: "button primary extend" %>
+			<div class="row-80 centered form-field">
+			<%= f.label :email %>
+			<%= f.email_field :email, class: 'form-control' %>
+			</div>
+			<div class="row-80 centered form-field">
+			<%= f.label :password %>
+			<small>
+			<%= link_to "(forgot password)", new_password_reset_path %>
+			</small>
+			<%= f.password_field :password, class: 'form-control' %>
+			</div>
+			<div class="row-80 centered form-field">
+			<%= f.label :remember_me, class: "checkbox inline" do %>
+			<%= f.check_box :remember_me %>
+			<span>Remember me</span>
+			<% end %>
+			</div>
+			<div class="row-80 centered form-field">
 				<%= f.button :submit, class: "button secondary extend" do %>
 					<span class="column">
 					<i class="material-icons">email</i>

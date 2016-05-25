@@ -43,44 +43,11 @@
 </div><!-- bottomfix -->
 <%= render 'layouts/footer' %>
 </div><!-- container -->
-<% if logged_in? %>
-<%= render 'joyride_contents' %>
-<script>
-$(window).load(function() {
-	$('#joyRideTipContent').joyride({
-		autoStart : true,
-		postStepCallback : function (index, tip) {
-			if (index == 2) {
-				$(this).joyride('set_li', false, 1);
-			}
-		},
-		modal:true,
-		expose: true
-	});
-});
-</script>
-<% end %>
 
-<script type="text/javascript">
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function expandDropdown() {
-		document.getElementById("dropdownList").classList.toggle("show");
-}
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-	if (!event.target.matches('.trigger')) {
+<%# if logged_in? %>
+<%#= render 'joyride' %>
+<%# end %>
 
-		var dropdowns = document.getElementsByClassName("dropdown-content");
-		var i;
-		for (i = 0; i < dropdowns.length; i++) {
-			var openDropdown = dropdowns[i];
-			if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
-			}
-		}
-	}
-}
-</script>
+<%= render 'dropdown' %>
 </body>
 </html>
