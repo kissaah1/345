@@ -1278,7 +1278,7 @@ a {
 
 // footer session fix
 #public-view {
-		.bottomfix {
+		.bottomfix.wrap {
 			padding-bottom: $medium-footer;
 		}
 	section {
@@ -1333,7 +1333,7 @@ a {
 	}
 }
 #logged-in-view {
-		.bottomfix {
+		.bottomfix.wrap {
 			padding-bottom: $small-footer;
 		}
 	section {

@@ -1,4 +1,11 @@
 <% provide(:title, "Log In") %>
+
+<% if logged_in? %>
+<p>
+You are already logged in.
+</p>
+<% else %>
+
 <section class="centered setting-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix signup">
@@ -54,3 +61,5 @@
 		</div><!-- columns -->
 	</div><!-- row -->
 </section>
+
+<% end %>
