@@ -1,7 +1,20 @@
 		<li class="row">
 		<div class="column">
 		<div class="column profile-pic clearfix">
-		<%= gravatar_for user %>
+		<% if Rails.env.production? %>
+		<%= if user.picture?
+				image_tag user.picture.url, class: "profile-pic"
+			else
+				image_tag "profile-picture-default.png", class: "profile-pic"
+			end %>
+		<% else %>
+		<%#= gravatar_for @user %>
+		<%= if user.picture?
+				image_tag user.picture.url, class: "profile-pic"
+			else
+				image_tag "profile-picture-default.png", class: "profile-pic"
+			end %>
+		<% end %>
 		</div>
 		
 		</div>

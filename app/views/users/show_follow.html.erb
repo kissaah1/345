@@ -6,7 +6,20 @@
   <div class="row">
     <div class="columns grid-80 centered clearfix">
       <div class="grid-100">
-          <%= gravatar_for @user %>
+            <% if Rails.env.production? %>
+            <%= if @user.picture?
+                image_tag @user.picture.url, class: "profile-pic"
+              else
+                image_tag "profile-picture-default.png", class: "profile-pic"
+              end %>
+            <% else %>
+            <%#= gravatar_for @user %>
+            <%= if @user.picture?
+                image_tag @user.picture.url, class: "profile-pic"
+              else
+                image_tag "profile-picture-default.png", class: "profile-pic"
+              end %>
+            <% end %>
           <h2><%= @user.name %></h2>
           <span><%= link_to "view my profile", @user %></span>
           <ul class="users">
@@ -15,7 +28,25 @@
       <% if @users.any? %>
         <div class="user_avatars">
           <% @users.each do |user| %>
-            <%= link_to gravatar_for(user, size: 30), user %>
+            <%#= link_to gravatar_for(user, size: 30), user %>
+           <% if Rails.env.production? %>
+           <%= link_to user do %>
+            <%= if user.picture?
+                image_tag user.picture.url, class: "profile-pic"
+              else
+                image_tag "profile-picture-default.png", class: "profile-pic"
+              end %>
+              <% end %>
+            <% else %>
+            <%= link_to user do %>
+            <%= if user.picture?
+                image_tag user.picture.url, class: "profile-pic"
+              else
+                image_tag "profile-picture-default.png", class: "profile-pic"
+              end %>
+            <% end %>
+            <% end %>
+ 
           <% end %>
         </div>
       <% end %>

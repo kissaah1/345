@@ -1,7 +1,20 @@
 
 			<div class="row profile-card">
 			<div class="column">
-					<%= link_to gravatar_for(current_user), current_user %>
+						<% if Rails.env.production? %>
+						<%= if current_user.picture?
+								image_tag current_user.picture.url, class: "profile-pic"
+							else
+								image_tag "profile-picture-default.png", class: "profile-pic"
+							end %>
+						<% else %>
+						<%#= gravatar_for @user %>
+						<%= if current_user.picture?
+								image_tag current_user.picture.url, class: "profile-pic"
+							else
+								image_tag "profile-picture-default.png", class: "profile-pic"
+							end %>
+						<% end %>
 			</div>
 			<div class="column taglines">
 			<h2 class="user-name">
