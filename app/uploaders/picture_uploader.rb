@@ -12,7 +12,7 @@ class PictureUploader < CarrierWave::Uploader::Base
     storage :file
   end
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -56,8 +56,6 @@ class PictureUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
-
-private
 
 
 end
