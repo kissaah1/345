@@ -1,9 +1,12 @@
 # encoding: utf-8
 
 class PictureUploader < CarrierWave::Uploader::Base
-
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
+  if Rails.env.production?
+    include Cloudinary::CarrierWave
+  end
+
   include CarrierWave::MiniMagick
   process resize_to_limit: [512, 512]
   if Rails.env.production?
@@ -12,7 +15,7 @@ class PictureUploader < CarrierWave::Uploader::Base
     storage :file
   end
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -31,6 +34,14 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
+
+  if Rails.env.production?
+    version :standard do
+    process :eager => true
+    process :resize_to_fill => [300, 300]
+    end
+  end
+
   process :resize_to_fit => [300, 300]
   process crop: '300x300+0+0'
   #
