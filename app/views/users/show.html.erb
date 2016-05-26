@@ -16,9 +16,24 @@
 					<div class="grid-100">
 						<div class="column profile-pic clearfix">
 						<%= link_to avatar_path(current_user) do %>
-						<%= gravatar_for @user %>
+						<% if Rails.env.production? %>
+						<%= if @user.picture?
+								image_tag @user.picture.url, class: "profile-pic"
+							else
+								image_tag "profile-picture-default.png", class: "profile-pic"
+							end %>
+						<% else %>
+						<%#= gravatar_for @user %>
+						<%= if @user.picture?
+								image_tag @user.picture.url, class: "profile-pic"
+							else
+								image_tag "profile-picture-default.png", class: "profile-pic"
+							end %>
 						<% end %>
-						<%#= image_tag src="ploads/profile-picture-1.jpg", class: "profile-pic" %>
+
+						<!-- img src="<%= @user.picture %>" class="profile-pic"-->
+						<% end %>
+						<%#= image_tag src="uploads/profile-picture-1.jpg", class: "profile-pic" %>
 						</div>
 
 						<div class="grid-60">
