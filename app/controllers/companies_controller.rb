@@ -52,7 +52,7 @@ class CompaniesController < ApplicationController
 	private
 
 		def company_params
-			params.require(:company).permit(:name, :industry, :website, :summary)
+			params.require(:company).permit(:name, :industry, :website, :summary, :picture)
 		end
 
 		# Confirms a logged-in user.

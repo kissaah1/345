@@ -1,6 +1,12 @@
 			<div id="position-<%= position.id %>" class="row-100 centered experience-card">
 			<div class="column">
-			<%= image_tag "company-logo-default.png", class: "company-logo" %>
+
+						<%= if position.picture?
+								image_tag position.picture.url, class: "company-logo"
+							else
+								image_tag "company-logo-default.png", class: "company-logo"
+							end %>
+
 			</div>
 			<div class="column experience-summary">
 			<span class="column">

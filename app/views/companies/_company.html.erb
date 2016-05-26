@@ -2,7 +2,21 @@
 				<div id="company-<%= company.id %>" class="column my-ally">
 					<div class="ally-profile">
 					<div class="column ally-avator lefted">
-						<%= image_tag "company-logo-default.png", class: "profile-thumb" %>
+
+						<% if Rails.env.production? %>
+						<%= if company.picture?
+								image_tag company.picture.url, class: "profile-thumb"
+							else
+								image_tag "company-logo-default.png", class: "profile-thumb"
+							end %>
+						<% else %><%#-- if Rails.env.production --%>
+						<%= if company.picture?
+								image_tag company.picture.url, class: "profile-thumb"
+							else
+								image_tag "company-logo-default.png", class: "profile-thumb"
+							end %>
+						<% end %><%#-- if Rails.env.production? --%>
+
 					</div><!-- ally-avator -->
 
 					<div class="column ally-info">

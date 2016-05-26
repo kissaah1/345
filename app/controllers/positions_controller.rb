@@ -36,7 +36,7 @@ class PositionsController < ApplicationController
 	private
 
 		def position_params
-			params.require(:position).permit(:title, :company, :summary, :start_date, :end_date, :is_current)
+			params.require(:position).permit(:title, :company, :summary, :start_date, :end_date, :is_current, :picture)
 		end
 
 		def correct_user
