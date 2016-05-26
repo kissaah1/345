@@ -12,7 +12,7 @@ class PictureUploader < CarrierWave::Uploader::Base
     storage :file
   end
   # Choose what kind of storage to use for this uploader:
-  # storage :file
+  storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -31,7 +31,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
-  #process :resize_to_fill => [480, 480]
+  process :resize_to_fill => [480, 480]
 
 
   #
