@@ -18,7 +18,9 @@
 					<%= position.company %>
 					</p>
 					<p class="time-location">
-					<%= position.start_date.strftime("%B %e %Y") %> to <%= position.end_date.strftime("%B %e %Y") %>
+					<% if position.start_date? %>
+					<%= position.start_date.try(:strftime, "%B %e %Y") %> to <%= position.end_date.try(:strftime, "%B %e %Y") %>
+					<% end %><%# if position start_date? %>
 					</p>
 			</div>
 			<div class="column righted clearfix">
