@@ -1,0 +1,51 @@
+<% provide(:title, "My ally") %>
+<section class="centered bottomfix">
+	<div class="row">
+		<div class="columns grid-80 centered clearfix">
+		<h2><%= @ally.name %></h2>
+
+
+				<div id="ally-<%= @ally.id %>" class="column my-ally">
+					<div class="ally-profile">
+
+					<div class="column ally-info">
+						<p class="ally-name">
+							<span class="column">
+								<a href="#">
+								<span class="column">
+								<%= @ally.name %>
+								</span>
+								<span class="column sub-menu">
+								<i class="material-icons">launch</i>
+								</span>
+								</a>
+							</span>
+						</p>
+					</div><!-- column ally-info -->
+
+					<div class="column sub-menu righted clearfix">
+						<% if current_user?(@user) %>
+							<%= link_to edit_ally_path do %>
+							<small class="f400">
+							Edit
+							</small>
+							<i class="material-icons">mode_edit</i>
+							<% end %>
+						<% end %>
+					</div><!-- sub-menu -->
+
+					<div class="column ally-info">
+					<p class="ally-title">
+						<%= @ally.descriptions %>
+					</p>
+
+					</div><!-- ally-info -->
+					</div><!-- ally-profile -->
+
+					</div>
+
+
+		</div><!-- columns -->
+	</div><!-- row -->
+</section><!-- bottomfix -->
+

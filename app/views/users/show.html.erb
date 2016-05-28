@@ -5,7 +5,6 @@
 <% if current_user?(@user) %>
 <%#= render 'shared/micropost_form' %>
 <%#= render 'shared/picture_form' %>
-<%#= render 'shared/survey_form' %>
 <% end %>
 
 	<div class="row">
@@ -104,9 +103,9 @@
 					</small>
 
 					</div><!-- taglines -->
-</div><!-- grid-100 -->
-<div class="grid-100">
-<div class="grid-100">
+				</div><!-- grid-100 -->
+				<div class="grid-100">
+				<div class="grid-100">
 					<% if current_user.enthusiast? %>
 
 					<div class="badge enthusiast">
@@ -177,7 +176,7 @@
 					<% end %>
 				<% end %>	
 					<% end %>
-</div>
+				</div><!-- grid-100 -->
 					<div class="grid-100 summary">
 						<h3>
 						Summary
@@ -205,7 +204,7 @@
 				<% end %>
 					</p>
 					</div><!-- summary -->
-</div><!-- grid-100 -->
+				</div><!-- grid-100 -->
 					</div><!-- row profile-card -->
 
 				<% if current_user?(@user) %>
@@ -226,12 +225,14 @@
 				<div class="row work-experience">
 				<div class="column">
 					<h3>
+					<%= link_to positions_path do %>
 						<span class="column">
 						<i class="material-icons">work</i>
 						</span>
 						<span class="column">
 						Work Experience
 						</span>
+						<% end %>
 					</h3>
 				</div>
 				<div class="column righted clearfix">

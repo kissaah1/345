@@ -1,4 +1,4 @@
-<% provide(:title, "My Companies") %>
+<% provide(:title, "Ally Circles") %>
 <section class="centered bottomfix company-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
@@ -10,10 +10,10 @@
 				<div class="column">
 					<h3>
 						<span class="column">
-						<i class="material-icons">work</i>
+						<i class="material-icons">people</i>
 						</span>
 						<span class="column">
-						My Company
+						Ally Circles
 						</span>
 					</h3>
 				</div>
@@ -21,11 +21,8 @@
 				<%= will_paginate %>
 				</div>
 				<div class="row-100 columns list">
-				<% if @companies.blank? %>
-				<h4>There are no companies containing the term <%= params[:search] %>.</h4>
-				<% end %>
-				<% @companies.each do |company| %>
-				<%= render company %>
+				<% @allies.each do |ally| %>
+				<%= render ally %>
 				<% end %>
 				</div>
 				<div class="paginate">

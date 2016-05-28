@@ -22,7 +22,7 @@
 					<div class="column ally-info">
 						<p class="ally-name">
 							<span class="column">
-								<a href="#">
+							<a href="../companies/<%= company.id %>/show">
 								<span class="column">
 								<%= company.name %>
 								</span>
@@ -35,14 +35,17 @@
 					</div><!-- column ally-info -->
 
 					<div class="column sub-menu righted clearfix">
-						<% if current_user?(@user) %>
+						<% if current_user?(company.user) %>
+							<%#= link_to edit_company_path do %>
 							<a href="../companies/<%= company.id %>/edit">
-							<small class="f400">
-							Edit
-							</small>
 							<i class="material-icons">mode_edit</i>
 							</a>
-						<% end %>
+							<%# end %>
+							<%= link_to company, method: :delete, data: { confirm: "You sure?" } do %>
+							<i class="material-icons">delete</i>
+							<% end %>
+
+						<% end %><%# if current_user? %>
 					</div><!-- sub-menu -->
 
 					<div class="column ally-info">

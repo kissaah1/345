@@ -38,25 +38,35 @@
 					<span class="nav-item">
 					<%= current_user.name %>
 					</span>
-					<% end %>
+					<% end %><%# link_to user %>
 					<%= link_to root_path do%>
 					<i class="material-icons">apps</i>
 					<span class="nav-item">
 					Demo App
 					</span>
-					<% end %>
+					<% end %><%# link_to root_path %>
 					<%= link_to companies_path do%>
 					<i class="material-icons">business</i>
 					<span class="nav-item">
 					My Company
 					</span>
-					<% end %>
+					<% end %><%# link_to companies_path %>
+					<%= link_to allies_path do%>
+					<i class="material-icons">people</i>
+					<span class="nav-item">
+					Ally Circle
+					</span>
+					<% end %><%# link_to allies_path %>
+
+					<% if current_user.cadmin? %>
 					<%= link_to companies_new_path do%>
 					<i class="material-icons">add_circle</i>
 					<span class="nav-item">
 					Create Company
 					</span>
 					<% end %>
+					<% end %>
+					
 					<%= link_to setting_path(current_user) do%>
 					<i class="material-icons">settings</i>
 					<span class="nav-item">

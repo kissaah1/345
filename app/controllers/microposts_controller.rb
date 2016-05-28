@@ -4,7 +4,7 @@ class MicropostsController < ApplicationController
 	before_action :admin_user, only: [:index, :edit, :update, :destroy]
 
 	def index
-		@microposts = Micropost.paginate(page: params[:page])
+		@microposts = current_user.microposts.paginate(page: params[:page], :per_page => 5)
 	end
 
 	def create
@@ -16,6 +16,10 @@ class MicropostsController < ApplicationController
 			@feed_items = []
 			render 'users/show'
 		end
+	end
+
+	def show
+		@micropost = Micropost.find(params[:id])
 	end
 
 	def edit

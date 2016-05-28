@@ -6,16 +6,14 @@ class CompaniesController < ApplicationController
 
 	def index
 		if params[:query].present?
-			@companies = Company.search(params[:query]).page(params[:page]).per_page(5)
+			@companies = current_user.companies.search(params[:query]).page(params[:page]).per_page(5)
 		else
-			@companies = Company.paginate(page: params[:page], :per_page => 5)
+			@companies = current_user.companies.paginate(page: params[:page], :per_page => 5)
 		end
 	end
 
 	def create
 		@company = current_user.companies.build(company_params)
-		#@company = Company.new(params[:company])
-		#@company.users << current_user
 		if @company.save
 			flash[:success] = "Company Created!"
 			redirect_to current_user
@@ -25,7 +23,7 @@ class CompaniesController < ApplicationController
 	end
 
 	def show
-		@company = Company.find(params[:id])
+		@company = current_user.companies.find(params[:id])
 	end
 
 	def edit
@@ -35,7 +33,6 @@ class CompaniesController < ApplicationController
 	def update
 		@company = Company.find(params[:id])
 		if @company.update_attributes(company_params)
-			# Handle a successful update.
 			flash[:success] = "Company has been updated"
 			redirect_to current_user
 		else
@@ -45,7 +42,7 @@ class CompaniesController < ApplicationController
 	
 	def destroy
 		@company.destroy
-		flash[:success] = "company deleted"
+		flash[:success] = "Company deleted"
 		redirect_to request.referrer || users_path(@user)
 	end
 

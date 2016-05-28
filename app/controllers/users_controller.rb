@@ -43,6 +43,7 @@ class UsersController < ApplicationController
 		@positions = @user.positions.paginate(page: params[:page], :per_page => 3)
 		@companies = @user.companies.paginate(page: params[:page], :per_page => 3)
 		@employments = @user.employments
+		@allies = @user.allies
 	end
 
 	def new

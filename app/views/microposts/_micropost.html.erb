@@ -1,3 +1,7 @@
+    <% if current_user?(micropost.user) %>
+      <%= link_to "delete", micropost, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
 
 						<div class="question">
 							<h4>

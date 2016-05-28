@@ -1,5 +1,5 @@
-<% provide(:title, "My Companies") %>
-<section class="centered bottomfix company-section">
+<% provide(:title, "My positions") %>
+<section class="centered bottomfix position-section">
 	<div class="row">
 		<div class="columns grid-80 centered clearfix">
 
@@ -13,7 +13,7 @@
 						<i class="material-icons">work</i>
 						</span>
 						<span class="column">
-						My Company
+						My position
 						</span>
 					</h3>
 				</div>
@@ -21,17 +21,17 @@
 				<%= will_paginate %>
 				</div>
 				<div class="row-100 columns list">
-				<% if @companies.blank? %>
-				<h4>There are no companies containing the term <%= params[:search] %>.</h4>
+				<% if @positions.blank? %>
+				<h4>There are no positions containing the term <%= params[:search] %>.</h4>
 				<% end %>
-				<% @companies.each do |company| %>
-				<%= render company %>
+				<% @positions.each do |position| %>
+				<%= render position %>
 				<% end %>
 				</div>
 				<div class="paginate">
 				<%= will_paginate %>
 				</div>
-				</div><!-- row companies -->
+				</div><!-- row positions -->
 			</div><!-- sticky-note end -->
 
 			</div>

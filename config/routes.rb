@@ -1,25 +1,37 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
+
   get 'static_pages/about'
   get 'static_pages/terms'
   get 'static_pages/privacy'
-  get '/auth/:provider/callback', to: 'sessions#create_linkedin'
+
   get 'microposts/survey'
+
   get 'users/new'
   get 'users/admins'
-  get 'users/enthusiasts'
-  get 'users/skeptics'
-  get 'users/pioneers'
-  get 'users/navigators'
-  get 'users/coachs'
-  get 'users/solos'
+# get 'users/enthusiasts'
+# get 'users/skeptics'
+# get 'users/pioneers'
+# get 'users/navigators'
+# get 'users/coachs'
+# get 'users/solos'
+
   get 'companies/index'
   get 'companies/show'
   get 'companies/new'
+
   get 'positions/new'
+  get 'positions/index'
+  get 'positions/show'
+
+  get 'allies/index'
+  get 'allies/show'
+  get 'allies/new'
+
 
   get 'employments/new'
 
@@ -42,24 +54,29 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  get '/auth/:provider/callback', to: 'sessions#create_linkedin'
 
-  get 'positions' => 'positions#new'
   get 'companies' => 'companies#index'
+  get 'companies/:id/show' => 'companies#show'
+
+  get 'positions' => 'positions#index'
   get 'positions/:id/edit' => 'positions#edit'
   
+  get 'allies' => 'allies#index'
+  get 'allies/:id/show' => 'allies#show'
 
-  get 'enthusiasts' => 'users#enthusiasts'
-  get 'skeptics' => 'users#skeptics'
-  get 'pioneers' => 'users#pioneers'
-  get 'navigators' => 'users#navigators'
-  get 'coaches' => 'users#coachs'
-  get 'solos' => 'users#solos'
-  get 'users/coaches' => 'users#coachs'
+ # get 'enthusiasts' => 'users#enthusiasts'
+ # get 'skeptics' => 'users#skeptics'
+ # get 'pioneers' => 'users#pioneers'
+ # get 'navigators' => 'users#navigators'
+ # get 'coaches' => 'users#coachs'
+ # get 'solos' => 'users#solos'
+ # get 'users/coaches' => 'users#coachs'
 
 
   get 'users/:id/setting' => 'users#setting', as: :setting
   get 'users/:id/summary' => 'users#summary', as: :summary
-  get 'users/:id/allies' => 'users#allies', as: :allies
+#  get 'users/:id/allies' => 'users#allies', as: :allies
   get 'users/:id/skills' => 'users#skills', as: :skills
   get 'users/:id/avatar' => 'users#avatar', as: :avatar
 
@@ -77,6 +94,7 @@ Rails.application.routes.draw do
   resources :positions, only: [:create, :edit, :update, :destroy]
   resources :companies
   resources :employments
+  resources :allies
   
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

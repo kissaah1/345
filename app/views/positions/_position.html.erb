@@ -31,7 +31,15 @@
 			</small>
 			<i class="material-icons sub-menu">mode_edit</i>
 			</a>
-			<% end %>
+
+			<%= link_to position, method: :delete, data: { confirm: "You sure?" } do %>
+			<small class="f400">
+			Delete
+			</small>
+			<i class="material-icons sub-menu">delete</i>
+			<% end %><%# linke_to delete %>
+
+			<% end %><%# if current_user? %>
 			</div>
 			<div class="column grid-100">
 			<p class="company-summary">

@@ -1,0 +1,25 @@
+<%= form_for current_user.allies.build do |f| %>
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:name, "Ally circlen name", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_field :name, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- row-90 -->
+
+				<div class="row-90 centered">
+					<h3 class="text-left">
+					<%= label_tag(:descriptions, "Descriptions", class: 'form-control') %>
+					</h3>
+					<div class="field">
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.text_area :descriptions, class: 'form-control' %>
+					</div><!-- field -->
+				</div><!-- row-90 -->
+
+				<div class="row-90 centered question">
+					<%= f.submit "Create a ally", class: "button extend primary" %>
+					<% end %>
+				</div><!-- question -->

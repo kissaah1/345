@@ -12,6 +12,10 @@ class PositionsController < ApplicationController
 		end
 	end
 
+	def index
+		@positions = current_user.positions.paginate(page: params[:page], :per_page => 5)
+	end
+
 	def edit
 		@position = Position.find(params[:id])
 	end
