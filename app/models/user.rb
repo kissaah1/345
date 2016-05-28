@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 #	include PgSearch
 #	pg_search_scope :search, :against => [:name, :email]
 	mount_uploader :picture, PictureUploader
-	has_many :allies, dependent: :destroy
+	has_and_belongs_to_many :allies, join_table: :allies_users, dependent: :destroy
 	has_many :employments, dependent: :destroy
 	has_many :companies, dependent: :destroy
 	has_many :positions, dependent: :destroy
@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
 	attr_accessor :remember_token, :activation_token, :reset_token
 	before_save :downcase_email
 	before_create :create_activation_digest
+	validates :summary, length: { maximum: 800 }
 	validates :name, length: { maximum: 50 }
 	# validates :picture, presence: true
 	# validates :name, presence: true, length: { maximum: 50 }
@@ -27,7 +28,6 @@ class User < ActiveRecord::Base
 	validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 	# Returns the hash digest of the given string.
 	validate	:picture_size
-
 
 	def User.digest(string)
 		cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

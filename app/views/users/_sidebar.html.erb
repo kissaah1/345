@@ -4,14 +4,17 @@
 				<div class="row allies">
 				<div class="column">
 					<h3>
+						<%= link_to companies_path do %>
 						<span class="column">
 						<i class="material-icons">business</i>
 						</span>
 						<span class="column">
 						My 	Company
 						</span>
+						<% end %>
 					</h3>
 				</div>
+
 				<div class="column righted clearfix sub-menu">
 				<% if current_user.cadmin? %>
 					<%= link_to companies_new_path do%>

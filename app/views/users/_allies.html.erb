@@ -7,33 +7,7 @@
 				Select Your Ally Circle
 				</h3>
 			<div class="row-80 centered form-field">
-				<%= f.label :enthusiast %>
-				<%= f.check_box :enthusiast %>
-			</div><!-- form-field -->
-
-			<div class="row-80 centered form-field">
-				<%= f.label :skeptic %>
-				<%= f.check_box :skeptic %>
-			</div><!-- form-field -->
-
-			<div class="row-80 centered form-field">
-				<%= f.label :pioneer %>
-				<%= f.check_box :pioneer %>
-			</div><!-- form-field -->
-
-			<div class="row-80 centered form-field">
-				<%= f.label :navigator %>
-				<%= f.check_box :navigator %>
-			</div><!-- form-field -->
-
-			<div class="row-80 centered form-field">
-				<%= f.label :coach %>
-				<%= f.check_box :coach %>
-			</div><!-- form-field -->
-
-			<div class="row-80 centered form-field">
-				<%= f.label :solo %>
-				<%= f.check_box :solo %>
+				<%= collection_check_boxes(:user, :ally_ids, @allies, :id, :name) %>
 			</div><!-- form-field -->
 
 			<div class="row-80 centered form-field">

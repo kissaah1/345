@@ -48,6 +48,7 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
+		@allies = Ally.all
 	end
 
 	def create
@@ -63,6 +64,7 @@ class UsersController < ApplicationController
 
 	def edit
 		@user = User.find(params[:id])
+		@allies = Ally.all
 	end
 
 	def setting
@@ -123,7 +125,7 @@ class UsersController < ApplicationController
 		def user_params
 			params.require(:user).permit(:name, :email, :password, :password_confirmation, 
 				:location, :headline, :industry, :linkedin, :summary, :skills, :other_skills,
-				:enthusiast, :skeptic, :navigator, :pioneer, :coach, :solo, :picture)
+				:enthusiast, :skeptic, :navigator, :pioneer, :coach, :solo, :picture, :ally_ids => [])
 		end
 
 		# Confirms a logged-in user.

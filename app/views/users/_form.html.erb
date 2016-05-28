@@ -27,7 +27,9 @@
 				<%= f.label :summary %>
 				<%= f.text_area :summary, class: 'form-control' %>
 			</div><!-- form-field -->
-
+			<div class="row-80 centered form-field">
+			<%= collection_check_boxes(:user, :ally_ids, @allies, :id, :name) %>
+			</div>
 			<div class="row-80 centered form-field">
 				<%= f.submit "Save changes", class: "button secondary extend" %>
 			</div><!-- form-field -->
