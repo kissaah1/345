@@ -32,25 +32,30 @@
 						<span class="bar"></span>
 					</button>
 					<div id="dropdownList" class="dropdown-content">
+
 					<% if logged_in? %>
+
 					<%= link_to user_path(current_user) do%>
 					<i class="material-icons">account_circle</i>
 					<span class="nav-item">
 					<%= current_user.name %>
 					</span>
 					<% end %><%# link_to user %>
+
 					<%= link_to root_path do%>
 					<i class="material-icons">apps</i>
 					<span class="nav-item">
 					Demo App
 					</span>
 					<% end %><%# link_to root_path %>
+
 					<%= link_to companies_path do%>
 					<i class="material-icons">business</i>
 					<span class="nav-item">
 					My Company
 					</span>
 					<% end %><%# link_to companies_path %>
+
 					<%= link_to allies_path do%>
 					<i class="material-icons">people</i>
 					<span class="nav-item">
@@ -64,28 +69,29 @@
 					<span class="nav-item">
 					Create Company
 					</span>
-					<% end %>
-					<% end %>
+					<% end %><%# linke_to companies %>
+					<% end %><%# if current_user.cadmin %>
 					
 					<%= link_to setting_path(current_user) do%>
 					<i class="material-icons">settings</i>
 					<span class="nav-item">
 					Settings
 					</span>
-					<% end %>
+					<% end %><%# link_to setting %>
+
 					<%= link_to root_path do%>
 					<i class="material-icons">credit_card</i>
 					<span class="nav-item">
 					Manage Subscription
 					</span>
-					<% end %>
+					<% end %><%# link_to subscription %>
 
 					<%= link_to logout_path, class: "last login", method: "delete" do%>
 					<span class="nav-item">
 					LOG OUT
 					</span>
 					<i class="material-icons">directions_run</i>
-					<% end %>
+					<% end %><%# link_to logout %>
 
 					<% else %>
 
@@ -94,6 +100,7 @@
 					<%#= link_to "SIGN UP with LINKEDIN", "auth/linkedin" %>
 					<%= link_to "LOG IN | SIGN UP", login_path, class: "last login" %>
 					<% end %>
+
 					</div><!-- dropdown-content -->
 
 				</div><!-- dropdown -->

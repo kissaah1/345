@@ -20,12 +20,16 @@
 						<% if Rails.env.production? %>
 						<%= if @user.picture?
 								image_tag @user.picture.url, class: "profile-pic"
+							elsif @user.linkedin_image?
+								image_tag @user.linkedin_image, class: "profile-pic"
 							else
 								image_tag "profile-picture-default.png", class: "profile-pic"
 							end %>
 						<% else %><%#-- if Rails.env.production --%>
 						<%= if @user.picture?
 								image_tag @user.picture.url, class: "profile-pic"
+							elsif @user.linkedin_image?
+								image_tag @user.linkedin_image, class: "profile-pic"
 							else
 								image_tag "profile-picture-default.png", class: "profile-pic"
 							end %>
@@ -36,12 +40,16 @@
 						<% if Rails.env.production? %>
 						<%= if @user.picture?
 								image_tag @user.picture.url, class: "profile-pic"
+							elsif @user.linkedin_image?
+								image_tag @user.linkedin_image, class: "profile-pic"
 							else
 								image_tag "profile-picture-default.png", class: "profile-pic"
 							end %>
 						<% else %><%#-- if Rails.env.production --%>
 						<%= if @user.picture?
 								image_tag @user.picture.url, class: "profile-pic"
+							elsif @user.linkedin_image?
+								image_tag @user.linkedin_image, class: "profile-pic"
 							else
 								image_tag "profile-picture-default.png", class: "profile-pic"
 							end %>

@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 			user.industry = auth["info"]["industry"]
 			user.headline = auth["info"]["headline"]
 			user.linkedin = auth["info"]["urls"]["public_profile"]
-			user.picture = auth["info"]["image"]
+			user.linkedin_image = auth["info"]["image"]
 			user.save!
 		end
 	end

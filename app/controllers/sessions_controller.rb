@@ -27,10 +27,8 @@ class SessionsController < ApplicationController
 	def create_linkedin
 		# raise env["omniauth.auth"].to_yaml
 		user = User.from_omniauth(env["omniauth.auth"])
-		# session[:user_id] = user.id
 		log_in user
-		# redirect_to root_url, notice: "It went though! xD"
-		redirect_back_or user
+		redirect_to user, notice: "Logged in with LinkedIn."
 	end
 
 	def destroy

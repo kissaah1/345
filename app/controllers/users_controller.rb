@@ -43,7 +43,6 @@ class UsersController < ApplicationController
 		@positions = @user.positions.paginate(page: params[:page], :per_page => 3)
 		@companies = @user.companies.paginate(page: params[:page], :per_page => 3)
 		@employments = @user.employments
-		@allies = @user.allies
 	end
 
 	def new
@@ -81,6 +80,7 @@ class UsersController < ApplicationController
 
 	def allies
 		@user = User.find(params[:id])
+		@allies = Ally.all
 	end
 
 	def avatar
@@ -90,6 +90,7 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
+		@allies = Ally.all
 		if @user.update_attributes(user_params)
 			# Handle a successful update.
 			flash[:success] = "Profile updated"
@@ -125,7 +126,7 @@ class UsersController < ApplicationController
 		def user_params
 			params.require(:user).permit(:name, :email, :password, :password_confirmation, 
 				:location, :headline, :industry, :linkedin, :summary, :skills, :other_skills,
-				:enthusiast, :skeptic, :navigator, :pioneer, :coach, :solo, :picture, :ally_ids => [])
+				:enthusiast, :skeptic, :navigator, :pioneer, :coach, :solo, :picture, :linkedin_image, :ally_ids => [])
 		end
 
 		# Confirms a logged-in user.
